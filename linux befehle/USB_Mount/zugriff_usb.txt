@@ -1,0 +1,4 @@
+Mountort - USB Stick Linux Mint
+*******************************
+
+-> /media/pc813/[UUID des USB Stick]

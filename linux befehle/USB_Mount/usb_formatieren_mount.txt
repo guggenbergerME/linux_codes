@@ -18,5 +18,9 @@ Formatieren
     Für das EXT4 Dateisystem: 
     -> sudo mkfs.ext4 /dev/sdX
 
+FormatTIPP
+**********
+    exfat
+
 
 
