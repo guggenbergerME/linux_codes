@@ -1,0 +1,12 @@
+wireless-tools 
+**************
+iwconfig 
+
+
+
+
+Wlan scannen
+************
+
+    Accesspoints auflisten
+    -> nmcli dev wifi list
