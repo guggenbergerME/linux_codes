@@ -1,6 +1,6 @@
 wireless-tools 
 **************
-    iwconfig 
+    -> iwconfig 
 
 iwlist
 ******
@@ -8,10 +8,11 @@ iwlist
     werden alle darstellbaren Informationen aufgelistet. Am Interessantesten sind wahrscheinlich die verfügbaren Netze.
 
     Beispiel
-    sudo iwlist wlan0 scan 
+    -> sudo iwlist wlan0 scan 
 
 Wlan scannen
 ************
 
     Accesspoints auflisten
     -> nmcli dev wifi list
+    -> infos https://www.makeuseof.com/connect-to-wifi-with-nmcli/

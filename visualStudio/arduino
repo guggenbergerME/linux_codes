@@ -4,4 +4,8 @@ Install
 
 USB Anschluss Zugriffsrechte
 ****************************
-
+    Gruppen anzeigen
+    -> id
+    
+    User zur dialout Gruppe hinzufügen
+    -> sudo usermod -a -G dialout YOUR_USER_NAME
