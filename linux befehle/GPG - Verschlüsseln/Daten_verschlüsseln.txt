@@ -1,0 +1,15 @@
+Tool
+****
+    -> install Kleopatra
+
+
+Datei mit gpg verschlüsseln
+***************************
+
+    -> gpg --symmetric --passphrase [Passwort] [Datei]
+
+
+Datei mit gpg entschlüsseln
+***************************
+
+    -> gpg -d -o [Datei_name_entschlüsselt] [Datei_verschlüsselt]
