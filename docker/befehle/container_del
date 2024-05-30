@@ -1,1 +1,2 @@
-
+## Container anzeigen
+docker ps -a
