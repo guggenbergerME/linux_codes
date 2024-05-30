@@ -3,7 +3,7 @@
 Laufenden Container stoppen
 ### docker stop [Container ID]
 
-###Container auflisten
+### Container auflisten
 ```
 docker ps -a
 ```
