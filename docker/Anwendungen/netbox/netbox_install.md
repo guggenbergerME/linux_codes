@@ -23,5 +23,10 @@ docker compose pull
 docker compose up
 ```
 
+## Admin anlegen
+```
+docker compose exec netbox /opt/netbox/netbox/manage.py createsuperuser
+```
+
 ### Links
 > https://www.youtube.com/watch?v=AmFu0UL6Hrs
