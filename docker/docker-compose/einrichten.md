@@ -1,15 +1,15 @@
 # Docker Compose einrichten
 
-Um sicherzustellen, dass wir die aktuellste stabile Version von Docker Compose erhalten, werden wir diese Software von ihrem offiziellen Github-Repository herunterladen.
-
-Bestätigen Sie zunächst die auf der Seite https://github.com/docker/compose/releases die verfügbare neueste Version. Zum Zeitpunkt des Schreibens dieses Artikels ist die aktuellste stabile Version 2.27.1
-
-> sudo curl -L "https://github.com/docker/compose/releases/download/2.27.1/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+> DOCKER_CONFIG=${DOCKER_CONFIG:-$HOME/.docker}
+> mkdir -p $DOCKER_CONFIG/cli-plugins
+> curl -SL https://github.com/docker/compose/releases/download/v2.27.0/docker-compose-linux-x86_64 -o $DOCKER_CONFIG/cli-plugins/docker-compose
 
 ## Compose ausführbar machen
 
-> sudo chmod +x /usr/local/bin/docker-compose
+> chmod +x $DOCKER_CONFIG/cli-plugins/docker-compose
 
 ## Installation testen
 
 > docker-compose --version
+
+Quelle https://docs.docker.com/compose/install/linux/
