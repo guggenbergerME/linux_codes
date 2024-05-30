@@ -22,3 +22,6 @@ Bei dieser Config wird netbox mit dem Port 8000 auf localhost und gemappt auf 80
 docker compose pull
 docker compose up
 ```
+
+### Links
+> https://www.youtube.com/watch?v=AmFu0UL6Hrs
