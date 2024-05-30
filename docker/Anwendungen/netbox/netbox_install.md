@@ -28,5 +28,11 @@ docker compose up
 docker compose exec netbox /opt/netbox/netbox/manage.py createsuperuser
 ```
 
+## WebGUI
+Port ist abhängig von den Eingaben in der yml Datei.
+```
+http://0.0.0.0:8000/
+```
+
 ### Links
 > https://www.youtube.com/watch?v=AmFu0UL6Hrs
