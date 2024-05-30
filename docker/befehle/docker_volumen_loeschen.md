@@ -1,7 +1,11 @@
 # Docker Volumen löschen
 
 ### Volumen anzeigen
-> docker volume ls
+```
+docker volume ls
+```
 
 ### Docker-Volume löschen
-> docker volume rm [Volume Name]
+```
+docker volume rm [Volume Name]
+```
