@@ -13,9 +13,6 @@ cd netbox-docker/
 ```
 sudo nano docker-compose.override.yml
 ```
-Bei dieser Config wird netbox mit dem Port 8000 auf localhost und gemappt auf 8080
-
-> http://localhost:8000
 
 ## Compose PULL
 ```
