@@ -2,8 +2,9 @@
 netbox wird per Compose installiert
 
 ### Grunddaten von github ziehen
-> git clone -b release https://github.com/netbox-community/netbox-docker.git
-
+'''
+git clone -b release https://github.com/netbox-community/netbox-docker.git
+'''
 Wechseln in den Ordner
 > cd netbox-docker/
 
