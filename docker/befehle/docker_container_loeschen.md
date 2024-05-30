@@ -4,8 +4,11 @@ Laufenden Container stoppen
 ### docker stop [Container ID]
 
 ###Container auflisten
-> docker ps -a
+```
+docker ps -a
+```
 
 ### Container löschen
-> docker rm [Container ID]
-
+```
+docker rm [Container ID]
+```
