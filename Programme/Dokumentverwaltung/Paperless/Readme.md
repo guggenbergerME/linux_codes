@@ -8,6 +8,11 @@ Die einfachste Installation erfolgt mit dem Paperless Script.
 bash -c "$(curl -L https://raw.githubusercontent.com/paperless-ngx/paperless-ngx/main/install-paperless-ngx.sh)"
 ```
 
+## Per Email Daten einbinden
+
+Infos
+https://www.youtube.com/watch?v=Wf2euUY-rzs
+
 ### Mehr Informationen
 https://github.com/paperless-ngx/paperless-ngx
 
