@@ -10,3 +10,6 @@ bash -c "$(curl -L https://raw.githubusercontent.com/paperless-ngx/paperless-ngx
 
 ### Mehr Informationen
 https://github.com/paperless-ngx/paperless-ngx
+
+### Tutorials
+https://www.youtube.com/watch?v=VBgRJHx0hPI
