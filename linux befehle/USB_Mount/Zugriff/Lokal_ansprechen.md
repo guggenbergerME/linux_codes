@@ -2,5 +2,5 @@
 
 ### Ubuntu/Linux Mint
 ```
-medie/...
+media/...
 ```
