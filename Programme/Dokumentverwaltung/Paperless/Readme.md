@@ -13,3 +13,6 @@ https://github.com/paperless-ngx/paperless-ngx
 
 ### Tutorials
 https://www.youtube.com/watch?v=VBgRJHx0hPI
+
+## Dokumente automatisch digitalisieren
+https://www.youtube.com/watch?v=6i0nJ8S3whM
