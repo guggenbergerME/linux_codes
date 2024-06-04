@@ -1,32 +1,19 @@
 # Wireguard Tunnel
 
-### Wireguard insallieren
+### Tunnel konfigurieren
+
+Vor der Installation aktualisieren wir einmal die Paketquellen und Updaten unseren Server:
 ```
-sudo add-apt-repository PPA:wireguard/wireguard
-```
-```
-sudo apt-get update
-```
-```
-sudo apt-get install wireguard
+sudo apt update && sudo apt upgrade -y
 ```
 
-Die Installation von wireguard-tools legt das Konfigurationsverzeichnis /etc/wireguard/ mit den zweckmäßigen Berechtigungen an. Kontrolle:
+Anschließend können wir WireGuard installieren:
 ```
-ls -ld /etc/wireguard/
+sudo apt install wireguard
 ```
-mit der Ausgabe
-```
-drwx------ 2 root root 4096 Jun  4 07:56 /etc/wireguard/
-```
-Das Konfigurationsverzeichnis muss die hier gezeigten Berechtigungen und Besitzer haben!
+Die Grundvoraussetzung für einen funktionierenden WireGuard Server ist, dass unser System IP Pakete des WireGuard Interfaces weiterleitet. Dazu muss man die Konfigurationsdatei /etc/sysctl.conf anpassen, und zwar das # vor dem Eintrag net.ipv4.ip_forward=1 entfernen und speichern.
 
-Eine Installation von WireGuard aus einer Fremdquelle ist ab August 2020 bei Ubuntu nicht mehr erforderlich.
-Der Start des Moduls wireguard.ko erfolgt automatisch beim Erstellen einer WireGuard-Schnittstelle. Es kann optional auch bereits beim Start des Kernels automatisch durch ein Eintragen in der Datei /etc/modules geladen werden:
+Damit die Änderungen aktiviert werden, muss man den Befehl eintippen:
 ```
-echo "wireguard" | sudo tee -a /etc/modules 
-```
-Nach einem Neustart sollte das Modul geladen werden. Ohne Neustart kann das Modul auch manuell geladen werden:
-```
-sudo modprobe wireguard 
+sudo sysctl -p
 ```
