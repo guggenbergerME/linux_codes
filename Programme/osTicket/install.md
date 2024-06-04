@@ -51,6 +51,7 @@ services:
 ```
 
 ## Admin login
+```
 https://10.20.10.249:6784/scp/login.php
-
+```
 https://mariushosting.com/how-to-install-osticket-on-your-synology-nas/
