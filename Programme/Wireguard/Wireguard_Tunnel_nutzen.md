@@ -74,7 +74,11 @@ Nun starten wir WireGuard mit den folgenden Befehlen. Dadurch wird dann auch der
 
 ```
 sudo systemctl enable wg-quick@wg0
+```
+```
 sudo systemctl start wg-quick@wg0
+```
+```
 sudo systemctl status wg-quick@wg0
 ```
 
