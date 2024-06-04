@@ -44,3 +44,6 @@ Zu erreichen ist die Weboberfläche unter
 ```
 http://localhost:51821/
 ```
+
+### Github des Projekts
+https://github.com/WeeJeWel/wg-easy
