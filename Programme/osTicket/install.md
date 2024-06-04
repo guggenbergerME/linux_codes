@@ -12,10 +12,10 @@ services:
       - seccomp:unconfined
       - apparmor:unconfined
     environment:
-      - MYSQL_ROOT_PASSWORD=qwerqwer
-      - MYSQL_USER=mysqlUSER
-      - MYSQL_PASSWORD=qwerqwer
-      - MYSQL_DATABASE=osticketdb
+      - MYSQL_ROOT_PASSWORD=root_password
+      - MYSQL_USER=some_user
+      - MYSQL_PASSWORD=some_password
+      - MYSQL_DATABASE=my_database_name
     volumes:
       - /volume1/docker/osticket:/var/lib/mysql:rw
     restart: on-failure:5
@@ -28,18 +28,18 @@ services:
     depends_on:
       - osticket_db
     environment:
-       MYSQL_USER: mysqlUSER
-       MYSQL_PASSWORD: qwerqwer
-       MYSQL_DATABASE: osticketdb
+       MYSQL_USER: some_user
+       MYSQL_PASSWORD: some_password
+       MYSQL_DATABASE: my_database_name
        MYSQL_HOST: osticket_db
-       INSTALL_SECRET: Guggenberger
-       INSTALL_URL: http://guggenberger.me
+       INSTALL_SECRET: Guggenberger.me
+       INSTALL_URL: http://www.Guggenberger.me
        INSTALL_NAME: GIMA Ticketsystem
        ADMIN_USERNAME: admin
        ADMIN_PASSWORD: qwerqwer
-       ADMIN_FIRSTNAME: AdminVorname
-       ADMIN_LASTNAME: AdminNachname
-       ADMIN_EMAIL: ticketos@guggenberger.me
+       ADMIN_FIRSTNAME: AdminV
+       ADMIN_LASTNAME: AdminL
+       ADMIN_EMAIL: admin@email
        CRON_INTERVAL: 1
        SMTP_USER: Your-own-gmail-address
        SMTP_PASSWORD: Your-own-app-password
