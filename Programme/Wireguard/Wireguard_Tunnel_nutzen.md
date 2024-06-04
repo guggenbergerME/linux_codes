@@ -25,7 +25,7 @@ Das Schlüsselpaar des Servers wird mit dem folgenden Befehl erstellt:
 ```
 wg genkey | sudo tee /etc/wireguard/privatekey | wg pubkey | sudo tee /etc/wireguard/publickey
 ```
-## Server Config
+## Server config
 
 Den Private Key sollte man die Zwischenablage kopieren, da man diesen im nächsten Schritt für die Serverkonfiguration von WireGuard benötigt. Dieser lässt sich mit sudo cat /etc/wireguard/privatekey anzeigen.
 
@@ -44,4 +44,12 @@ SaveConfig = true
 PostUp = iptables -A FORWARD -i %i -j ACCEPT; iptables -A FORWARD -o %i -j ACCEPT; iptables -t nat -A POSTROUTING -o ens160 -j MASQUERADE
 PostDown = iptables -D FORWARD -i %i -j ACCEPT; iptables -D FORWARD -o %i -j ACCEPT; iptables -t nat -D POSTROUTING -o ens160 -j MASQUERADE
 ListenPort = 51820
+```
+
+## Client config
+Jetzt müssen wir für unseren Client ebenfalls ein Schlüsselpaar anlegen und außerdem den Public Key des Clients in die Serverkonfiguration schreiben.
+
+Schlüssel generieren
+```
+wg genkey | tee client_key | wg pubkey > client_pub
 ```
