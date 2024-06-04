@@ -35,7 +35,7 @@ sudo touch /etc/wireguard/wg0.conf
 ```
 verwenden.
 
- In die Datei schreibt ihr mit dem Texteditor eurer Wahl folgendes:
+ In die Datei wg0.conf schreibt ihr mit dem Texteditor eurer Wahl folgendes:
  ```
 [Interface]
 PrivateKey = Hier den privaten Key einfügen
@@ -53,3 +53,15 @@ Schlüssel generieren
 ```
 wg genkey | tee client_key | wg pubkey > client_pub
 ```
+Für den Client erfolgt noch der nachfolgende Eintrag
+```
+[Interface]
+PrivateKey = Hier Private Key des Clients einfügen
+Address = 10.0.0.2/32
+
+[Peer]
+PublicKey = Hier Public Key des Servers einfügen
+Endpoint = Public IP des Servers:51820
+AllowedIPs = 10.0.0.0/24
+```
+in die wg0.conf
