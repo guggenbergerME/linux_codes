@@ -53,7 +53,9 @@ Schlüssel generieren
 ```
 wg genkey | tee client_key | wg pubkey > client_pub
 ```
-Für den Client erfolgt noch der nachfolgende Eintrag
+
+Config des Clients
+
 ```
 [Interface]
 PrivateKey = Hier Private Key des Clients einfügen
@@ -64,4 +66,21 @@ PublicKey = Hier Public Key des Servers einfügen
 Endpoint = Public IP des Servers:51820
 AllowedIPs = 10.0.0.0/24
 ```
-in die wg0.conf
+In der wg.conf auf dem Server muss dann noch der Public Key des Clients eingetragen werden. Dieser wird in der Config als Peer bezeichnet.
+
+Entsprechend der Konfiguration hat der Server im WireGuard Netzwerk die IP-Adresse 10.0.0.1 und der Client 10.0.0.2 .  Wir haben eine 24 Bit Subnetzmaske gewählt (/24 bzw. 255.255.255.0). Für die Konfiguration hätte auch jeder andere private IP-Adressbereich genutzt werden können, zum Beispiel 192.168.X.X /24 .
+
+Nun starten wir WireGuard mit den folgenden Befehlen. Dadurch wird dann auch der Status des Services angezeigt, welcher “active” sein sollte.
+
+```
+sudo systemctl enable wg-quick@wg0
+sudo systemctl start wg-quick@wg0
+sudo systemctl status wg-quick@wg0
+```
+
+Nun kann mit dem Client die Verbindung zum Server aufgebaut werden. Wir können uns noch kurz vergewissern, ob die VPN-Verbindung wirklich funktioniert, indem wir vom Client einen Ping an den Server senden.
+
+ping 10.0.0.1
+
+Quelle
+https://mialikescoffee.com/wireguard-vpn/
