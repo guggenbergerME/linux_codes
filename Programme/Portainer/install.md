@@ -1,6 +1,11 @@
 # Portainer installieren
 
- ## Docker Volumen anlegen
+## Pull
+```
+docker pull portainer/portainer
+```
+
+## Docker Volumen anlegen
 
  ```
 docker volume create portainer_data
