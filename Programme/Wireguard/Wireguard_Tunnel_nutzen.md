@@ -25,3 +25,23 @@ Das Schlüsselpaar des Servers wird mit dem folgenden Befehl erstellt:
 ```
 wg genkey | sudo tee /etc/wireguard/privatekey | wg pubkey | sudo tee /etc/wireguard/publickey
 ```
+## Server Config
+
+Den Private Key sollte man die Zwischenablage kopieren, da man diesen im nächsten Schritt für die Serverkonfiguration von WireGuard benötigt. Dieser lässt sich mit sudo cat /etc/wireguard/privatekey anzeigen.
+
+Nun muss die Konfiguration des WireGuard Servers angelegt werden, wofür der private Schlüssel benötigt wird. Dafür die Datei /etc/wireguard/wg0.conf anlegen. Dazu könnt ihr den Befehl 
+```
+sudo touch /etc/wireguard/wg0.conf
+```
+verwenden.
+
+ In die Datei schreibt ihr mit dem Texteditor eurer Wahl folgendes:
+ ```
+[Interface]
+PrivateKey = Hier den privaten Key einfügen
+Address = 10.0.0.1/24
+SaveConfig = true
+PostUp = iptables -A FORWARD -i %i -j ACCEPT; iptables -A FORWARD -o %i -j ACCEPT; iptables -t nat -A POSTROUTING -o ens160 -j MASQUERADE
+PostDown = iptables -D FORWARD -i %i -j ACCEPT; iptables -D FORWARD -o %i -j ACCEPT; iptables -t nat -D POSTROUTING -o ens160 -j MASQUERADE
+ListenPort = 51820
+```
