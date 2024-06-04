@@ -42,3 +42,5 @@ http://10.20.10.249:8888/scp/login.php
 ## Login
 username: ostadmin
 password: Admin1
+
+https://hub.docker.com/r/osticket/osticket
