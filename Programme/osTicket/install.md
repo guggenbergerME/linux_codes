@@ -2,56 +2,40 @@
 
 ## docker compose
 ```
-version: '3.9'
+version: '3'
 services:
-  osticket_db:
-    image: mariadb:11.3-jammy
-    container_name: OsTicket_DB
-    security_opt:
-      - no-new-privileges:true
-      - seccomp:unconfined
-      - apparmor:unconfined
-    environment:
-      - MYSQL_ROOT_PASSWORD=root_password
-      - MYSQL_USER=some_user
-      - MYSQL_PASSWORD=some_password
-      - MYSQL_DATABASE=my_database_name
+  mysql:
+    image: mysql:5.7
     volumes:
-      - /volume1/docker/osticket:/var/lib/mysql:rw
-    restart: on-failure:5
- 
+      - "osticket-db1:/var/lib/mysql"
+    environment:
+      MYSQL_ROOT_PASSWORD: Please-Change-Me-Im-Root
+      MYSQL_DATABASE: osticket
+      MYSQL_USER: osticket
+      MYSQL_PASSWORD: Please-Change-Me
   osticket:
     image: devinsolutions/osticket:latest
-    container_name: OsTicket
-    ports:
-      - 6784:80
-    depends_on:
-      - osticket_db
+    volumes:
+      - 'osticket-app:/var/lib/osticket'
     environment:
-       MYSQL_USER: some_user
-       MYSQL_PASSWORD: some_password
-       MYSQL_DATABASE: my_database_name
-       MYSQL_HOST: osticket_db
-       INSTALL_SECRET: Guggenberger.me
-       INSTALL_URL: http://www.Guggenberger.me
-       INSTALL_NAME: GIMA Ticketsystem
-       ADMIN_USERNAME: admin
-       ADMIN_PASSWORD: qwerqwer
-       ADMIN_FIRSTNAME: AdminV
-       ADMIN_LASTNAME: AdminL
-       ADMIN_EMAIL: admin@email
-       CRON_INTERVAL: 1
-       SMTP_USER: Your-own-gmail-address
-       SMTP_PASSWORD: Your-own-app-password
-       SMTP_HOST: smtp.gmail.com
-       SMTP_PORT: 587
-       SMTP_FROM: Your-own-gmail-address
-       SMTP_TLS: 1
-    restart: on-failure:5
+      MYSQL_HOST: mysql
+      MYSQL_DATABASE: osticket
+      MYSQL_USER: osticket
+      MYSQL_PASSWORD: Please-Change-Me
+    ports:
+      - 8888:80
+    restart: on-failure
+
+volumes:
+  osticket-db1:
+    driver: local
+  osticket-app:
+    driver: local
+
 ```
 
 ## Admin login
 ```
-http://10.20.10.249:6784/scp/login.php
+http://10.20.10.249:8888/scp/login.php
 ```
 https://mariushosting.com/how-to-install-osticket-on-your-synology-nas/
