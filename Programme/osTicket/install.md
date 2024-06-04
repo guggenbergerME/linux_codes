@@ -49,3 +49,5 @@ services:
        SMTP_TLS: 1
     restart: on-failure:5
 ```
+
+https://mariushosting.com/how-to-install-osticket-on-your-synology-nas/
