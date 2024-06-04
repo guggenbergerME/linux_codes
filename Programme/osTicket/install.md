@@ -12,10 +12,10 @@ services:
       - seccomp:unconfined
       - apparmor:unconfined
     environment:
-      - MYSQL_ROOT_PASSWORD=root_password
-      - MYSQL_USER=some_user
-      - MYSQL_PASSWORD=some_password
-      - MYSQL_DATABASE=my_database_name
+      - MYSQL_ROOT_PASSWORD=qwerqwer
+      - MYSQL_USER=mysqlUSER
+      - MYSQL_PASSWORD=qwerqwer
+      - MYSQL_DATABASE=osticketdb
     volumes:
       - /volume1/docker/osticket:/var/lib/mysql:rw
     restart: on-failure:5
@@ -28,18 +28,18 @@ services:
     depends_on:
       - osticket_db
     environment:
-       MYSQL_USER: some_user
-       MYSQL_PASSWORD: some_password
-       MYSQL_DATABASE: my_database_name
+       MYSQL_USER: mysqlUSER
+       MYSQL_PASSWORD: qwerqwer
+       MYSQL_DATABASE: osticketdb
        MYSQL_HOST: osticket_db
-       INSTALL_SECRET: MariushostingMariushostingMari13
-       INSTALL_URL: https://osticket.yourname.synology.me
-       INSTALL_NAME: Marius Helpdesk
-       ADMIN_USERNAME: marius
-       ADMIN_PASSWORD: mariushosting
-       ADMIN_FIRSTNAME: Marius
-       ADMIN_LASTNAME: Lixandru
-       ADMIN_EMAIL: yourown@email
+       INSTALL_SECRET: Guggenberger
+       INSTALL_URL: http://guggenberger.me
+       INSTALL_NAME: GIMA Ticketsystem
+       ADMIN_USERNAME: admin
+       ADMIN_PASSWORD: qwerqwer
+       ADMIN_FIRSTNAME: AdminVorname
+       ADMIN_LASTNAME: AdminNachname
+       ADMIN_EMAIL: ticketos@guggenberger.me
        CRON_INTERVAL: 1
        SMTP_USER: Your-own-gmail-address
        SMTP_PASSWORD: Your-own-app-password
