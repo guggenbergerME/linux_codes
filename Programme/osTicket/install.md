@@ -38,4 +38,7 @@ volumes:
 ```
 http://10.20.10.249:8888/scp/login.php
 ```
-https://mariushosting.com/how-to-install-osticket-on-your-synology-nas/
+
+## Login
+username: ostadmin
+password: Admin1
