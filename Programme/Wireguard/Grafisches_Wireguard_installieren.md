@@ -38,3 +38,9 @@ Durch den nachfolgenden Befehl können alle laufenden Container aufgelistet werd
 ```
 docker ps
 ```
+## Weboberfläche öffnen
+Zu erreichen ist die Weboberfläche unter
+```
+http://localhost:51821/
+```
+
