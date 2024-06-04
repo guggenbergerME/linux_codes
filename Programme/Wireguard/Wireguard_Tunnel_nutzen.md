@@ -17,3 +17,11 @@ Damit die Änderungen aktiviert werden, muss man den Befehl eintippen:
 ```
 sudo sysctl -p
 ```
+Anschließend ändern wir die Berechtigungen des Ordners /etc/wireguard mit 
+```
+umask 077 /etc/wireguard
+```
+Das Schlüsselpaar des Servers wird mit dem folgenden Befehl erstellt:
+```
+wg genkey | sudo tee /etc/wireguard/privatekey | wg pubkey | sudo tee /etc/wireguard/publickey
+```
