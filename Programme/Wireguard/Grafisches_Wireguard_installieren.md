@@ -31,3 +31,4 @@ docker run -d \
   --restart unless-stopped \
   weejewel/wg-easy
 ```
+Anschliessend werden noch alle fehlenden Pakete installiert.
