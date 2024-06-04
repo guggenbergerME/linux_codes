@@ -7,3 +7,6 @@ curl -sSL https://get.docker.com | sh
 ```
 sudo usermod -aG docker $(whoami)
 ```
+
+Quelle
+https://gnulinux.ch/schnell-zum-eigenen-vpn-server-mit-wireguard-easy
