@@ -32,3 +32,9 @@ docker run -d \
   weejewel/wg-easy
 ```
 Anschliessend werden noch alle fehlenden Pakete installiert.
+
+## Docker Container auflisten
+Durch den nachfolgenden Befehl können alle laufenden Container aufgelistet werden.
+```
+docker ps
+```
