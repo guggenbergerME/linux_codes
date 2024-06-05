@@ -141,6 +141,26 @@ tar -xzvf /opt/backup-compose-projects/composeproject1.tar.gz
 ```
 schon ist alles wieder an Ort und Stelle. 
 
+### Docker Container bzw. Image
+
+Auch Docker Container oder Images selbst kann man sichern und wiederherstellen, oder besser gesagt, man kann so den Status eines Containers in ein Image abspeichern (wie einen Snapshot). Das erstellte Image bzw. der Snapshot kann dann gesichert werden. Dies kann Sinn machen, wenn man zu Debugging Zwecken einen Container mit dem aktuellen Stand in eine Testumgebung kopieren möchte, um dort dann ausgiebig zu troubleshooten.
+Wir wollen nun wissen wie unser Container heißt, mit diesem Befehl bekommt man eine Übersicht aller laufender Container:
+
+    docker ps
+
+nun sucht man sich den zu sichernden Container heraus und nutzt entweder dessen CONTAINER ID oder den Namen:
+
+    docker commit -p CONTAINER-ID BACKUP-NAME
+
+verifizieren kann man das nun mit folgendem Befehl, in der Liste sollte nun irgendwo der BACKUP-NAME auftauchen
+
+    docker image ls
+
+Um das Image nun auf der Festplatte abzuspeichern:
+
+    docker save -o backup-name.tar BACKUP-NAME
+
+
 ## Backup per Script
 Unter nachfolgendem GitHub Link findet sich eine Sammlung mit Backup Scripts
 
