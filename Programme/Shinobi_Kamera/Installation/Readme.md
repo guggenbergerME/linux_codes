@@ -7,7 +7,7 @@
 git clone https://gitlab.com/Shinobi-Systems/ShinobiDocker.git
 ```
 
-## installation
+## Installation
 
 Anpassen der Datei **docker-compose-main.yml**.
 
