@@ -50,6 +50,11 @@ Port 2222 lauscht, können Sie diesen Befehl verwenden, um Verbindungen an diese
 sudo ufw enable
 ```
 
+## udp öffnen
+```
+sudo ufw allow 80/udp
+```
+
 ## Zulassen anderer Verbindungen
 
 Jetzt sollten Sie alle anderen Verbindungen zulassen, auf die Ihr Server reagieren soll. Die Verbindungen, die Sie zulassen sollten, sind von Ihren spezifischen Bedürfnissen abhängig. 
