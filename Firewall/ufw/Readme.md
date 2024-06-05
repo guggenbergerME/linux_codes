@@ -98,4 +98,145 @@ Außerdem können Sie auch den Zielport angeben, mit dem das Subnetz 203.0.113.0
 sudo ufw allow from 203.0.113.0/24 to any port 22
 ```
 
+## Verbindungen zu einer spezifischen Netzwerkschnittstelle
+
+Wenn Sie eine Firewall-Regel erstellen möchten, die nur für eine bestimmte Netzwerkschnittstelle gilt, können Sie dazu „allow in on“ gefolgt vom Namen der Netzwerkschnittstelle angeben.
+
+Sie möchten möglicherweise Ihre Netzwerkschnittstellen überprüfen, bevor Sie fortfahren. Dazu verwenden Sie diesen Befehl:
+
+    ip addr
+
+```
+2: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state
+. . .
+3: eth1: <BROADCAST,MULTICAST> mtu 1500 qdisc noop state DOWN group default
+. . .
+```
+
+Die hervorgehobene Ausgabe gibt die Namen der Netzwerkschnittstellen an. Sie haben typischerweise Namen wie eth0 oder enp3s2.
+
+Wenn Ihr Server eine öffentliche Netzwerkschnittstelle namens eth0 hat, könnten Sie HTTP-Verkehr (Port 80) dorthin mit diesem Befehl zulassen:
+```
+sudo ufw allow in on eth0 to any port 80
+```
+
+Dadurch würden Sie zulassen, dass Ihr Server HTTP-Anfragen aus dem öffentlichen Internet empfängt.
+
+Oder wenn Sie möchten, dass Ihr MySQL-Datenbankserver (Port 3306) an der privaten Netzwerkschnittstelle eth1 nach Verbindungen lauschen soll, können Sie diesen Befehl verwenden:
+```
+sudo ufw allow in on eth1 to any port 3306
+```
+
+Dadurch dürften andere Server in Ihrem privaten Netzwerk eine Verbindung mit Ihrer MySQL-Datenbank herstellen.
+Schritt 6 — Ablehnen von Verbindungen
+
+Wenn Sie die Standardrichtlinie für eingehende Verbindungen nicht geändert haben, ist UFW so konfiguriert, dass alle eingehenden Verbindungen abgelehnt werden. Das vereinfacht im Allgemeinen das Erstellen einer sicheren Firewall-Richtlinie, da Sie Regeln erstellen müssen, die bestimmte Ports und IP-Adressen explizit zulassen.
+
+Manchmal werden Sie jedoch einzelne Verbindungen auf Grundlage der Quell-IP-Adresse oder des Subnetzes ablehnen wollen, vielleicht weil Sie wissen, dass Ihr Server von dort angegriffen wird. Wenn Sie Ihre Richtlinie für eingehenden Datenverkehr in allow ändern möchten (was nicht empfohlen wird), müssten Sie für alle Dienste oder IP-Adressen, bei denen Sie keine Verbindung zulassen wollen, deny-Regeln erstellen.
+
+Um deny-Regeln zu schreiben, können Sie die oben beschriebenen Befehle verwenden und allow durch deny ersetzen.
+
+Um zum Beispiel HTTP-Verbindungen abzulehnen, können Sie diesen Befehl verwenden:
+
+```
+sudo ufw deny http
+```
+
+Oder wenn Sie alle Verbindungen von 203.0.113.4 ablehnen möchten, können Sie diesen Befehl verwenden:
+
+```
+sudo ufw deny from 203.0.113.4
+```
+
+Jetzt werfen wir einen Blick auf das Löschen von Regeln.
+
+## Löschen von Regeln
+
+Zu wissen, wie man Firewall-Regeln löscht, ist genauso wichtig wie zu wissen, wie man sie erstellt. Es gibt zwei Wege, um anzugeben, welche Regeln gelöscht werden sollen: anhand der Regelnummer oder der tatsächlichen Regel (ähnlich wie beim Angeben der Regeln im Rahmen der Erstellung). Wir beginnen mit der Methode Löschen anhand von Regelnummer, da sie einfacher ist.
+Nach Regelnummer
+
+Wenn Sie die Regelnummer verwenden, um Firewall-Regeln zu löschen, wird eine Liste Ihrer Firewall-Regeln angezeigt. Der UFW-Statusbefehl hat eine Option, um neben jeder Regel eine Nummer anzuzeigen, wie hier gezeigt:
+
+```
+sudo ufw status numbered
+```
+
+```
+Status: active
+
+     To                         Action      From
+     --                         ------      ----
+[ 1] 22                         ALLOW IN    15.15.15.0/24
+[ 2] 80                         ALLOW IN    Anywhere
+```
+
+Wenn wir entscheiden, dass wir Regel 2, die Verbindungen an Port 80 (HTTP) zulässt, löschen möchten, können wir sie in einem UFW-Befehl wie diesem angeben:
+
+```
+sudo ufw delete 2
+```
+
+Dadurch würde eine Bestätigungsaufforderung angezeigt und Regel 2, die HTTP-Verbindungen zulässt, dann gelöscht. Beachten Sie, dass Sie bei aktiviertem IPv6 wahrscheinlich auch die entsprechende IPv6-Regel löschen möchten.
+Nach tatsächlicher Regel
+
+Die Alternative zu Regelnummern besteht darin, die tatsächlich zu löschende Regel anzugeben. Wenn Sie zum Beispiel die Regel allow http entfernen möchten, können Sie das wie folgt schreiben:
+
+```
+sudo ufw delete allow http
+```
+
+Sie könnten die Regel auch anhand von allow 80 anstelle des Dienstnamens angeben:
+
+```
+sudo ufw delete allow 80
+```
+
+Diese Methode löscht sowohl IPv4- als auch IPv6-Regeln, falls vorhanden.
+
+## Prüfen von UFW-Status und -Regeln
+
+Sie können den Status von UFW mit diesem Befehl jederzeit überprüfen:
+
+```
+sudo ufw status verbose
+```
+
+Wenn UFW deaktiviert ist, was standardmäßig der Fall ist, sehen Sie in etwa Folgendes:
+
+```
+Status: inactive
+```
+
+Wenn UFW aktiv ist, was der Fall sein sollte, wenn Sie Schritt 3 ausgeführt haben, teilt die Ausgabe mit, dass UFW aktiv ist; zudem werden alle festgelegten Regeln aufgelistet. Wenn Sie die Firewall beispielsweise so einrichten, dass SSH (Port 22)-Verbindungen überall zugelassen werden, könnte die Ausgabe ungefähr wie folgt aussehen:
+
+```
+Status: active
+Logging: on (low)
+Default: deny (incoming), allow (outgoing), disabled (routed)
+New profiles: skip
+
+To                         Action      From
+--                         ------      ----
+22/tcp                     ALLOW IN    Anywhere
+```
+
+Verwenden Sie den Befehl status, um zu prüfen, wie UFW die Firewall konfiguriert hat.
+Schritt 9 — Aktivieren oder Zurücksetzen von UFW (optional)
+
+Wenn Sie entscheiden, dass Sie UFW nicht mehr verwenden möchten, können Sie die Firewall mit diesem Befehl deaktivieren:
+
+```
+sudo ufw disable
+```
+
+Alle Regeln, die Sie mit UFW erstellt haben, sind dann nicht mehr aktiv. Sie können später jederzeit sudo ufw enable nutzen, um sie wieder zu aktivieren.
+
+Wenn Sie bereits UFW-Regeln konfiguriert haben, aber lieber neu anfangen möchten, können Sie den Befehl reset verwenden:
+
+```
+sudo ufw reset
+```
+
+Dadurch wird UFW deaktiviert und alle Regeln, die zuvor definiert wurden, werden gelöscht. Beachten Sie, dass die Standardrichtlinien nicht zu ihren ursprünglichen Einstellungen zurückkehren, wenn Sie sie irgendwann geändert haben. Jetzt sollten Sie mit UFW neu anfangen können.
+
 
