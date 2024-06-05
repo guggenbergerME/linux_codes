@@ -160,6 +160,20 @@ Um das Image nun auf der Festplatte abzuspeichern:
 
     docker save -o backup-name.tar BACKUP-NAME
 
+komprimieren kann man die Datei zum Schluss ebenfalls noch
+
+    gzip backup-name.tar
+
+Nun hat man eine komprimierte Version des Docker Containers.
+
+**Der Restore des Images erfolgt dann mit docker load:**
+
+    docker load -i backup-name.tar
+
+Um den Container wieder herzustellen, kann dann einfach das Image mit docker run gestartet werden:
+
+    docker run -d --name NEWCONTAINERNAME BACKUP-NAME
+
 
 ## Backup per Script
 Unter nachfolgendem GitHub Link findet sich eine Sammlung mit Backup Scripts
