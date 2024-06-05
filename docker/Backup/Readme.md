@@ -104,6 +104,20 @@ cat backup.sql | docker -i exec CONTAINERNAME psql -U POSTGRESUSER -d DATABASENA
 zcat backup.sql.gz | docker -i exec CONTAINERNAME psql -U POSTGRESUSER -d DATABASENAME
 ```
 
+### InfluxDB v2.x
+
+Die InfluxDB in Version 2.x bringt mit der CLI influx einen Parameter backup / restore mit. Mit diesem kann man ganz einfach die InfluxDB Datenbank sichern. Voraussetzung hierfür ist, das ihr ein Backup Folder in euren Container vorab nach /backup mountet.
+```
+volumes:
+    - "/backup/influxdb:/backup/"
+```
+
+dann kann man ein komplettes komprimiertes Backup der Datenbank ganz einfach mit dem folgenden Befehl ausführen:
+```
+docker exec CONTAINERNAME influx backup --compression gzip /backup/backup1
+```
+
+
 ## Backup per Script
 Unter nachfolgendem GitHub Link findet sich eine Sammlung mit Backup Scripts
 
