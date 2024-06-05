@@ -9,6 +9,29 @@ Zusammengefasst heißt das:
 + Docker Container bzw. Image sichern
 + Dateien, die außerhalb des Compose Projekt Ordners liegen und in einen Container gemountet sind, sichern.
 
+## Manuelles Backup und Restore
+
+Hier ein paar Tips wie man manuell Docker Container bzw. deren Applikationen sichert und wiederherstellt.
+### Docker Volume
+Zuerst sollte man wissen wie das zu sichernde Docker Volume heißt. Eine Übersicht ergibt der folgende Befehl:
+    docker volume ls
+Ich möchte das Volume mit dem Namen test-data sichern, mein Backup Verzeichnis soll /backup/volumes/ sein, welches vorher angelegt werden muss:
+
+    mkdir -p /backup/volumes/
+    docker run --rm \
+            -v /backup/volumes:/backup \
+            -v test-data:/data:ro \
+            debian:stretch-slim bash -c "cd /data && /bin/tar -czvf /backup/test-data.tar.gz ."
+
+Zum Restore das Ganze einfach umdrehen.
+
+    docker run --rm \
+            -v /backup/volumes:/backup \
+            -v test-data:/data \
+            debian:stretch-slim bash -c "cd /data && /bin/tar -xzvf /backup/test-data.tar.gz"
+
+Nun sollten wieder alle Dateien an Ort und Stelle sein. Falls Dateien am Ort vorhanden sind, werden diese mit den Dateien aus dem Backup überschrieben. 
+
 ## Backup per Script
 Unter nachfolgendem GitHub Link findet sich eine Sammlung mit Backup Scripts
 
