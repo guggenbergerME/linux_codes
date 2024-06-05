@@ -43,3 +43,18 @@ System **16.04/18.04/20.04 LTS**
 ```
 sudo systemctl restart ssh
 ```
+
+# Status anzeigen
+
+**Status**
+```
+sudo /etc/init.d/ssh status
+```
+oder
+```
+sudo service ssh status
+```
+oder systemd - System
+```
+sudo systemctl status ssh 
+```
