@@ -42,3 +42,40 @@ Wir können die äquivalente Regel jedoch auch schreiben, indem wir den Port ans
 ```
 sudo ufw allow 22
 ```
+
+Wenn Sie Ihren SSH-Daemon so konfiguriert haben, dass er einen anderen Port verwendet, müssen Sie den entsprechenden Port angeben. Wenn Ihr SSH-Server beispielsweise an 
+Port 2222 lauscht, können Sie diesen Befehl verwenden, um Verbindungen an diesem Port zuzulassen:
+
+```
+sudo ufw enable
+```
+
+## Zulassen anderer Verbindungen
+
+Jetzt sollten Sie alle anderen Verbindungen zulassen, auf die Ihr Server reagieren soll. Die Verbindungen, die Sie zulassen sollten, sind von Ihren spezifischen Bedürfnissen abhängig. 
+Glücklicherweise wissen Sie bereits, wie Sie Regeln schreiben, die Verbindungen anhand eines Dienstnamens oder Ports zulassen. Das haben wir bereits für SSH an Port 22 getan. Sie können es auch tun für:
+
++ HTTP an Port 80, was nicht verschlüsselte Webserver verwenden; mit **sudo ufw allow http** oder **sudo ufw allow 80**
++ HTTPS an Port 443, was verschlüsselte Webserver verwenden; mit **sudo ufw allow https** oder **sudo ufw allow 443**
+
+Es gibt weitere Möglichkeiten, um andere Verbindungen zuzulassen, abgesehen von der Angabe eines Ports oder bekannten Dienstes.
+
+## Spezifische Portbereiche
+
+Sie können mit UFW spezifische Portbereiche angeben. Einige Anwendungen verwenden mehrere Ports anstelle eines einzelnen Ports.
+
+Um zum Beispiel X11-Verbindungen zuzulassen, die Ports 6000-6007 verwenden, nutzen Sie diese Befehle:
+
+```
+sudo ufw allow 6000:6007/tcp
+sudo ufw allow 6000:6007/udp
+```
+
+Wenn Sie mit UFW Portbereiche angeben, müssen Sie das Protokoll (tcp oder udp) angeben, für das die Regeln gelten sollen. Wir haben das vorher nicht erwähnt, da wir ohne Angabe des Protokolls automatisch beide Protokolle zulassen, was in den meisten Fällen in Ordnung ist.
+
+## Spezifische IP-Adressen
+
+Beim Arbeiten mit UFW können Sie auch IP-Adressen spezifizieren. Wenn Sie zum Beispiel Verbindungen von einer bestimmten IP-Adresse zulassen möchten, wie einer Arbeits- oder privaten IP-Adresse unter 203.0.113.4, müssen Sie from und dann die IP-Adresse angeben:
+```
+sudo ufw allow from 203.0.113.4
+```
