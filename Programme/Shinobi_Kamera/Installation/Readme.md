@@ -9,7 +9,7 @@ git clone https://gitlab.com/Shinobi-Systems/ShinobiDocker.git
 
 ## installation
 
-Anpassen der Datei **docker-compose.yml**.
+Anpassen der Datei **docker-compose-main.yml**.
 Installationsscript starten
 ```
 bash setup_and_run.sh
