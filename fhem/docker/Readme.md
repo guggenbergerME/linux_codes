@@ -16,3 +16,9 @@ Um die **fhem.cfg** direkt im web zu bearbeiten ist folgendes Attribut notwendig
 ```
 attr WEB editConfig 1
 ```
+
+## Einspielen der fhem.cfg
+Sicherungskopien
+```
+https://github.com/guggenbergerME/linux_codes/tree/main/fhem/fhem.cfg
+```
