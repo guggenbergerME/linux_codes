@@ -2,10 +2,7 @@
 
 [Aktuelle Versionen ](https://github.com/rustdesk/rustdesk/releases)
 
-```
-# Bitte ignorieren Sie den falschen Bericht zur Festplattennutzung
-sudo apt install -fy ./rustdesk-<version>.deb
-```
+deb download und installieren
 
 
 ### weitere Infos
