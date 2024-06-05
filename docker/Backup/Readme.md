@@ -23,7 +23,7 @@ Ich möchte das Volume mit dem Namen test-data sichern, mein Backup Verzeichnis 
             -v test-data:/data:ro \
             debian:stretch-slim bash -c "cd /data && /bin/tar -czvf /backup/test-data.tar.gz ."
 
-Zum Restore das Ganze einfach umdrehen.
+**Zum Restore das Ganze einfach umdrehen.**
 
     docker run --rm \
             -v /backup/volumes:/backup \
@@ -34,32 +34,32 @@ Nun sollten wieder alle Dateien an Ort und Stelle sein. Falls Dateien am Ort vor
 
 ### MySQL
 So kann man ganz einfach eine MySQL oder eine ältere MariaDB mittels mysqldump und mysql Sichern und Wiederherstellen: 
-Backup (Sichern)
+**Backup (Sichern)**
 ```
 docker exec CONTAINERNAME /usr/bin/mysqldump -u root --password=ROOTPASSWORD DATABASE > backup.sql
 ```
-Restore (Wiederherstellen)
+**Restore (Wiederherstellen)**
 ```
 cat backup.sql | docker exec -i CONTAINERNAME /usr/bin/mysql -u root --password=ROOTPASSWORD DATABASENAME
 ```
 
 ### MariaDB
 So kann man ganz einfach eine MariaDB mittels mariadb-dump sichern und mit dem mysql command wiederherstellen:
-Backup (Sichern)
+**Backup (Sichern)**
 ```
 docker exec CONTAINERNAME /usr/bin/mariadb-dump -u root --password=ROOTPASSWORD DATABASE > backup.sql
 ```
-Restore (Wiederherstellen)
+**Restore (Wiederherstellen)**
 ```
 cat backup.sql | docker exec -i CONTAINERNAME /usr/bin/mysql -u root --password=ROOTPASSWORD DATABASENAME
 ```
 und das Ganze nun noch komprimiert mit gzip:
 
-Backup (Sichern)
+**Backup (Sichern)**
 ```
 docker exec CONTAINERNAME /usr/bin/mariadb-dump -u root --password=ROOTPASSWORD DATABASE | gzip > backup.sql.gz
 ```
-Restore (Wiederherstellen)
+**Restore (Wiederherstellen)**
 ```
 zcat backup.sql.gz | docker exec -i CONTAINERNAME /usr/bin/mysql -u root --password=ROOTPASSWORD DATABASENAME
 ```
@@ -68,37 +68,37 @@ zcat backup.sql.gz | docker exec -i CONTAINERNAME /usr/bin/mysql -u root --passw
 
 Um PostgreSQL zu sichern, verwenden wir einfach pg_dump oder für alle Datenbanken pg_dumpall. Die Befehle schicken wir direkt in den Datenbank Container:
 
-Backup Aller Datenbanken unkomprimiert
+**Backup Aller Datenbanken unkomprimiert**
 ```
 docker exec CONTAINERNAME pg_dumpall -c -U POSTGRESUSER > backup.sql
 ```
-Backup Aller Datenbanken komprimiert
+**Backup Aller Datenbanken komprimiert**
 ```
 docker exec CONTAINERNAME pg_dumpall -c -U POSTGRESUSER | gzip > backup.sql.gz
 ```
-Backup einer Bestimmten Datenbank unkomprimiert
+**Backup einer Bestimmten Datenbank unkomprimiert**
 ```
 docker exec CONTAINERNAME pg_dumpall -c -U POSTGRESUSER -d DATABASENAME > backup.sql
 ```
-Backup einer Bestimmten Datenbank komprimiert
+**Backup einer Bestimmten Datenbank komprimiert**
 ```
 docker exec CONTAINERNAME pg_dumpall -c -U POSTGRESUSER -d DATABASENAME | gzip > backup.sql.gz
 ```
-Der Restore erfolgt dann so:
+**Der Restore erfolgt dann so:**
 
 Restore Aller Datenbanken unkomprimiert
 ```
 cat backup.sql | docker -i exec CONTAINERNAME psql -U POSTGRESUSER
 ```
-Restore Aller Datenbanken komprimiert
+**Restore Aller Datenbanken komprimiert**
 ```
 zcat backup.sql.gz |docker -i exec CONTAINERNAME psql -U POSTGRESUSER
 ```
-Restore einer Bestimmten Datenbank unkomprimiert
+**Restore einer Bestimmten Datenbank unkomprimiert**
 ```
 cat backup.sql | docker -i exec CONTAINERNAME psql -U POSTGRESUSER -d DATABASENAME
 ```
-Restore einer Bestimmten Datenbank komprimiert
+**Restore einer Bestimmten Datenbank komprimiert**
 ```
 zcat backup.sql.gz | docker -i exec CONTAINERNAME psql -U POSTGRESUSER -d DATABASENAME
 ```
