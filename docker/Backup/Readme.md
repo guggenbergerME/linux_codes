@@ -84,7 +84,24 @@ Backup einer Bestimmten Datenbank komprimiert
 ```
 docker exec CONTAINERNAME pg_dumpall -c -U POSTGRESUSER -d DATABASENAME | gzip > backup.sql.gz
 ```
+Der Restore erfolgt dann so:
 
+Restore Aller Datenbanken unkomprimiert
+```
+cat backup.sql | docker -i exec CONTAINERNAME psql -U POSTGRESUSER
+```
+Restore Aller Datenbanken komprimiert
+```
+zcat backup.sql.gz |docker -i exec CONTAINERNAME psql -U POSTGRESUSER
+```
+Restore einer Bestimmten Datenbank unkomprimiert
+```
+cat backup.sql | docker -i exec CONTAINERNAME psql -U POSTGRESUSER -d DATABASENAME
+```
+Restore einer Bestimmten Datenbank komprimiert
+```
+zcat backup.sql.gz | docker -i exec CONTAINERNAME psql -U POSTGRESUSER -d DATABASENAME
+```
 
 ## Backup per Script
 Unter nachfolgendem GitHub Link findet sich eine Sammlung mit Backup Scripts
