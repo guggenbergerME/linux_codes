@@ -53,6 +53,38 @@ Restore (Wiederherstellen)
 ```
 cat backup.sql | docker exec -i CONTAINERNAME /usr/bin/mysql -u root --password=ROOTPASSWORD DATABASENAME
 ```
+und das Ganze nun noch komprimiert mit gzip:
+
+Backup (Sichern)
+```
+docker exec CONTAINERNAME /usr/bin/mariadb-dump -u root --password=ROOTPASSWORD DATABASE | gzip > backup.sql.gz
+```
+Restore (Wiederherstellen)
+```
+zcat backup.sql.gz | docker exec -i CONTAINERNAME /usr/bin/mysql -u root --password=ROOTPASSWORD DATABASENAME
+```
+
+## PostgreSQL
+
+Um PostgreSQL zu sichern, verwenden wir einfach pg_dump oder für alle Datenbanken pg_dumpall. Die Befehle schicken wir direkt in den Datenbank Container:
+
+Backup Aller Datenbanken unkomprimiert
+```
+docker exec CONTAINERNAME pg_dumpall -c -U POSTGRESUSER > backup.sql
+```
+Backup Aller Datenbanken komprimiert
+```
+docker exec CONTAINERNAME pg_dumpall -c -U POSTGRESUSER | gzip > backup.sql.gz
+```
+Backup einer Bestimmten Datenbank unkomprimiert
+```
+docker exec CONTAINERNAME pg_dumpall -c -U POSTGRESUSER -d DATABASENAME > backup.sql
+```
+Backup einer Bestimmten Datenbank komprimiert
+```
+docker exec CONTAINERNAME pg_dumpall -c -U POSTGRESUSER -d DATABASENAME | gzip > backup.sql.gz
+```
+
 
 ## Backup per Script
 Unter nachfolgendem GitHub Link findet sich eine Sammlung mit Backup Scripts
