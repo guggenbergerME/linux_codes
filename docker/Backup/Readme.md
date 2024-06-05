@@ -34,6 +34,7 @@ Nun sollten wieder alle Dateien an Ort und Stelle sein. Falls Dateien am Ort vor
 
 ### MySQL
 So kann man ganz einfach eine MySQL oder eine ältere MariaDB mittels mysqldump und mysql Sichern und Wiederherstellen: 
+
 **Backup (Sichern)**
 ```
 docker exec CONTAINERNAME /usr/bin/mysqldump -u root --password=ROOTPASSWORD DATABASE > backup.sql
