@@ -1,3 +1,9 @@
+
+# Installieren
+```
+sudo apt install openssh-server
+```
+
 # Start OpenSSH Server
 
 **Start**
