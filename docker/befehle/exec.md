@@ -1,5 +1,5 @@
 # Per Bash in einen Container
 
 ```
-docker exec -it <mycontainer> bash
+docker exec -it <mycontainer> sh
 ```
