@@ -1,7 +1,16 @@
 # Shinobi installieren mit Docker
 
-## bash script
-Eingabe Terminal
+## Installieren von Github
+
+**Download Repo**
 ```
-bash <(curl -s https://gitlab.com/Shinobi-Systems/Shinobi-Installer/raw/master/shinobi-docker.sh)
+git clone https://gitlab.com/Shinobi-Systems/ShinobiDocker.git
+```
+
+## installation
+
+Anpassen der Datei **docker-compose.yml**.
+Installationsscript starten
+```
+bash setup_and_run.sh
 ```
