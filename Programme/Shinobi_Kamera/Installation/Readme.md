@@ -41,3 +41,10 @@ Passwort
 ```
 admin
 ```
+
+## Benutzer Account anlegen
+Anlegen eins Benutzer Accounts.
+Dashboard
+```
+ http://[YOUR-IP]:8080/
+```
