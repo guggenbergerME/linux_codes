@@ -198,3 +198,25 @@ Hier sind die Script inklusive Dokumentation zu finden:
 + [Docker InfluxDB 2 Backup Script](https://www.laub-home.de/wiki/Docker_InfluxDB_2_Backup_Script)
 + [Docker Compose Project Backup Script](https://www.laub-home.de/wiki/Docker_Compose_Project_Backup_Script)
 
+## Restore ecovery-docker-mysql.sh
+
+Bitte das Backupverzeichnis beachten, event. anpassen.
+
+```
+BACKUPDIR=/backup/mysql 
+```
+
+**Anwenden des Scripts** im Ordner
+```
+/usr/local/sbin
+```
+**Ausführbar** machen
+```
+sudo chmod +x /usr/local/sbin/recovery-docker-mysql.sh
+```
+**Ausführen**
+```
+sudo ./recovery-docker-mysql.sh
+```
+**Hinweis**
+**Root-Berechtigung** ist erforderlich, da das MySQL-Root-PW aus der Docker-Umgebung abgerufen wird. Wenn Sie Docker Secrets verwenden, funktioniert es nicht. Sie müssen das PW manuell im Skript speichern: MYSQL_PWD='yourpw'
