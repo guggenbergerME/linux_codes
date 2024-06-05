@@ -2,7 +2,6 @@
 
 ## Docker installation
 ```
-# For Linux and without a web server or reverse proxy (like Apache, Nginx, Cloudflare Tunnel and else) already in place:
 sudo docker run \
 --init \
 --sig-proxy=false \
