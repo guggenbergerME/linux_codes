@@ -79,3 +79,23 @@ Beim Arbeiten mit UFW können Sie auch IP-Adressen spezifizieren. Wenn Sie zum B
 ```
 sudo ufw allow from 203.0.113.4
 ```
+
+Sie können auch einen bestimmten Port angeben, mit dem die IP-Adresse eine Verbindung herstellen darf, indem Sie to any port (zu jedem Port) gefolgt von der Portnummer hinzufügen. Wenn Sie zum Beispiel 203.0.113.4 erlauben möchten, sich mit Port 22 (SSH) zu verbinden, verwenden Sie diesen Befehl:,
+
+```
+sudo ufw allow from 203.0.113.4 to any port 22
+```
+
+## Subnetze
+
+Wenn Sie ein Subnetz von IP-Adressen zulassen möchten, können Sie CIDR-Notation verwenden, um eine Netzmaske anzugeben. Wenn Sie zum Beispiel alle IP-Adressen im Bereich von 203.0.113.1 bis 203.0.113.254 zulassen möchten, können Sie diesen Befehl verwenden:
+```
+sudo ufw allow from 203.0.113.0/24
+```
+
+Außerdem können Sie auch den Zielport angeben, mit dem das Subnetz 203.0.113.0/24 eine Verbindung herstellen darf. Auch hier verwenden wir Port 22 (SSH) als Beispiel:
+```
+sudo ufw allow from 203.0.113.0/24 to any port 22
+```
+
+
