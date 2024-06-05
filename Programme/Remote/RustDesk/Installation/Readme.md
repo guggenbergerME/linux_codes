@@ -2,6 +2,13 @@
 
 ## Installation per docker-compose.yml
 
+Erstellen eines Ordners
+```
+home/rustdesk
+```
+
+Erstellen Sie eine neue docker-compose.yml mit nachfolgendem Inhalt
+
 ```
 version: '3'
 
@@ -39,4 +46,14 @@ hbbr:
     networks:
       - rustdesk-net
     restart: unless-stopped
+```
+
+## yml laden
+```
+docker compose pull
+```
+
+## Docker Stack ausführen
+```
+docker-compose up -d
 ```
