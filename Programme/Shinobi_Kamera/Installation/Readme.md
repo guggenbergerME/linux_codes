@@ -20,3 +20,18 @@ Installationsscript starten
 ```
 ./setup_and_run.sh
 ```
+
+## Erstes Login
+```
+http://YOUR_SHINOBI_SERVER_IP_ADDRESS:8080/super
+```
+
+Login
+User
+```
+admin@shinobi.video
+```
+Passwort
+```
+admin
+```
