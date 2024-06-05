@@ -11,6 +11,12 @@ git clone https://gitlab.com/Shinobi-Systems/ShinobiDocker.git
 
 Anpassen der Datei **docker-compose-main.yml**.
 
+### Lokales Volumen anpassen
+```
+volumes:
+      - $HOME/Shinobi:/home/Shinobi
+```
+
 Script ausführbar machen
 ```
 sudo chmod +x setup_and_run.sh
