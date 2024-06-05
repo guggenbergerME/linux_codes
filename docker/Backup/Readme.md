@@ -117,6 +117,29 @@ dann kann man ein komplettes komprimiertes Backup der Datenbank ganz einfach mit
 docker exec CONTAINERNAME influx backup --compression gzip /backup/backup1
 ```
 
+Das Backup file sollte dann im Ordner unter /backup/backup1 abgelegt werden. Den Backup Status sieht man im STDOUT. Der Restore kann dann durch den restore Parameter ausgeführt werden:
+
+**Restore aller Timeseries**
+    docker exec CONTAINERNAME influx restore /backup/backup1
+
+**Restore und alles ersetzen**
+    docker exec CONTAINERNAME influx restore /backup/backup1
+
+### Docker Compose Projekt Ordners
+
+Um ein Compose Projekt zu sichern ist es am besten einfach ein tar.gz des gesamten Ordners zu erstellen:
+```
+mkdir /opt/backup-compose-projects/
+cd /opt/composeproject1
+tar -czvf /opt/backup-compose-projects/composeproject1.tar.gz .
+```
+Der Restore erfolgt dann durch Entpacken des tar.gz
+```
+mkdir /opt/composeproject1
+cd /opt/composeproject1
+tar -xzvf /opt/backup-compose-projects/composeproject1.tar.gz
+```
+schon ist alles wieder an Ort und Stelle. 
 
 ## Backup per Script
 Unter nachfolgendem GitHub Link findet sich eine Sammlung mit Backup Scripts
