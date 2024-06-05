@@ -32,6 +32,28 @@ Zum Restore das Ganze einfach umdrehen.
 
 Nun sollten wieder alle Dateien an Ort und Stelle sein. Falls Dateien am Ort vorhanden sind, werden diese mit den Dateien aus dem Backup überschrieben. 
 
+### MySQL
+So kann man ganz einfach eine MySQL oder eine ältere MariaDB mittels mysqldump und mysql Sichern und Wiederherstellen: 
+Backup (Sichern)
+```
+docker exec CONTAINERNAME /usr/bin/mysqldump -u root --password=ROOTPASSWORD DATABASE > backup.sql
+```
+Restore (Wiederherstellen)
+```
+cat backup.sql | docker exec -i CONTAINERNAME /usr/bin/mysql -u root --password=ROOTPASSWORD DATABASENAME
+```
+
+### MariaDB
+So kann man ganz einfach eine MariaDB mittels mariadb-dump sichern und mit dem mysql command wiederherstellen:
+Backup (Sichern)
+```
+docker exec CONTAINERNAME /usr/bin/mariadb-dump -u root --password=ROOTPASSWORD DATABASE > backup.sql
+```
+Restore (Wiederherstellen)
+```
+cat backup.sql | docker exec -i CONTAINERNAME /usr/bin/mysql -u root --password=ROOTPASSWORD DATABASENAME
+```
+
 ## Backup per Script
 Unter nachfolgendem GitHub Link findet sich eine Sammlung mit Backup Scripts
 
@@ -44,3 +66,4 @@ Hier sind die Script inklusive Dokumentation zu finden:
 + [Docker Postgres Backup Script](https://www.laub-home.de/wiki/Docker_Postgres_Backup_Script)
 + [Docker InfluxDB 2 Backup Script](https://www.laub-home.de/wiki/Docker_InfluxDB_2_Backup_Script)
 + [Docker Compose Project Backup Script](https://www.laub-home.de/wiki/Docker_Compose_Project_Backup_Script)
+
