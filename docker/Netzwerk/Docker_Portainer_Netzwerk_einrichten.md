@@ -1,4 +1,4 @@
-# Portäiner Docker
+# Portainer Docker
 
 ## IP`s in Portainer anlegen
 
@@ -30,3 +30,19 @@ In diesem Beispiel soll eine IP für einen Dockercontainer angelegt werden
 192.168.1.22/32
 ```
 /32 setzt die Netbits auf 32 somit kann nur eine Host IP erzeugt werden,
+
+**NAME-netip anlegen**
+Nachdem die Config erstellt wurde kann die Netz IP Datei angelegt werden. Hierfür wieder auf
+
+**Add network**
+Den Driver auf **macvlan** stellen
+
+**Creation** klicken
+
+Und die zuvor erstellte Config Datei auswählen.
+
+##Container stoppen
+
+Nun den betreffenden Container stoppen!
+Anschliessend den Conatiner Namen anklicken um in die Details zu kommen. Den Container nun im Bereich **Connected networks ** dem Netzwerk **NAME-netip** hinzufügen.
+
