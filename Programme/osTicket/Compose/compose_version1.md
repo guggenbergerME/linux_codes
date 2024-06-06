@@ -1,3 +1,4 @@
+```
 services:
 
   osticket-app:
@@ -84,3 +85,5 @@ networks:
     external: true
   services:
     external: true
+
+```
