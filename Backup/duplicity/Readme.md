@@ -7,6 +7,18 @@ duplicity sichert Dateien und Verzeichnisse, indem es mit Hilfe von gpg verschl�
 Ohne weitere Angabe von Parametern erstellt duplicity automatisch mit gzip komprimierte .difftar-Dateien, mit einer maximalen Grösse von 200 MB. Sobald solch eine Datei vorliegt, wird sie mit GnuPG verschlüsselt und ins Backend hochgeladen. Danach wird das Backup fortgesetzt.
 
 ## Duplicity installieren
-**Schritt 1: Aktualisieren Sie das Paket-Repository**
-    sudo apt-get update -y
+**System update**
+```
+sudo apt-get update -y
+```
+**Installieren Sie Duplicity mit apt-get**
 
+Aktualisieren des **Repositorys**
+```
+sudo apt-get install -y duplicity
+```
+**Prüfen der installation**
+```
+apt-cache policy duplicity
+```
+Die Ausgabe sollte anzeigen, ob die Installation erfolgreich war oder nicht!
