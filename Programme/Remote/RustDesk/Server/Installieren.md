@@ -47,3 +47,6 @@ sudo rm -rf /var/log/gohttp/
 sudo rm -rf /opt/gohttp/
 sudo rm -rf /etc/systemd/system/gohttpserver.service
 ```
+
+### Links
++ [RustDesk Github Repo](https://github.com/rustdesk/rustdesk/releases/tag/1.2.3-2)
