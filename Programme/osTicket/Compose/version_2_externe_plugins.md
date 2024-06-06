@@ -49,3 +49,5 @@ networks:
     external:
       name: nginx-proxy
 ```
+
+[Quelle](https://github.com/tiredofit/docker-osticket/tree/main/examples)
