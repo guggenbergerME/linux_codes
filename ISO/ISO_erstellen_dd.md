@@ -4,12 +4,6 @@ Auslesen der Laufwerkskennung
 ```
 lsblk
 ```
-
-## USB Laufwerk auswerfen
-```
-sudo umount /dev/sdX
-```
-
 ## Download der ISO prüfen
 Das Download der ISO kann mit der angegeben Checksumme geprüft werden.
 ```
