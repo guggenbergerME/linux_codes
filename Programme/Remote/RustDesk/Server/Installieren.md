@@ -18,7 +18,11 @@ sudo ufw enable
 Führen Sie die folgenden Befehle aus:
 ```
 wget https://raw.githubusercontent.com/techahold/rustdeskinstall/master/install.sh
+```
+```
 chmod +x install.sh
+```
+```
 ./install.sh
 ```
 Es gibt auch ein Update-Skript auf Techaholds Repository.
