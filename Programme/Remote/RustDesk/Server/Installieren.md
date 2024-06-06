@@ -1,5 +1,9 @@
 # RustDesk installieren
 
+## RustDesk start|stop|status
+```
+sudo systemctl stop rustdeskrelay.service rustdesksignal.service
+```
 
 ## RustDesk löschen
 ```
