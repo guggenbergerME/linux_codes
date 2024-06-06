@@ -95,3 +95,5 @@ Difference found: File resolv.conf has mtime Fri Dec  2 05:58:42 2005, expected 
 Verify complete: 3503 files compared, 2 differences found.
 ```
 Es sieht so aus, als hätten 2 Dateien unterschiedliche Änderungszeiten als die im Sicherungssatz aufgezeichneten: resolv.conf und das aktuelle Verzeichnis (/ etc), das mit einem einzigen Punkt gekennzeichnet ist.
+
++ [mehr Informationen](https://help.ubuntu.com/community/DuplicityBackupHowto)
