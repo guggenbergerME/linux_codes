@@ -2,7 +2,11 @@
 Nachfolgend eine Sammlung von Grundbefehlen
 
 ## Grundbefehle
-sudo    Befehle mit Rechten anderer Benutzerinnen bzw. Benutzer ausführen 
+Befehle mit Rechten anderer Benutzerinnen bzw. Benutzer ausführen 
+```
+sudo
+```
+
 
 ## System update
 ```
