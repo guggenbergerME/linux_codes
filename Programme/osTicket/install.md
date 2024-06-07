@@ -36,7 +36,7 @@ volumes:
 
 ## Admin login
 ```
-http://10.20.10.249:8888/scp/login.php
+http://[IP]:8888/scp/login.php
 ```
 
 ## Login
