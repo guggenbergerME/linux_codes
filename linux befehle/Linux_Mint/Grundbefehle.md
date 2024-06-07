@@ -5,3 +5,7 @@ Nachfolgend eine Sammlung von Grundbefehlen
 ```
 sudo apt update
 ```
+oder
+```
+sudo apt-get update
+```
