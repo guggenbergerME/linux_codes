@@ -5,6 +5,6 @@ http://[IP]:8888/scp/login.php
 
 ## Login
 
-username: ostadmin
+username: ```ostadmin```
 
-password: Admin1
+password: ```Admin1```
