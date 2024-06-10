@@ -1,2 +1,2 @@
-# Shutter
+# Shutter - Bildschirmfoto
 Eine wunderbare Lösung für alle, die ein paar Ansprüche mehr haben, ist das Programm Shutter, das Sie einfach über das Software-Center oder den Befehl "sudo apt-get install shutter" installieren können. Shutter verfügt über dieselben Features, wie das bereits vorgestellte Mint-Standardwerkzeug. Aber es kann eben deutlich mehr: Es bleibt – natürlich – auch nach einem Shot im Vordergrund, kann einzelne Fenster direkt aus der Programmoberfläche erfassen, andere (virtuelle) Desktops ablichten und zeigt alle erstellten Bilder selbst in Tabs dar. Praktisch für präzises Arbeiten: Beim Screenshot eines selbst gewählten Bereichs gibt es ein kleines Lupen-Fenster, über das Sie Kanten und Ecken pixelgenau anvisieren können.
