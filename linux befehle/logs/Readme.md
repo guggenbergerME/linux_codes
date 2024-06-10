@@ -8,3 +8,7 @@ cat /var/log/auth.log
 ```
 /var/log/auth.log
 ```
+## Systemd-Protokolle
+```
+journalctl -b
+```
