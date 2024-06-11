@@ -45,4 +45,12 @@ username: ostadmin
 
 password: Admin1
 
-https://hub.docker.com/r/osticket/osticket
+## Netzwerke auf docker
++ Angelegt wird ```osticket_default```
++ Driver brigde
++ IPV4 Gateway - 172.20.0.1
+
+
+### Links
+
++ https://hub.docker.com/r/osticket/osticket
