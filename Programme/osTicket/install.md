@@ -50,6 +50,13 @@ password: Admin1
 + Driver brigde
 + IPV4 Gateway - 172.20.0.1
 
+## Datensicherung
+osTicket verfügt über kein eigenes Backup. Entweder sichert man die ganze Maschine oder nur speziell die db.
+Je nach docker Version ist die db unter folgendem Verzeichnis als Volumen zu finden.
+```
+/var/lib/docker/volumes/osticket_osticket-db1/_data
+```
+
 
 ### Links
 
