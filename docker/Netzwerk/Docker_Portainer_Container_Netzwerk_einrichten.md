@@ -14,8 +14,8 @@ Passend zum iob_public (MACVLAN) aus meinem Tutorial nenne ich das Netzwerk „i
 
 Als „Driver“ wählen wir ```bridge```, denn es soll ja schließlich ein Solches werden.
 
-Unter „Network configuration“ benötigen wir lediglich die Angaben für das „Subnet“ und das „Gateway“. Ich 
-wähle hier passend zum Standard-Bridge-Netz z.B. das Subnet 
+Unter „Network configuration“ benötigen wir lediglich die Angaben für das „Subnet“ und das „Gateway“. 
+Hier sollte natürlich ein Subnetz genutzt werdend das noch nicht im gebrauch ist!
 ```
 172.18.0.0/16
 ```
