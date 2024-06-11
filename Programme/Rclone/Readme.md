@@ -9,3 +9,8 @@ sudo apt-get install rclone-browser
 ```
 rclone config
 ´´´
+
+## Ordner auf dem FTP anlegen
+```
+rclone mkdir ftp:Verzeichnis/Verzeichnis
+```
