@@ -30,15 +30,15 @@ sudo ./docker-backup backup --tar <container ID>
 ```
 Sie können auch alle Laufcontainer auf dem Host mit dem --allFahne:
 ```
-docker-backup backup --all
+sudo ./docker-backup backup --all
 ```
 Um alle Container zu backen (unabhängig von ihrem aktuellen Laufzustand), laufen Sie:
 ```
-docker-backup backup --all --stopped
+sudo ./docker-backup backup --all --stopped
 ```
 Mit Hilfe --launchSie können direkt ein Backup-Programm mit dem Generierte Dateiliste als Argument:
 ```
-docker-backup backup --all --launch "restic -r /dest backup --password-file pwfile --tag %tag --files-from %list"
+sudo ./docker-backup backup --all --launch "restic -r /dest backup --password-file pwfile --tag %tag --files-from %list"
 ```
 
 
