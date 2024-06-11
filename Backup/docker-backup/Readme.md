@@ -49,13 +49,13 @@ sudo ./docker-backup backup --all --launch "restic -r /dest backup --password-fi
 
 Zum wiederherstellen eines Container nutz folgenden Befehl
 ```
-docker-backup restore <backup file>
+sudo ./docker-backup restore <backup file>
 ```
 docker-backup erkennt automatische die Dateiendung ```.tar``` or ```.json```.
 
 Will man den Container nach dem wiederherstellen sofort starten geht das mit folgendem Befehl
 ```
-docker-backup restore --start <backup file>
+sudo ./docker-backup restore --start <backup file>
 ```
 
 
