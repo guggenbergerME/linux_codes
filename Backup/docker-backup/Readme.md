@@ -20,13 +20,13 @@ go build
 Um einen einzelnen Container zu backupen startet man ```docker-backup``` mit dem ```backup```Befhel und der Container ID. 
 Ein Übersicht aller Container erhält man mit dem Befehl ```docker ps -a```.
 ```
-docker-backup backup <container ID>
+sudo ./docker-backup backup <container ID>
 ```
 Das schafft .jsonDatei mit Metadaten des Containers sowie eine Datei mit allen Volumes, die mit einem externen Werkzeug wie restisch oder borgbackup.
 
 Wenn Sie direkt eine .tarDatei mit allen Containern Daten einfach:
 ```
-docker-backup backup --tar <container ID>
+sudo ./docker-backup backup --tar <container ID>
 ```
 Sie können auch alle Laufcontainer auf dem Host mit dem --allFahne:
 ```
