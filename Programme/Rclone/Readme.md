@@ -8,7 +8,12 @@ sudo apt-get install rclone-browser
 ## erstes config
 ```
 rclone config
-´´´
+```
+
+## Remote ordner ausgeben
+```
+rclone lsd [REMOTE]:
+```
 
 ## Ordner auf dem FTP anlegen
 ```
