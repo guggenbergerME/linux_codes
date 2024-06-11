@@ -45,9 +45,6 @@ username: ostadmin
 
 password: Admin1
 
-## Docker backup wieder einspielen
-+ [Wie erstellt man ein Backup](https://github.com/guggenbergerME/linux_codes/tree/main/Backup/docker-backup)
-
 ## Netzwerke auf docker
 + Angelegt wird ```osticket_default```
 + Driver brigde
