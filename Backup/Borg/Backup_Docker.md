@@ -8,10 +8,10 @@ Als Ziel kann man lokale oder remote (auch borg-installationen) Verzeichnisse/�
 
 Anleitungen gibt es zu Hauf:
 
-    Quick Start — Borg - Deduplicating Archiver 1.2.9.dev5 documentation 3
-    A convenient way to backup your docker volumes with Borg and Ansible · Baptiste Bouchereau 1
-    Resistance is futile - Borg with Docker | Mike Polinowski 2
-    Versioniertes Backup - #8 von foer 1
++ [Quick Start — Borg - Deduplicating Archiver 1.2.9.](https://borgbackup.readthedocs.io/en/1.2-maint/quickstart.html)
++ [A convenient way to backup your docker volumes with Borg and Ansible](https://baptiste.bouchereau.pro/tutorial/backup-docker-volumes-with-borg/)
++ [Resistance is futile - Borg with Docker](https://mpolinowski.github.io/docs/DevOps/Linux/2022-11-09--docker-borg-backupserver/2022-11-09)
++ [Versioniertes Backup](https://ask.linuxmuster.net/t/versioniertes-backup/10167/8)
 
 Was findet ihr, ist best practice? Ich poste mal mein Setup.
 
