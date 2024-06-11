@@ -1,32 +1,31 @@
-# Borg Docker backup
+# backup server 
 
-Neben Backup für ganze VMs oder LVMs/snapshots gibt es Situationen, wo man einzelne Backups erstellen will/sollte.
 
-Um Borg Backup zu nutzen, kann man es auf eine Computer installieren oder wiederum dafür docker verwenden (z.B. um das grundsystem frei von Software zu halten).
+Es wird empfohlen, Borg auf dem Backup-Rechner zu installieren. Folgen Sie [diesem Guide](https://borgbackup.readthedocs.io/en/stable/installation.html#installation).
 
-Als Ziel kann man lokale oder remote (auch borg-installationen) Verzeichnisse/„Repos“ angeben.
-
-Anleitungen gibt es zu Hauf:
-
-+ [Quick Start — Borg - Deduplicating Archiver 1.2.9.](https://borgbackup.readthedocs.io/en/1.2-maint/quickstart.html)
-+ [A convenient way to backup your docker volumes with Borg and Ansible](https://baptiste.bouchereau.pro/tutorial/backup-docker-volumes-with-borg/)
-+ [Resistance is futile - Borg with Docker](https://mpolinowski.github.io/docs/DevOps/Linux/2022-11-09--docker-borg-backupserver/2022-11-09)
-+ [Versioniertes Backup](https://ask.linuxmuster.net/t/versioniertes-backup/10167/8)
-
-Was findet ihr, ist best practice? Ich poste mal mein Setup.
-
-## Beispielimplementation: Borg Backup mit Hilfe von docker (compose)
-
-+ Docker-Container-Up-to-Date-Security: Mir gefällt bei den Borg Backups (im Internet) via Docker oft nicht, dass irgendwelche docker-container verwendet werden, daher baue ich mein Image selbst aufbauend auf einem vertrauten Image (debian:stable-slim).
-+ Regelmäßigkeit Außerdem: man braucht Borg ja eigentlich nicht ständig, aber regelmäßig (über einen scheduler wie cron. Man kann jetzt einen docker-container bauen, der ständig läuft und cron enthält. Mag ich auch nicht. Ich nehme dafür cron auf dem System.
-+ docker vs docker compose Außerdem: eigentlich braucht man docker-compose dafür nicht. Es reicht ja ein docker -v /srv/backup:/srv/target exec|run... usw. Aber ich mag dann doch lieber docker-compose.yml, selbst wenn der Dockercontainer ein Zombie ist.
-+ Flexibilität und Dokumentation: Das Elegante an einer Lösung über docker compose: ich kann beliebige „hooks“ noch einfügen, wenn ich mag, z.B. wenn man einen datenbank-container dumpen will, wenn man container anhalten mag, wenn man lokale Backupstrategien nutzen will (z.B. bei mailcow/helper-scripts/backup_and_restore.sh). Ich habe (außer der cron-links) alle Config in der Nähe des docker-compose.yml. Da kann ich mich noch später erinnern, wie es funktioniert:
-
-## Beispielhafte docker-struktur:
+Für dieses Beispiel lassen Sie es einfach lokal installieren. Auf meinem Laptop, der auf Ubuntu bionic läuft, ist es so einfach wie:
 ```
-# Linux Ubuntu Server
-/var/lib/docker
-```
+sudo apt install borgbackup
+borg --version
+```  
+Der Container, der Backups sendet, benötigt einen SSH-Zugriff auf den Backup-Server. Erstellen wir ein neues ssh Schlüsselpaar auf der Maschine, in dem Ihre Container laufen. Dieser muss ohne Passphrase sein, da er in einem Cron verwendet wird.
+```  
+ssh-keygen -f ~/.ssh/id_rsa_borg_backup -t rsa -N ''
+```  
+Jetzt - auf Ihrem Server - Autorisieren Sie diesen Schlüssel.
+```  
+touch ~/.ssh/authorized_keys
+chmod g-w ~
+chmod 700 ~/.ssh
+chmod 600 ~/.ssh/authorized_keys
+```  
+Kopieren Sie den Inhalt des öffentlichen Schlüssels am Ende der Datei **.ssh/authorized-keys**.
 
-## Links
-- [Borg Doku](https://github.com/borgmatic-collective/docker-borgmatic)
+Wenn das gesamte Setup in Lokal ist, macht es das einfach:
+```  
+cat ~/.ssh/id_rsa_borg_backup.pub >> ~/.ssh/authorized_keys
+```  
+Natürlich stellen Sie sicher, dass Sie einen ssh-Server auf Ihrem Server haben.
+```  
+sudo apt install openssh-server
+```  
