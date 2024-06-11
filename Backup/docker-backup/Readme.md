@@ -28,11 +28,15 @@ Wenn Sie direkt eine .tarDatei mit allen Containern Daten einfach:
 ```
 sudo ./docker-backup backup --tar <container ID>
 ```
-Sie können auch alle Laufcontainer auf dem Host mit dem --allFahne:
+Sie können auch alle laufenden Container auf dem Host mit dem --allFahne:
 ```
 sudo ./docker-backup backup --all
 ```
-Um alle Container zu backen (unabhängig von ihrem aktuellen Laufzustand), laufen Sie:
+Alle automatisch kompriemieren
+```
+sudo ./docker-backup backup --tar --all
+```
+Um alle Container zu komprimieren (unabhängig von ihrem aktuellen Laufzustand), laufen Sie:
 ```
 sudo ./docker-backup backup --all --stopped
 ```
