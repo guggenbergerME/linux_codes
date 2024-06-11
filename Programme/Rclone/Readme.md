@@ -23,6 +23,10 @@ rclone mkdir ftp:Verzeichnis/Verzeichnis
 ```
 rclone copy -Pv [QUELLVERZEICHNIS]/ [REMOTE]:[ZIELORDNER]
 ```
+## Verzeichnis synchronisieren
+```
+rclone sync -Pv [QUELLVERZEICHNIS]/ [REMOTE]:[ZIELORDNER]
+```
 
 ### Weitere Links
 + [FTP rClone Anleitung](https://rclone.org/ftp/)
