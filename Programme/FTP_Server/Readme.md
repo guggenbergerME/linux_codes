@@ -1,7 +1,11 @@
 # FTP Server
 
-Docker
+## Anlegen eines Volume
+```
+docker volume create [name]
+```
 
+## Docker run Befehl
 ```
 docker run \
 	--detach \
