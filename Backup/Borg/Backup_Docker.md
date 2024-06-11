@@ -24,6 +24,8 @@ location:
 ```
 ## Backup Ordner erstellen
 
+Führen Sie diesen Befehl aus, um Datenverzeichnisse zu erstellen, die dieses Bild unter Ihrem bevorzugten Verzeichnis benötigt.
+
 ```
 mkdir data/
 mkdir data/borgmatic.d
@@ -31,6 +33,22 @@ mkdir data/repository
 mkdir data/.config
 mkdir data/.ssh
 mkdir data/.cache
+```
+
+Konfigurieren Sie eine Kopie von borgmatic config.yaml in data/borgmatic.dund den Behälter laufen lassen. 
+Sie können einen der Host-Mount-Punkte an Ihre Backup-Konfiguration anpassen.
+
+```
+docker run \
+  --detach --name borgmatic \
+  -v /home:/mnt/source:ro \
+  -v ./data/repository:/mnt/borg-repository \
+  -v ./data/borgmatic.d:/etc/borgmatic.d/ \
+  -v ./data/.config/borg:/root/.config/borg \
+  -v ./data/.ssh:/root/.ssh \
+  -v ./data/.cache/borg:/root/.cache/borg \
+  -e TZ=Europe/Berlin \
+  ghcr.io/borgmatic-collective/borgmatic
 ```
 
 ## Links
