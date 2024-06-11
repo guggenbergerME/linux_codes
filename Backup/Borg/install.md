@@ -10,3 +10,7 @@ Bevor Backups in Archiven gespeichert werden können, muss mit Hilfe des Termina
       borg init [OPTIONEN] REPO_VERZEICHNISPFAD 
 
 REPO_VERZEICHNISPFAD gibt dabei den Pfad [4] zu einem leeren Verzeichnis an, in dem das Repository angelegt werden soll. Zu möglichen Optionen siehe nachfolgende Tabelle:
+
+
+## Links
++ [Borg Dokumentation](https://docs.borgbase.com/)
