@@ -17,8 +17,8 @@ cd docker-backup
 go build
 ```
 ## Ein Backup erstellen
-
-Um einen einzigen Containerstart zu backen docker-backupmit backupBefehl und den Ausweis des Behälters zu liefern:
+Um einen einzelnen Container zu backupen startet man ```docker-backup``` mit dem ```backup```Befhel und der Container ID. 
+Ein Übersicht aller Container erhält man mit dem Befehl ```docker ps -a```.
 ```
 docker-backup backup <container ID>
 ```
