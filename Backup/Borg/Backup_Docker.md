@@ -24,15 +24,8 @@ Was findet ihr, ist best practice? Ich poste mal mein Setup.
 
 ## Beispielhafte docker-struktur:
 ```
-/srv/docker/app1
-/srv/docker/app2
-+-          app2/grossercache
-/srv/docker/borgbackup
-+-          borgbackup/Dockerfile
-+-          borgbackup/borgbackup.sh
-+-          borgbackup/borg-localbackup-cron
-/srv/docker/docker-compose.yml
-/etc/nginx/
+# Linux Ubuntu Server
+/var/lib/docker
 ```
 
 ## Links
