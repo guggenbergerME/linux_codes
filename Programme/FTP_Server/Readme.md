@@ -14,7 +14,7 @@ docker run \
 	--name my-ftp-server \
 	--publish 20-21:20-21/tcp \
 	--publish 40000-40009:40000-40009/tcp \
-	--volume /data:/home/user \
+	--volume /ftp:/home/user \
 	garethflowers/ftp-server
 ```
 
