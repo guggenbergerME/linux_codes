@@ -19,3 +19,6 @@ rclone lsd [REMOTE]:
 ```
 rclone mkdir ftp:Verzeichnis/Verzeichnis
 ```
+
+### Weitere Links
++ [FTP rClone Anleitung](https://rclone.org/ftp/)
