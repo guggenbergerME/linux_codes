@@ -22,7 +22,16 @@ location:
         - /root/docker-compose
         - /var/lib/docker/volumes/
 ```
+## Backup Ordner erstellen
 
+```
+mkdir data/
+mkdir data/borgmatic.d
+mkdir data/repository
+mkdir data/.config
+mkdir data/.ssh
+mkdir data/.cache
+```
 
 ## Links
 - [Borg Doku](https://github.com/borgmatic-collective/docker-borgmatic)
