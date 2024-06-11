@@ -22,7 +22,18 @@ Was findet ihr, ist best practice? Ich poste mal mein Setup.
 + docker vs docker compose Außerdem: eigentlich braucht man docker-compose dafür nicht. Es reicht ja ein docker -v /srv/backup:/srv/target exec|run... usw. Aber ich mag dann doch lieber docker-compose.yml, selbst wenn der Dockercontainer ein Zombie ist.
 + Flexibilität und Dokumentation: Das Elegante an einer Lösung über docker compose: ich kann beliebige „hooks“ noch einfügen, wenn ich mag, z.B. wenn man einen datenbank-container dumpen will, wenn man container anhalten mag, wenn man lokale Backupstrategien nutzen will (z.B. bei mailcow/helper-scripts/backup_and_restore.sh). Ich habe (außer der cron-links) alle Config in der Nähe des docker-compose.yml. Da kann ich mich noch später erinnern, wie es funktioniert:
 
-
+## Beispielhafte docker-struktur:
+```
+/srv/docker/app1
+/srv/docker/app2
++-          app2/grossercache
+/srv/docker/borgbackup
++-          borgbackup/Dockerfile
++-          borgbackup/borgbackup.sh
++-          borgbackup/borg-localbackup-cron
+/srv/docker/docker-compose.yml
+/etc/nginx/
+```
 
 ## Links
 - [Borg Doku](https://github.com/borgmatic-collective/docker-borgmatic)
