@@ -1,6 +1,6 @@
 # Borg installieren
 
-  sudo apt-get install borgbackup 
+    sudo apt-get install borgbackup 
 
 ## Initialisierung
 
