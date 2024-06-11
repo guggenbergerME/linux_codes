@@ -58,6 +58,9 @@ Will man den Container nach dem wiederherstellen sofort starten geht das mit fol
 sudo ./docker-backup restore --start <backup file>
 ```
 
+## Netzwerke
+Eventuell müssen verschiedene Container wieder in ein gemeinsames Netzwerk gemountet werden.
+
 
 ### Links
 + [Repo](https://github.com/muesli/docker-backup)
