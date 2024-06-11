@@ -10,3 +10,15 @@ Das bedeutet, dass die Details, die für die Neua Erstellung eines Behälters od
 Alle Daten in einem Container werden vom Herausgeber des Bildes verwaltet und verschwinden, wenn der Behälter aktualisiert oder neu erstellt wird. So ist es notwendig, persistente Ordner außerhalb des Behälters zu montieren. Dies kann bei benannten Mengen passieren (nach der Containerlaufzeit verwaltet und in der Regel in /var/lib/docker/volumes/oder der Heimordner eines Benutzers) oder Bindenhalters (Links zu tatsächlichen Host-Ordnern). Egal, wo montierte Ordner gehalten werden, sie müssen in das Backup aufgenommen werden.
 ### Datenbanken
 Viele Apps benötigen eine Datenbank zum Arbeiten und starten oft einen separaten Behälter dafür. Wenn Sie mehrere Apps haben, die z.B. eine MySQL-Datenbank benötigen, ist es im Allgemeinen einfacher, dies in einem Container zu konsolidieren und mehrere Apps einen DB-Container teilen zu lassen. Das erleichtert das Backup und spart auch Ressourcen.
+
+## Schritt 2 - Backup-Volumen
+
+Mit den bekannten Orten können Sie unser übliches CLI-Tutorial oder Ansible-Rolle verwenden, um Borgmatic und Borg einzurichten. Es gibt auch ein Docker-Bild, um Borgmatic zu betreiben. Egal, welche Installationsmethode am besten funktioniert, Sie müssen immer einen borgmatic.yamlDatei.
+
+Lassen Sie uns zuerst Containerkonfigurationen und -Volumen abdecken:
+```
+location:
+    source_directories:
+        - /root/docker-compose
+        - /var/lib/docker/volumes/
+```
