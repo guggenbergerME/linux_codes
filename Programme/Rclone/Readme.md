@@ -19,6 +19,10 @@ rclone lsd [REMOTE]:
 ```
 rclone mkdir ftp:Verzeichnis/Verzeichnis
 ```
+## Verzeichnis kopieren
+```
+rclone copy -Pv [QUELLVERZEICHNIS]/ [REMOTE]:[ZIELORDNER]
+```
 
 ### Weitere Links
 + [FTP rClone Anleitung](https://rclone.org/ftp/)
