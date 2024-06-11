@@ -7,15 +7,7 @@ docker volume create [name]
 
 ## Docker run Befehl
 ```
-docker run \
-	--detach \
-	--env FTP_PASS=123 \
-	--env FTP_USER=user \
-	--name my-ftp-server \
-	--publish 20-21:20-21/tcp \
-	--publish 40000-40009:40000-40009/tcp \
-	--volume /ftp:/home/user \
-	garethflowers/ftp-server
+docker run --detach --env FTP_PASS=123 --env FTP_USER=user --name ftp_server --publish 20-21:20-21/tcp --publish 40000-40009:40000-40009/tcp -v [VOLUME_NAME]:/home/user/ garethflowers/ftp-server
 ```
 
 ## FTP Ziel auslesen
