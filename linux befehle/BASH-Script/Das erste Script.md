@@ -75,3 +75,60 @@ kein Kommentar # Dies ist ein Kommentar.
 
 echo "auch # kein Kommentar innerhalb" # , wohl aber außerhalb
 ```
+## Variablen – Teil 1
+
+Variablen sind symbolische Namen für Werte und verleihen einem Skript große Flexibilität. Sie erlauben es, einen Wert an nur einer Stelle zu ändern und den Wert überhaupt zu ändern.
+Variablen belegen
+
+Variablen werden folgendermaßen belegt:
+```
+message=hallo 
+```
+In diesem Beispiel wird der Variablen mit dem Namen message der Wert hallo zugewiesen. Im Gegensatz zu vielen anderen Programmiersprachen darf man bei der Shell keine Leerzeichen vor und nach dem Zuweisungszeichen = verwenden!
+
+Wenn die Zuweisung Leerzeichen oder andere Sonderzeichen enthält, sind Anführungszeichen notwendig:
+```
+message="hallo Welt" 
+```
+oder das maskieren mittels Backslash:
+```
+message=hello\ world
+```
+
+## Variablen lesen
+
+Variablen werden mit echo ausgegeben. Dabei muss man ein Dollarzeichen $ vor den Namen der Variablen setzen. Für die oben mit der Zuweisung hallo versehene Variable message würde sich also Folgendes ergeben:
+```
+echo "$message" 
+```
+hallo Welt
+
+## Variablen löschen
+
+Man kann Variablen, die nicht mehr gebraucht werden, einfach mit dem Befehl unset wieder löschen. Dies wird am vorherigen Beispiel mit der Variable message weiterverfolgt.
+```
+echo "$message" 
+
+hallo Welt
+
+unset message
+echo "$message"
+```
+
+## Variablen abgrenzen
+
+Gelegentlich kann es der Fall sein, dass man Variablen innerhalb einer Zeichenkette verwenden möchte. Dabei kommt es zu Schwierigkeiten, da die Konsole dann die Variable nicht mehr von dem sie umgebenden Zeichenkette unterscheiden kann. Um dieses Problem zu umgehen, verwendet man eine Schreibweise mit geschweiften Klammern. Ein Beispiel zeigt das Problem.
+```
+echo "$message" 
+
+hallo
+
+echo "$messagelolo" 
+```
+Hier wird nach dem Anhängen einer beliebigen Zeichenkette an die Variable $message eine leere Variable ausgegeben. Dies liegt daran, dass die Bash versucht, die Variable mit dem Namen $messagelolo auszugeben, welche nicht belegt und daher eben leer ist. Grenzt man die Variable jedoch durch die Schreibweise mit geschweiften Klammern ab, bekommt man folgendes Ergebnis.
+```
+echo "${message}lolo" 
+
+hallololo
+```
+Wie man sehen kann, wird hier die angehängte Zeichenkette lolo an die Variable angehängt, ohne sich mit der Zeichenkette der Variablen zu vermischen, und man erhält das gewünschte Ergebnis.
