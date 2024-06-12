@@ -54,5 +54,6 @@ Ist das Skript wie oben beschrieben verfügbar gemacht worden, dann kann es einf
 mein_Skript.sh
 ```
 
-
+### Links
++ [BASH Tutorial [deu]](https://www.ernstlx.com/linux90script.html)
 
