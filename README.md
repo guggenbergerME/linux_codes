@@ -1,1 +1,3 @@
-# linux_codes
+# Linux Sammlung
+
+email info@guggenberger.me
