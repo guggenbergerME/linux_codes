@@ -59,7 +59,7 @@ Grundsätzlich gilt: Man muss einen Interpreter angeben, der alle im Skript benu
 
 Ein Skript, welches mit #!/bin/sh als POSIX-Shell deklariert wurde, kann sich bei einer erzwungenen Abarbeitung durch die Bash anders oder sogar fehlerhaft verhalten.
 
-> [Hinweis]
+> [!WARNING]
 > Unter Ubuntu ist /bin/sh ein symbolischer Link auf die Dash. Welche Konsequenzen das hat, wird unter anderem im englischen Ubuntu-Wiki Eintrag zur DASH 🇬🇧 erklärt.
 
 Kommentare einfügen
