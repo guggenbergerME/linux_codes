@@ -7,7 +7,7 @@ docker pull fhem/fhem
 ## Fhem starten
 
 ```
-    docker run -d --name fhem --restart unless-stopped -p 8083:8083 -v /some/host/directory:/opt/fhem ghcr.io/fhem/fhem-docker:4-bullseye
+    docker run -d --name fhem --restart unless-stopped -p 8083:8083 -v [PFAD-WORKSPACE]:/opt/fhem ghcr.io/fhem/fhem-docker:4-bullseye
 ```
 
 ## fhem - fhem.cfg
