@@ -62,17 +62,16 @@ Ein Skript, welches mit #!/bin/sh als POSIX-Shell deklariert wurde, kann sich be
 > [!WARNING]
 > Unter Ubuntu ist /bin/sh ein symbolischer Link auf die Dash. Welche Konsequenzen das hat, wird unter anderem im englischen Ubuntu-Wiki Eintrag zur DASH 🇬🇧 erklärt.
 
-Kommentare einfügen
+## Kommentare einfügen
 
 Kommentare sind wichtig, und man sollte regen Gebrauch davon machen. An schwierigen Passagen sollte man kleine Notizen hinterlegen, um festzuhalten, was man sich dabei gedacht hat und wie das Konstrukt funktioniert. So erleichtert man sich selbst, z.B. nach längeren Pausen, oder aber auch anderen, welche das Skript bearbeiten möchten, das Verständnis.
 
 Kommentare beginnen mit dem Hash-Zeichen (#). Dies kann überall in einer Zeile stehen; außer innerhalb von Quotes. Die Bash ignoriert alles, was dahinter steht. 
 Allgemein sieht das dann so aus:
-
+```
 # Dies ist ein Kommentar
 
 kein Kommentar # Dies ist ein Kommentar.
 
 echo "auch # kein Kommentar innerhalb" # , wohl aber außerhalb
-
-...
+```
