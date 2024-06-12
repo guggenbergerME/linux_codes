@@ -32,6 +32,8 @@ Man legt also für die Ausführung des Skriptes die Shell Bash fest.
 1 #! /bin/bash
 ```
 Das Leerzeichen dient nur nur Verbesserung der Lesbarkeit.
+
++ [weiter](https://wiki.ubuntuusers.de/Shell/Bash-Skripting-Guide_f%C3%BCr_Anf%C3%A4nger/)
 ```
 1 #!   /bin/bash -e
 ```
