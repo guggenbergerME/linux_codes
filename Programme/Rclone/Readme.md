@@ -1,4 +1,4 @@
-# Rclone
+# rClone
 
 ## install
 ```
