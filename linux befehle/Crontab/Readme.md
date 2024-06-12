@@ -49,3 +49,10 @@ Einen Sound alle 10 Minuten Abzuspielen könnte wie folgt aussehen:
 ```
 */10 * * * * /usr/bin/play_sound.sh
 ```
+
+## Crontab und das %
+Sollte man in einem Befehl ein "%" Zeichen verwenden, beispielsweise bei einem Datum, ist die lösung das Zeichen zu escapen ```\```
+```
+0 8,17 * * * /usr/bin/script.sh >>/var/log/cron/script_$(date +\%Y\%m\%d).log
+
+```
