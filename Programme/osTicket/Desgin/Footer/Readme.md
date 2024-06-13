@@ -1,5 +1,7 @@
 # osTicket Footer
 
+Eintreten in die Docker Umgebeung mit [exec](https://github.com/guggenbergerME/linux_codes/tree/main/docker/EXEC).
+
 Editing the osTicket Footer:
 ```
 Locate /include/client/footer.inc.php.
