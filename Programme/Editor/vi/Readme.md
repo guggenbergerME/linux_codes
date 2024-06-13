@@ -2,7 +2,9 @@
 
 ## Kurzübersicht Befehle
 ```Einfg```- Code änderbar machen
+
 ```:q``` - Verlassen ohne zu speichern
+
 ```:wq``` - Verlassen mit speichern
 
 
