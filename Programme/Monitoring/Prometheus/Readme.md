@@ -8,3 +8,8 @@
 
 ## Prometheus mit Grafana verbinden
 Im Bereich Prometheus server URL wird die Docker IP benötigt.
+
+## Anzeigen der Werte in einem Dashboard
+Dashboards werden aus json Datein erzeugt.
+
++ [Sammlung von Dashboards](https://github.com/jimmidyson/prometheus-grafana-dashboards/tree/master)
