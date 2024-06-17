@@ -7,7 +7,7 @@ services:
   mysql:
     image: mysql:5.7
     volumes:
-      - "osticket-db1:/var/lib/mysql"
+      - "/home/bpc009/docker-app/osticket-db1:/var/lib/mysql"
     environment:
       MYSQL_ROOT_PASSWORD: Please-Change-Me-Im-Root
       MYSQL_DATABASE: osticket
@@ -16,7 +16,7 @@ services:
   osticket:
     image: devinsolutions/osticket:latest
     volumes:
-      - 'osticket-app:/var/lib/osticket'
+      - '/home/bpc009/docker-app/osticket-app:/var/lib/osticket'
     environment:
       MYSQL_HOST: mysql
       MYSQL_DATABASE: osticket
