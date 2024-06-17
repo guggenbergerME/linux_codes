@@ -46,7 +46,8 @@ username: ostadmin
 password: Admin1
 
 ## Backup der Daten
-in den nachfolgenden Ordner sind alle relevanten Daten abgelegt um das osTicket wiederherzustellen
+in den nachfolgenden Ordner sind alle relevanten Daten abgelegt um das osTicket wiederherzustellen.
+Diese Daten könne nun per borg oder rClone gesichert werden.
 ```
 /home/bpc009/docker-app/osticket-db1:/var/lib/mysql
 /home/bpc009/docker-app/osticket-app:/var/lib/osticket
