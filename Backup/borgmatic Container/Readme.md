@@ -6,20 +6,12 @@
 mkdir backup/
 mkdir backup/borgmatic.d
 touch backup/config.yaml
-```
-Konfigurieren der config.yaml
-```
 mkdir backup/repository
-```
-```
 mkdir backup/.config
-```
-```
 mkdir backup/.ssh
-```
-```
 mkdir backup/.cache
 ```
+Konfigurieren der config.yaml
 
 Konfigurieren Sie eine Kopie von borgmatic config.yaml in data/borgmatic.dund den Behälter laufen lassen. Sie können einen der Host-Mount-Punkte an Ihre Backup-Konfiguration anpassen.
 ```
