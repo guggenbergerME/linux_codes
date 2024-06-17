@@ -12,14 +12,14 @@ services:
   uptime-kuma:
     image: louislam/uptime-kuma:1
     volumes:
-      - /home/bpc009/kuma:/app/data
+      - /home/bpc009/docker-app/kuma:/app/data:/app/data
     ports:
       # <Host Port>:<Container Port>
       - 3001:3001
     restart: unless-stopped
 ```
 ## Backup von KUMA
-Im Ordner ```/home/bpc009/kuma``` sind alles relevanten Darten gespeichert und muss in ein Backup eingefügt werden
+Im Ordner ```/home/bpc009/docker-app/kuma``` sind alles relevanten Darten gespeichert und muss in ein Backup eingefügt werden
 
 ### Links
 + [Github](https://github.com/louislam/uptime-kuma)
