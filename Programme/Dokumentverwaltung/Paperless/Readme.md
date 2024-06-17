@@ -2,9 +2,10 @@
 
 ## Anletung
 
-https://docs.paperless-ngx.com/setup/
++ https://docs.paperless-ngx.com/setup/
++ https://docs.paperless-ngx.com/setup/#docker_build
 
-## Instalation mit compose
+## Installation mit compose
 ```
 services:
   broker:
