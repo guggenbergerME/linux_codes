@@ -1,5 +1,25 @@
 # Paperless-ngx
 
+## Installation mit Compose
+```
+version: "2.1"
+services:
+  paperless-ngx:
+    image: lscr.io/linuxserver/paperless-ngx:latest
+    container_name: paperless-ngx
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=America/New_York
+      - REDIS_URL= #optional
+    volumes:
+      - /home/bpc009/docker-app/Paperless-ngx/config:/config
+      - /home/bpc009/docker-app/Paperless-ngx/data:/data
+    ports:
+      - 8000:8000
+    restart: unless-stopped
+```
+
 ## Installation in Docker Umgebung
 
 Die einfachste Installation erfolgt mit dem Paperless Script.
