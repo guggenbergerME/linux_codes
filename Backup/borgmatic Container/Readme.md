@@ -3,6 +3,7 @@
 ## Erstellen der Backup Ornderstruktur
 
 ```
+mkdir backup/
 mkdir backup/borgmatic.d
 touch backup/config.yaml
 ```
