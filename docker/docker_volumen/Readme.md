@@ -2,5 +2,6 @@
 
 Schreibweise zum einfügen des Docker Volumes
 ```
-/[PFAD auf der Worksation]/:/[Pfad im Docker Ordner]/
+    volumes:
+      - /[HOME-USER VEREICHNIS]/docker-app/[PROGRAMM]:/app/data:/app/data
 ```
