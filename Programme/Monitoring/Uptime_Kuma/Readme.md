@@ -12,7 +12,7 @@ services:
   uptime-kuma:
     image: louislam/uptime-kuma:1
     volumes:
-      - ./data:/app/data
+      - ./docker/kuma:/app/data
     ports:
       # <Host Port>:<Container Port>
       - 3001:3001
