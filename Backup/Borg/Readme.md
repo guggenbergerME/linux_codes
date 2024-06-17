@@ -1,4 +1,7 @@
-# borg backup
+# borg backup ssh
+
+Auf beiden Systemen mus borg installiert sein.
+
 
 ## Borg installieren
 ```
