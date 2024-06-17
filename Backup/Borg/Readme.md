@@ -30,5 +30,5 @@ borg list /home/pc813/borg_backup
 ## Backup von SSH wiederherstellen
 In dem Ordner der wiederhergstellt werden soll ...
 ```
-borg extract upc813@192.168.1.187:/home/pc813/borg_backup::test3
+borg extract pc813@192.168.1.187:/home/pc813/borg_backup::test3
 ```
