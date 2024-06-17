@@ -21,3 +21,8 @@ Verzeichnisse per ssh sichern
 ```
 borg create --stats [NAME]@[IP]:/[Backup_Ordner]::[NAME des BACKUP] [Verzeichnis..1]/ [Verzeichnis..2]/
 ```
+
+## Borg Verzeicnis ansehen
+```
+borg list /home/pc813/borg_backup
+```
