@@ -11,6 +11,10 @@ Bevor man ein Backup mit borg erzeugen kann, muss ein Repository initialisiert w
 ```
 borg init --encryption=none /path/to/repo
 ```
+per ssh init
+```
+borg init --encryption=none NAME@IP:/[Backup_Ordner]
+```
 
 ## Sichern eines Verzeichnis
 ```
