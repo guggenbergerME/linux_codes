@@ -19,5 +19,5 @@ borg init --encryption=none NAME@IP:/[Backup_Ordner]
 ## Sichern eines Verzeichnis
 Verzeichnisse per ssh sichern
 ```
-borg create --stats [NAME]@[IP]:/[Backup_Ordner]::[NAME des BACKUP] [Verzeichnis..1] [Verzeichnis..2]
+borg create --stats [NAME]@[IP]:/[Backup_Ordner]::[NAME des BACKUP] [Verzeichnis..1]/ [Verzeichnis..2]/
 ```
