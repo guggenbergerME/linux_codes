@@ -6,6 +6,7 @@
 mkdir backup/borgmatic.d
 touch backup/config.yaml
 ```
+Konfigurieren der config.yaml
 ```
 mkdir backup/repository
 ```
