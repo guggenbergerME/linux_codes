@@ -6,6 +6,7 @@ docker run -d --restart=always -p 3001:3001 -v uptime-kuma:/app/data --name upti
 ```
 
 ## Installation mit Compose
+Durch das auslgern der Systemdatein in ein Volume kann Kuma gesichert werden.
 ```
 services:
   uptime-kuma:
