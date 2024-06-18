@@ -14,6 +14,8 @@ services:
     restart: unless-stopped
 ```
 ## Backup von KUMA
+>[!TIP]
+>Auf das Backup Verzeichnis achten
 Im Ordner ```/home/bpc009/docker-app/kuma``` sind alles relevanten Darten gespeichert und muss in ein Backup eingefügt werden
 
 ### Links
