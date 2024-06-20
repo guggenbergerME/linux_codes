@@ -31,6 +31,9 @@ für das erste Login wird ein Admin benötigt
 ```
 docker exec -it [ContainerID] /opt/netbox/netbox/manage.py createsuperuser
 ```
+## Library
++ [Repo Sammlung von Geräten](https://github.com/netbox-community/devicetype-library/tree/master)
+
 
 ### Links
 + [Repo](https://github.com/netbox-community/netbox-docker?ref=packetswitch.co.uk)
