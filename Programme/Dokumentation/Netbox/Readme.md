@@ -1,6 +1,6 @@
 #Netbox - Dokumentation
 
-## Docker Installation
+## Netbox - Docker Installation
 ```
 git clone -b release https://github.com/netbox-community/netbox-docker.git
 ```
