@@ -37,3 +37,4 @@ docker exec -it [ContainerID] /opt/netbox/netbox/manage.py createsuperuser
 
 ### Links
 + [Repo](https://github.com/netbox-community/netbox-docker?ref=packetswitch.co.uk)
++ [Demoeinrichtung](https://netbox.c3voc.de/dcim/regions/)
