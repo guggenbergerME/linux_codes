@@ -16,3 +16,9 @@ danach dd auf den USB Stick
 ```
 sudo dd if=OPNsense-23.7-vga-amd64.img of=/dev/sdb bs=1M
 ```
+
+## OPNsense LIVE nutzen
+login ```root``` und Passwort ```opnsense```
+
+## OPNsense installieren
+login ```installer``` und Passwort ```opnsense```
