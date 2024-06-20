@@ -26,5 +26,11 @@ Netbox starten
 docker compose up
 ```
 
+## Admin erzeugen
+für das erste Login wird ein Admin benötigt
+```
+docker compose exec netbox /opt/netbox/netbox/manage.py createsuperuser
+```
+
 ### Links
 + [Repo](https://github.com/netbox-community/netbox-docker?ref=packetswitch.co.uk)
