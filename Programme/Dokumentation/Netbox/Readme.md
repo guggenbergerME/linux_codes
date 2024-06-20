@@ -16,10 +16,12 @@ services:
   netbox:
     ports:
       - 8000:8080
-
+```
+Pakete holen
 ```
 docker compose pull
 ```
+Netbox starten
 ```
 docker compose up
 ```
