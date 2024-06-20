@@ -29,7 +29,7 @@ docker compose up
 ## Admin erzeugen
 für das erste Login wird ein Admin benötigt
 ```
-docker compose exec netbox /opt/netbox/netbox/manage.py createsuperuser
+docker exec -it [ContainerID] /opt/netbox/netbox/manage.py createsuperuser
 ```
 
 ### Links
