@@ -72,6 +72,11 @@ Next, start a console connection at 115200 bps on the administrator's workstatio
 ```
 sudo screen /dev/ttyUSB0 115200
 ```
+## Keine USB Verbindung
+Bitte nachfolgende Hinweis lesen
++ [Serial/USB Converter](https://github.com/guggenbergerME/linux_codes/blob/main/Programmieren/Serial/Readme.md)
+
+
 Now plug the device in. Be sure to start watching the console output immediately.
 First boot
 
