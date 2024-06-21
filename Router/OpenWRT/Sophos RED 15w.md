@@ -50,7 +50,7 @@ cd /srv/tftp
 ```
 and download the initial boot file for the RED 15w. To download current firmware, go to the OpenWrt downloads site:
 
-+ https://downloads.openwrt.org/ 43
++ https://downloads.openwrt.org/ 
 
 Click on the link in the Stable Release section (as of this writing, it is 23.05.2). This will take you to the targets page (in the OpenWrt parlance, a "target" is a type of hardware for which firmware is intended; OpenWrt is available for dozens of targets). Today, we are interested in the mpc85xx target, so click on the mpc85xx link, then on the p1010 link. Find the file sophos_red-15w-rev1-initramfs-kernel.bin and download it to your TFTP server. The easiest way to do that is to copy its URL to clipboard and then paste it into the terminal accessing the TFTP server after manually typing wget. In my case, I ended up with
 ```
