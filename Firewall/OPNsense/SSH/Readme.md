@@ -1,4 +1,4 @@
-# ssh Zugrif
+# ssh Zugriff
 ## Aktivieren
 Gehen Sie per Menü zu 
 ```
