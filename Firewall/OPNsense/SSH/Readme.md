@@ -4,7 +4,7 @@ Gehen Sie per Menü zu
 ```
 System → Einstellungen → Verwaltung
 ```
-und aktivieren Sie den SSH-Server sowie *Anmeldung mit Passwort erlauben*
+und **aktivieren Sie den SSH-Server** sowie **Anmeldung mit Passwort erlauben**
 
 
 
