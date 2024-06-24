@@ -15,3 +15,6 @@ pkg install nano
 nano /usr/local/etc/LCDd-sdeclcd.conf
 ````
 
+**Driver** ändern auf hd44780
+
+
