@@ -6,4 +6,4 @@
 
 ## VLAN config
 
-+ 999 Thrunk - GTL_managment
++ 999 Trunk - GTL_management
