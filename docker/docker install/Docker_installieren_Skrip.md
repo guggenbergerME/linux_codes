@@ -82,3 +82,7 @@ Feb 11 21:47:31 DockerTest dockerd[8347]: time="2021-02-11T21:47:31.078816699Z" 
 Mit der Installation von Docker unter Proxmox sind jetzt die Voraussetzungen für einen sehr flexiblen Docker-Host geschaffen worden. Diesen werden wir in weiterführenden Beiträgen um Standarddienste erweitern, um die Verwaltung und Konfiguration weiterer Dienste und Anwendungen so einfach wie möglich durchführen zu können.
 
 Dazu gehören unter anderem Portainer und ein Reverse Proxy (nginx).
+
+
+### Links
++ [Docker und Proxmox](https://kayomo.de/blog/docker-unter-proxmox-installieren/)
