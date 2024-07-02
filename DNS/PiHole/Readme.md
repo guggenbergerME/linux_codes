@@ -23,3 +23,6 @@ curl -sSL https://install.pi-hole.net | bash
 Das Script prüft zunächst den angemeldet Benutzer und installiert alle notwendigen Pakete. Dann beginnt das Setup. Bestätige zunächst die Infos.
 
 Hat der Server mehrere Netzwerk-Schnittstellen, muss die richtige ausgewählt werden. Diese ist meistens eth0 unter Debian oder ens192 unter Ubuntu.
+
+## Blocklisten einpflegen
++ [Ein übersicht von Blocklisten](https://github.com/guggenbergerME/linux_codes/blob/main/DNS/PiHole/Blocklisten.md)
