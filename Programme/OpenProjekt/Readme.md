@@ -23,5 +23,13 @@ apt install openproject
 ```
 Then finish the installation by reading the Initial configuration section.
 
+## Installation starten
+
+To start the configuration wizard, please run the following command with sudo, or as root:
+```
+sudo openproject reconfigure #interactive - manual choices are stored in /etc/openproject/installer.dat
+sudo openproject configure #non-interactive - using values stored in /etc/openproject/installer.dat
+```
+
 ### Links
 + [OpenProjekt installieren](https://www.openproject.org/de/download-und-installation/)
