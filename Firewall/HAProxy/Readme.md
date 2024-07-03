@@ -78,5 +78,77 @@ Firewall / NAT / Port Forward → Add
 
 ## Weiterleitung interner Anfragen
 
+Damit schulhausinterne Aufrufe der Webdienste direkt beim Reverse-Proxy landen und nicht über das Internet geroutet werden, müssen entsprechende Nameserver-Weiterleitungen zur virtuellen IP-Adresse des gewünschten HAProxy-Moduls existieren. Sofern der Webdienst nur innerhalb des Schulhauses erreichbar sein soll, leiten Sie zur virtuellen IP von HAProxy_lan ansonsten zu HAProxy_lan_wan weiter.
+
+Beispiel für den Webdienst Nextcloud, welcher auch von außen erreichbar sein soll: 
+
+### Services / Unbound DNS / Overrides / Host Overrides → Add
+
++ Host: nextcloud
++ Domain: z. B. ihre-schule.de
++ Type: A or AAAA (IPv4 or IPv6 address)
++ IP: z. B. 10.1.100.2 (virtuelle IP von HAProxy_lan_wan)
+
+## Einrichtung von Real Servers
+
+Real Servers sind jene Dienste, welche hinter dem HAProxy erreicht werden sollen.
+
+Richten Sie für jeden Ihrer Webdienste - unabhängig davon, ob dieser von außen erreichbar sein soll oder nicht - einen Real Server ein:
+
++ nextcloud.ihre-schule.de
++ collabora.ihre-schule.de
++ usermanagement.ihre-schule.de
++ selfservice.ihre-schule.de
++ fog.ihre-schule.de
+
+Beispiel für den Webdienst nextcloud.ihre-schule.de:
+```
+Services / HAProxy / Settings / Real Servers → Add
+```
++ Name: nextcloud_host
++ FQDN or IP: z. B. 10.1.100.8 (IP-Adresse Ihrer Nextcloud)
++ Port: 80
++ SSL: kein Haken
++ Verify SSL CA: kein Haken
+
+## Einrichtung von Backend Pools
+
+Mit einem Backend Pool können ein oder mehrere Real Server gebündelt werden. Auch wenn für jeden Webdienst jeweils nur einen Real Server (z. B. gibt es nur einen Nextcloud-Server) bereitgehalten wird, muss an dieser Stelle für jeden Dienst ein Backend Pool eingerichtet werden.
+
+Beispiel für den Webdienst nextcloud.ihre-schule.de:
+```
+Services / HAProxy / Settings / Virtual Services / Backend Pools → Add
+```
++ Name: nextcloud_backend
++ Servers: nextcloud_host
+
+## Einrichtung der Public Services
+
+Die Public Services des HAProxys sind die Anlaufstellen, die interne bzw. externe Anfragen entgegennehmen.
+
+Für das Schulnetzkonzept werden 3 Public Services benötigt:
+
++ eines für interne und externe Anfragen über http,
++ eines für interne und externe Anfragen über https und
++ eines für ausschließlich interne Anfragen über https.
+
+### Einrichtung des Public Service für interne und externe Anfragen über http
+```
+Services / HAProxy / Settings / Virtual Services / Public Services → Add
+```
++ Name: http_lan_wan
++ Description: interne und externe http-Anfragen
++ Listen Addresses:
+  + z. B. 10.1.100.2:80 (HAProxy_lan_wan)
+  + z. B. 10.1.100.3:80 (HAProxy_lan)
++ Type: HTTP / HTTPS (SSL offloading)
++ Default Backend Pool: none
++ Enable SSL offloading: kein Haken
++ X-Forwarded-For header: Haken
+
+
+
+    
+
 ### Links
 + [Tutorial HAProxy auf OPNsense Firewall mit Let’s Encrypt](https://blog.we-cme.de/haproxy-auf-opnsense-als-https-frontend-mit-lets-encrypt/)
