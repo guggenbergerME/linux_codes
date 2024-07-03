@@ -157,3 +157,44 @@ Services / Unbound DNS / General
 ```
 Check Register DHCP leases and Register DHCP static mappings to enable local name resolution.
 
+## Test
+
+On any client with internet access
+```
+ping 8.8.8.8
+```
+
+this should confirm you have a working internet connection at all  ;)
+```
+ping www.google.com
+```
+this should confirm your DNS setup is working, external addresses are resolved
+
+```
+nslookup doubleclick.net
+```
+should output:
+```
+    Server:		10.10.1.254
+    Address:	10.10.1.254#53
+
+    Name:	doubleclick.net
+    Address: 0.0.0.0
+```
+
+Address: 0.0.0.0 indicates it has been blocked. If not, check settings.
+
+
+### On any client of your internal networks
+
+Check internal name resolution with
+```
+nslookup 10.10.1.254
+```
+
+provides pihole.local_lan.domain (in my example)
+```
+nslookup pihole.local_lan.domain
+```
+
+
