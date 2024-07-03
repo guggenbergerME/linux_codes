@@ -54,3 +54,6 @@ sudo echo "SystemMaxUse=1G" >> /etc/systemd/journald.conf && sudo systemctl rest
 ## Setup automatic backup system
 <https://github.com/Jean28518/linux-guides/tree/main/backup-server-sytem>
 
+### Links
++ [Mehr Informationen](https://github.com/Jean28518/linux-guides/tree/main)
+
