@@ -9,7 +9,7 @@ Anschließend muss der HAProxy aktiviert werden:
 ```
 Services / HAProxy / Settings / Service Settings
 ```
-** Haken bei: Enable HAProxy **
+**Haken bei: Enable HAProxy**
 
 ## Einrichtung virtueller IPs und zugehöriger Namen (Aliases) für den HAProxy
 
