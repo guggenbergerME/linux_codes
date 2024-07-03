@@ -89,5 +89,22 @@ Grundsätzlich genügt es unter Ubuntu, das oben angeführte Prozedere für die 
 ---
 > #PasswordAuthentication yes
 ```
+Vom Client aus wird die Verbindung ein weiteres Mal getestet:
+```
+ssh -i /home/pc/.ssh/id_rsa.pub  benutzer@XXX.XXX.XXX.XXX
+Agent admitted failure to sign using the key.
+Permission denied (publickey).
+```
+Im oben genannten Beispiel wurde der Dialog zum Eingeben des Schlüssel-Passworts abgebrochen. Da das Anmelden via Passwort deaktiviert wurde, war die Anmeldung am System nicht möglich. 
 
+## Passwort-Authentifizierung nur für einen User verbieten
 
+Eine weitere Möglichkeit, bei der Passwort-Authentifizierung nicht komplett deaktiviert wird, ist die Passwort-Anmeldung für spezielle User zu deaktivieren. Dadurch kann sich z.B. einem User, der am Server keine sudo-Rechte besitzt am Server anmelden. Um root-Rechte zu erlangen muss daraufhin zumindest ein weiteres Passwort eine Users mit sudo-Rechten herausgefunden werden. Außerdem gibt es die Möglichkeit, User komplett von ssh auszunehmen:
+```
+:~$ sudo diff /etc/ssh/sshd_config /etc/ssh/sshd_config.orig
+88,91d87
+< 
+< DenyUsers test
+< Match User tktest
+<     PasswordAuthentication no
+```
