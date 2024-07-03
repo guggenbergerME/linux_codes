@@ -41,4 +41,7 @@ The key's randomart image is:
 |*=.+o= .  .      |
 | +=+oo+          |
 +----[SHA256]-----+
+pc@pc:~/.ssh$ ls
+authorized_keys  id_rsa  id_rsa.pub  known_hosts  known_hosts.old
+
 ```
