@@ -108,3 +108,9 @@ Eine weitere Möglichkeit, bei der Passwort-Authentifizierung nicht komplett dea
 < Match User tktest
 <     PasswordAuthentication no
 ```
+Dieses Beispiel:
+
++ Verbietet den SSH-Zugang für den User test
++ Deaktiviert die Passwort-Authentifizierung für den User tktest
++ Für alle anderen User bleibt die Passwort-Authentifizierung erhalten.
+
