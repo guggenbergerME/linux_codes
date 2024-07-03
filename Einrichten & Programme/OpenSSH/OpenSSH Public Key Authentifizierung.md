@@ -45,3 +45,27 @@ pc@pc:~/.ssh$ ls
 authorized_keys  id_rsa  id_rsa.pub  known_hosts  known_hosts.old
 
 ```
+**Achtung**: Es wird aus sicherheitstechnischen Gründen empfohlen, den Schlüssel auf jeden Fall mit einer Passphrase zu schützen.
+
+## Öffentl. Schlüssel auf Server übertragen
+
+Für das Übertragen des öffentlichen Schlüssels auf den Server wird im ersten Schritt noch die SSH-Verbindung mittels Passwort-Authentifizierung genutzt. Das Werkzeug ssh-copy-id kopiert das entsprechende Identity-File auf den Server: 
+
+```
+ssh-copy-id -i /home/pc/.ssh/id_rsa.pub benutzer@XXX.XXX.XXX.XXX
+```
+
+Das oben genannte Prozedere hat am Server in der Datei ```/home/benutzer/.ssh/authorized_keys``` folgenden Eintrag erstellt: 
+
+```:~$ cat .ssh/authorized_keys 
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQC7qmegDxzv1omqG2cWM+i+qaEGzCoSBwqCeXyGUU93sTqtNYYHJVGj6YZqXeXEGzJtKm2A/uo59Y+WmqhJgW7HcT2Hqvo80NfbIRhqE9TJETyBe
+GiiC8qpiYgPC2zigCNvTsRXh0CH5FJ1qy4QEBjztQDWOqSrsoOSJEEWCJiKJizTiXDmlGdiKE409GBo8lvlbMRWbrMj3iX825WTqy/T0Pio1kqANDotLnPA0sRXUPVyzc/ghzqRHzFetzP9j7C0nh
+EvjiJphiuYvhbgix79FrCQG0lXBGcAWzsWUeAoT/d3kQu79+UTWxm+z4pnJ7gkKVMejqrWys560SdAqD264dc5UBRGI9j6XxVKdraSaEitDneONrSAt2tE/RwRxh2ASxqQfdF88zyDI8/ma608tHc
+FROaNsn5hF+/wzjRK9akdhp5WjA5HXhg2OlkwKvSMhGlSgotRj5pr4Ebxjegysy1mEWRFN/vh/oNq4uHQy8adpfogaVELkI/Z2nuAdQk+uMy6D1hrKhUWubmBPxTbG00IWF25Tyuz8hnFRP9+gB/P
+NRlF59/EHy27a72nirvuOyfxKnx/Mn+FD9Ah59OSLhWuo3sN9Im8yc2cliecwMz+DmTtE7TwzNw9v2zfxU9JDQwyLtppULiGpmKFOLHjz+SVGxSbVsWS//IyNK1GrQ== gschoenb@gschoenb-X220
+```
+
+
+
+
+
