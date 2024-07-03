@@ -73,7 +73,21 @@ ssh -i /home/pc/.ssh/id_rsa.pub  benutzer@XXX.XXX.XXX.XXX
 ```
 Daraufhin erscheint bei GUI-basierten Systemen eine Fragebox. Nach Eingabe des Passworts, mit dem der Schlüssel beim Erstellen geschützt wurde, ist man am System authentifiziert: 
 
+## Am Server
 
+Der nachfolgende Abschnitt zeigt die Konfigurationsschritte am Server.
 
+### sshd-Konfiguration
+
+Grundsätzlich genügt es unter Ubuntu, das oben angeführte Prozedere für die Public-Key-Authentifizierung durchzuführen. In manchen Situationen macht es dann auch Sinn, Passwort-Authentifizierung komplett zu deaktivieren.
+
+**Achtung**: Nach Änderung der folgenden Einstellung, ist es nicht mehr möglich, sich mit einem Passwort über ssh anzumelden: ```PasswordAuthentication no```. 
+```
+:~$ sudo diff /etc/ssh/sshd_config /etc/ssh/sshd_config.orig
+51c51
+< PasswordAuthentication no
+---
+> #PasswordAuthentication yes
+```
 
 
