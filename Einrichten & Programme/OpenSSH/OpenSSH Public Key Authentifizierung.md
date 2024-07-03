@@ -20,13 +20,13 @@ In diesem Beispiel wird für die RSA-Schlüssel eine Bitlänge von 4096 Bit ausg
 ```
 pc@pc:~$ ssh-keygen -b 4096
 Generating public/private rsa key pair.
-Enter file in which to save the key (/home/pc813/.ssh/id_rsa): 
-/home/pc813/.ssh/id_rsa already exists.
+Enter file in which to save the key (/home/pc/.ssh/id_rsa): 
+/home/pc/.ssh/id_rsa already exists.
 Overwrite (y/n)? y
 Enter passphrase (empty for no passphrase): 
 Enter same passphrase again: 
-Your identification has been saved in /home/pc813/.ssh/id_rsa
-Your public key has been saved in /home/pc813/.ssh/id_rsa.pub
+Your identification has been saved in /home/pc/.ssh/id_rsa
+Your public key has been saved in /home/pc/.ssh/id_rsa.pub
 The key fingerprint is:
 SHA256:jha0u6JEzA7qIBRVqD/b4Ts6ULlNz5PCoplb4ObnVX8 pc813@pc813
 The key's randomart image is:
