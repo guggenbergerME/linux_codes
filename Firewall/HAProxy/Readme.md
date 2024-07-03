@@ -146,9 +146,77 @@ Services / HAProxy / Settings / Virtual Services / Public Services → Add
 + Enable SSL offloading: kein Haken
 + X-Forwarded-For header: Haken
 
+### Einrichtung des Public Service für interne und externe Anfragen über https
+```
+Services / HAProxy / Settings / Virtual Services / Public Services → Add
+```
++ Name: https_lan_wan
++ Description: interne und externe https-Anfragen
++ Listen Addresses:
+    + z. B. 10.1.100.2:443 (HAProxy_lan_wan)
+    + z. B. 10.1.100.3:443 (HAProxy_lan)
++ Type: HTTP / HTTPS (SSL offloading)
++ Default Backend Pool: none
++ Enable SSL offloading: Haken
++ Certificates: Web GUI SSL certificate (wird später durch Let's-Encrypt-Zertifikate ersetzt)
++ X-Forwarded-For header: Haken
 
+### Einrichtung des Public Service für ausschließlich interne Anfragen über https
+```
+Services / HAProxy / Settings / Virtual Services / Public Services → Add
+```
++ Name: https_lan
++ Description: ausschließlich interne https-Anfragen
++ Listen Addresses:
+  + z. B. 10.1.100.3:443 (HAProxy_lan)
++ Type: HTTP / HTTPS (SSL offloading)
++ Default Backend Pool: none
++ Enable SSL offloading: Haken
++ Certificates: Web GUI SSL certificate (wird später durch Let's-Encrypt-Zertifikate ersetzt)
++ X-Forwarded-For header: Haken
 
-    
+### Einrichtung von Conditions
+
+Conditions sind vordefinierte Bedingungen die für die späteren Regeln für die Reaktionen des HAProxy notwendig sind.
+
+Zunächst benötigen Sie für jeden Webdienst eine Bedingung, die greift, falls eine Anfrage mit dem entsprechenden Domänennamen an den HAProxy gerichtet wird.Beispiel für den Webdienst nextcloud.ihre-schule.de:
+```
+Services / HAProxy / Settings / Rules & Checks / Conditions → Add
+```
++ Name: nextcloud
++ Condition type: Host ends with
++ Host Suffix: nextcloud.ihre-schule.de
+
+Weiterhin benötigen Sie eine Bedingung, mit der der HAProxy erkennt, dass eine Anfrage an ihn nicht verschlüsselt erfolgt ist:
+```
+Services / HAProxy / Settings / Rules & Checks / Conditions → Add
+```
++ Name: not-ssl
++ Condition type: Traffic is SSL (locally deciphered)
++ Negate condition: Haken
+
+### Einrichtung von Rules
+
+Rules sind vordefinierte Regeln, wie der HAProxy bei Eintreten einer oder mehrere Bedingungen reagieren soll.
+
+Zunächst benötigen Sie für jeden Webdienst eine Regel, die den HAProxy dazu verleitet, dass er eine an ihn gerichtete Anfrage an den entsprechenden Backend Pool weiterleitet.Beispiel für den Webdienst nextcloud.ihre-schule.de:
+```
+Services / HAProxy / Settings / Rules & Checks / Rules → Add* Name: nextcloud
+```
++ Test type: if
++ Select conditions: nextcloud
++ Execute function: Use specified Backend Pool
++ Use backend pool: nextcloud_backend
+
+Weiterhin benötigen Sie eine Regel, die nicht verschlüsselte htttp-Anfragen auf https umleitet:
+```
+Services / HAProxy / Settings / Rules & Checks / Rules → Add* Name: redirect_ssl
+```
++ Test type: if
++ Select conditions: not-ssl
++ Execute function: http-request-redirect
++ HTTP Redirect: scheme https code 301
+
 
 ### Links
 + [Tutorial HAProxy auf OPNsense Firewall mit Let’s Encrypt](https://blog.we-cme.de/haproxy-auf-opnsense-als-https-frontend-mit-lets-encrypt/)
