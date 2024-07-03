@@ -65,6 +65,14 @@ FROaNsn5hF+/wzjRK9akdhp5WjA5HXhg2OlkwKvSMhGlSgotRj5pr4Ebxjegysy1mEWRFN/vh/oNq4uH
 NRlF59/EHy27a72nirvuOyfxKnx/Mn+FD9Ah59OSLhWuo3sN9Im8yc2cliecwMz+DmTtE7TwzNw9v2zfxU9JDQwyLtppULiGpmKFOLHjz+SVGxSbVsWS//IyNK1GrQ== gschoenb@gschoenb-X220
 ```
 
+## Testen der Key-Authentifizierung
+
+Nachdem sich nun der öffentlich. Schlüssel am Server befindet, kann vom Client aus die Verbindung getestet werden. Wichtig ist dabei, dass nicht nach dem Passwort des Benutzers am Server gefragt wird, sondern die Passphrase, mit der der Schlüssel geschützt ist, verlangt wird!
+```
+ssh -i /home/pc/.ssh/id_rsa.pub  benutzer@XXX.XXX.XXX.XXX
+```
+Daraufhin erscheint bei GUI-basierten Systemen eine Fragebox. Nach Eingabe des Passworts, mit dem der Schlüssel beim Erstellen geschützt wurde, ist man am System authentifiziert: 
+
 
 
 
