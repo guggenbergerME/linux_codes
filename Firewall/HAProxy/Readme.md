@@ -217,6 +217,43 @@ Services / HAProxy / Settings / Rules & Checks / Rules → Add* Name: redirect_s
 + Execute function: http-request-redirect
 + HTTP Redirect: scheme https code 301
 
+## Zuweisung von Rules zu Backend-Pools
+
+Da jede http-Anfrage an einen der Webdienste auf https umgeleitet werden soll, weisen sie jedem Backend Pool dir Rule redirect_ssl zu.
+
+Beispiel für den Backend Pool nextcloud_backend:
+```
+HAProxy / Settings / Virtual Services / Backend Pools / nextcloud_backend → Edit
+```
+```
+Select Rules: redirect_ssl
+```
+
+## Zuweisung von Rules zu Public Services
+
+Der Public Service http_lan_wan soll alle an ihn gestellte Anfragen an den entsprechenden Backend-Poll weiterleiten:
+```
+HAProxy / Settings / Virtual Services / Public Services / http_lan_wan → Edit
+```
+```
+Select Rules: z. B. : nextcloud  fog usermanagement opnsense collabora
+```
+Der Public Service https_lan soll nur auf https-Anfragen reagieren, die ausschließlich intern zugänglich sein sollen:
+```
+HAProxy / Settings / Virtual Services / Public Services / https_lan → Edit
+```
+```
+Select Rules: z. B. : fog usermanagement opnsense
+```
+Der Public Service https_lan_wan soll auf sowohl interne als auch externe https-Anfragen reagieren:
+```
+HAProxy / Settings / Virtual Services / Public Services / https_lan_wan → Edit
+```
+```
+Select Rules: z. B. : nextcloud collabora
+```
+
+
 
 ### Links
 + [Tutorial HAProxy auf OPNsense Firewall mit Let’s Encrypt](https://blog.we-cme.de/haproxy-auf-opnsense-als-https-frontend-mit-lets-encrypt/)
