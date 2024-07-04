@@ -4,12 +4,12 @@ Die weniger bekannte XFCE-Edition von Linux Mint läuft auch auf älteren Rechne
 
 Vorteile:
 
-    Einsteigerfreundliche Distribution
-    Viele Funktionen und Extras
++ Einsteigerfreundliche Distribution
++ Viele Funktionen und Extras
 
 Nachteile:
 
-    Keine 32-Bit-Version
++ Keine 32-Bit-Version
 
 
 https://linuxmint.com/edition.php?id=301
