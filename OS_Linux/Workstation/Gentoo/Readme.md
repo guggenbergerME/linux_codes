@@ -1,0 +1,10 @@
+# Gentoo
+
+Gentoo ist eine vielseitige und schnelle und komplett freie Linux-Meta-Distribution, die sich an Entwickler und Netzwerkprofis richtet. Im Gegensatz zu anderen Distributionen verfügt Gentoo Linux über ein fortschrittliches, quellenbasiertes Paketverwaltungssystem namens Portage. Portage ist ein echtes Ports-System in der Tradition von BSD-Ports, ist jedoch in Python implementiert und bietet eine Reihe fortschrittlicher Funktionen, darunter Abhängigkeiten, fein granulares Paketverwaltung, "fake" (OpenBSD-style) Installationen, sicheres unmergen, Systemprofile, virtuelle Pakete, Verwaltung von Konfigurationsdateien und vieles mehr.
+
+Gentoo wurde um das Jahr 2000 von Daniel Robbins ins Leben gerufen, der die Vision einer Meta-Distribution hatte, die ohne vorkompilierte Binärpakete eingerichtet werden könnte. Ein Gentoo-System wird normalerweise mit einem minimalen Satz vorkompilierter Pakete eingerichtet, und die gewünschte Software nach Bedarf kompiliert und dem System hinzugefügt. Gentoo verwendet Optimierungen zur Kompilierungszeit ("Use Flags" genannt), mit denen das System stark angepasst werden kann und Features so hinzugefügt oder entfernt werden können, wie es der Situation am besten entspricht.
+
+Das Gentoo-Projekt ist bekannt für seine Flexibilität. Es elaubt seinen Benutzern eine Vielzahl von Softwarekonfigurationen, Kerneln und Init-Systemen sowie die übliche Sammlung von Desktop-Umgebungen ausführen zu können. Die Anpassung und Leistung, die mit dem Ports-Baum von Gentoo erzielt werden kann, hat dazu geführt, dass die Meta-Distribution als Basis für viele andere Projekte verwendet wurde, darunter Calculate Linux (eine geschäftsorientierte Distribution) und Container Linux (eine minimale Distribution für die Ausführung von Containern) und Redcore Linux (eine leichtgewichtige Desktop-Distribution). Gentoo dient auch als Basis für die Chrome OS-Plattform von Google und ist zum Zeitpunkt des Schreibens wahrscheinlich die fünftbeliebteste Linux-basierte Serverplattform für Websites.
+
+
+https://www.gentoo.org/
