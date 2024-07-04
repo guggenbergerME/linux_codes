@@ -4,11 +4,11 @@ So wie Linux Mint XFCE setzt auch Xubuntu auf den XFCE-Desktop, bringt allerding
 
 Vorteile:
 
-    Einsteigerfreundliche Distro
++ Einsteigerfreundliche Distro
 
 Nachteile:
 
-    Keine 32-Bit-Version
++ Keine 32-Bit-Version
 
 
 https://xubuntu.org/download/
