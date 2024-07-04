@@ -1,6 +1,6 @@
 # Ventoy
 
-## Download der Software
+**Download der Software**
 + [Download](https://www.ventoy.net/en/download.html)
 
 ## Linux CLI
