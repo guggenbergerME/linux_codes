@@ -80,6 +80,39 @@ PORT    STATE SERVICE
 443/tcp open  https
 ```
 
+## Ein Subnetz scannen
+```
+nmap 192.168.0.0/24
+```
+Ergebnis
+```
+$nmap 192.168.0.0/24
+Start von Nmap 7.80 ( https://nmap.org ) um 2020-09-18 20:15 UTC
+Nmap-Scanbericht für server-1.geekflare.com/de (192.168.0.7)
+Der Host ist verfügbar (0.044s Latenz).
+Nicht angezeigt: 999 geschlossene Ports
+PORT STATUS SERVICE
+22/tcp offen ssh
 
+Nmap-Scanbericht für server-2.geekflare.com/de (192.168.0.8)
+Der Host ist verfügbar (0.046s Latenzzeit).
+Nicht angezeigt: 999 geschlossene Ports
+PORT STATUS SERVICE
+22/tcp offen ssh
+
+Nmap-Scanbericht für server-3.geekflare.com/de (192.168.0.9)
+Der Host ist verfügbar (0.043s Latenzzeit).
+Nicht angezeigt: 999 geschlossene Ports
+PORT STATUS SERVICE
+22/tcp offen ssh
+
+Nmap-Scanbericht für server-4.geekflare.com/de (192.168.0.10)
+Der Host ist verfügbar (0.044s Latenzzeit).
+Nicht angezeigt: 999 geschlossene Ports
+PORT STATUS SERVICE
+22/tcp offen ssh
+
+Nmap fertig: 256 IP-Adressen (4 Hosts) gescannt in 4,67 Sekunden
+```
 
 
