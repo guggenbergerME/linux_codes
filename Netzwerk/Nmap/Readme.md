@@ -115,4 +115,122 @@ PORT STATUS SERVICE
 Nmap fertig: 256 IP-Adressen (4 Hosts) gescannt in 4,67 Sekunden
 ```
 
+## Scannen mehrerer Hosts
+
+Das Scannen mehrerer Hosts ist ganz einfach!
+
+Fügen Sie die Hostnamen oder IP-Adressen, die Sie scannen möchten, nacheinander in einer Reihe ein
+```
+nmap 192.168.0.1 192.168.0.3 192.168.0.4
+```
+
+### Komma verwenden
+
+Der oben genannte Befehl könnte auch wie folgt geschrieben werden, um die IP-Adresse nicht noch einmal zu erwähnen
+```
+nmap 192.168.0.1,3,4
+```
+### Bindestrich
+
+Verwenden Sie Bindestriche (-), um den IP-Adressbereich wie unten gezeigt anzugeben
+```
+nmap 192.168.0.1-20
+```
+
+### *
+
+Mit dem obigen Befehl werden die ersten zwanzig Hosts des Subnetzes gescannt.
+
+Verwenden Sie Platzhalter, um das gesamte Subnetz zu scannen –
+```
+nmap 192.168.0.*
+```
+Der obige Befehl scannt nach allen 256 IP-Adressen im Subnetz.
+
+### Hosts ais einer Datei
+
+Hosts aus einer Datei lesen
+
+Sie können alle Hosts, die gescannt werden sollen, in einer Datei angeben und den folgenden Befehl verwenden –
+
+```
+nmap -iL /tmp/hostfile
+```
+
+Beispiel einer Hostdatei –
+
+```
+cat /tmp/hostfile
+192.168.0.1,2,4
+scanme.nmap.org
+10.0.0-255.1-254
+```
+
+### Hosts von der Suche ausschließen
+Sie können einige Hosts von der Gruppensuche ausschließen, wenn Sie möchten.
+```
+nmap 192.168.0.* --ausschließen 192.168.0.2
+nmap 192.168.0.1-40 --ausschließen 192.168.0.5,6,7
+```
+
+Sie können auch Hosts von Ihrer Suche ausschließen, indem Sie das Flag -excludefile verwenden
+
+```
+nmap 192.168.0.* --excludefile /tmp/hosts.txt
+```
+
+## Nmap Port-Auswahl
+Um bestimmte Ports auf einem System zu scannen, können Sie anstelle der standardmäßigen Top 1000 häufig verwendeten Ports den Parameter -p verwenden. 
+
+```
+nmap -p 22,80,443 192.168.0.2-50
+```
+Ergebnis 
+```
+$nmap -p 22,80,443 192.168.0.2-50
+Start von Nmap 7.70 ( https://nmap.org ) um 2020-09-18 20:18 UTC
+Nmap-Scanbericht für server-1.geekflare.com/de (192.168.0.7)
+Der Host ist verfügbar (0.00018s Latenz).
+
+PORT STATUS SERVICE
+22/tcp offen ssh
+80/tcp geschlossen http
+443/tcp geschlossen https
+
+Nmap-Scan-Bericht für server-2.geekflare.com/de (192.168.0.8)
+Der Host ist verfügbar (0.00094s Latenz).
+
+PORT STATUS SERVICE
+22/tcp offen ssh
+80/tcp geschlossen http
+443/tcp geschlossen https
+
+Nmap-Scan-Bericht für server-3.geekflare.com/de (192.168.0.9)
+Der Host ist verfügbar (0.00092s Latenz).
+
+PORT STATUS SERVICE
+22/tcp offen ssh
+80/tcp geschlossen http
+443/tcp geschlossen https
+
+Nmap-Scan-Bericht für server-4.geekflare.com/de (192.168.0.10)
+Der Host ist verfügbar (0.00089s Latenz).
+
+PORT STATUS SERVICE
+22/tcp offen ssh
+80/tcp geschlossen http
+443/tcp geschlossen https
+
+Nmap erledigt: 49 IP-Adressen (4 Hosts) gescannt in 1,65 Sekunden
+```
+
+Der obige Befehl scannt nur nach den Ports 22, 80 und 443 auf den genannten IP-Adressen.
+```
+nmap -p 1-500 192.168.0.2
+```
+Der obige Befehl scannt nach den Ports 1 bis 500 auf dem genannten Host.
+```
+nmap -p- 192.168.0.2
+```
+Mit ```-p-``` werden alle 65535 Ports gescannt.
 
