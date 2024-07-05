@@ -16,6 +16,6 @@ Wir werden die Installation von Nmap auf zwei gängigen Linux-Distributionen dem
 ```
 sudo apt-get update
 ```
-´´´
+```
 sudo apt-get install nmap -y
-´´´
+```
