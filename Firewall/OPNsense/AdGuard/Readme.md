@@ -19,4 +19,11 @@ Nun ist das entsprechnende Paket im Bereich
 System / Pakete / Erweiterungen / os-adguardhome-maxit
 ```
 
-zu finden.
+zu finden. Dieses Paket nun aktivieren!
+
+## AdGuard setup
+
+AdGuard nun aktivieren
+```
+Dienste / Adguardhome / Allgemein
+```
