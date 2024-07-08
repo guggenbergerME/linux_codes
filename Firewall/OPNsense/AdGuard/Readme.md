@@ -43,4 +43,21 @@ Dienste / Unbound DNS / Allgmeine
 
 Aktivieren Sie Register DHCP leasesund Register DHCP static mappings.
 Dadurch werden Hostnamen in AdGuard Home für uns aufgelöst.
+
 Speichern Sie die Einstellungen.
+
+## AdGuard webGUI
+
+Jetzt können wir AdGuard Home selbst konfigurieren. Ich werde hier nicht auf alle Konfigurationen eingehen, aber einige Dinge sind erforderlich, damit dies optimal mit OPNsense funktioniert.
+
+Navigiere zur
+```
+http://[FW-IOP]:3000/
+```
+
+Stellen Sie die Admin-Oberfläche so ein, dass nur die IP-Adresse Ihres Routers abgehört wird (häufig 192.168.1.1), dieselbe IP-Adresse, die Sie auch bei der Konfiguration von OPNsense selbst verwenden. Stellen Sie den Port außerdem auf ein ```8080```.
+
+Der DNS-Server kann alle Schnittstellen abhören und den Standardport verwenden ```53```.
+
+
+
