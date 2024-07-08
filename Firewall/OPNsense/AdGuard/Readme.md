@@ -60,4 +60,6 @@ Stellen Sie die Admin-Oberfläche so ein, dass nur die IP-Adresse Ihres Routers 
 Der DNS-Server kann alle Schnittstellen abhören und den Standardport verwenden ```53```.
 
 
+## Links
++ [Setup Video](https://www.youtube.com/watch?v=fP_mQWSI8tc)
 
