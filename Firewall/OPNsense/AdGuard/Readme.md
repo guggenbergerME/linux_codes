@@ -13,3 +13,10 @@ anschliessend ein
 pkg update
 ```
 
+Nun ist das entsprechnende Paket im Bereich
+
+```
+System / Pakete / Erweiterungen / os-adguardhome-maxit
+```
+
+zu finden.
