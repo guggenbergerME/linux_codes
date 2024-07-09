@@ -29,6 +29,7 @@ Gefördert werden Privatpersonen in Sachsen, die Eigentümer oder Mieter von Woh
 
 Update Juni 2024: Insgesamt wurden seit Programmstart etwa 12.210 Anträge eingereicht, davon 9.400 von Eigentümern. Die Mittel für Balkonkraftwerke für Eigentümer sind deshalb ausgeschöpft. Das Kontingent für Mieter ist noch ausreichend. Verfügbar bleiben 1.956.000 €, was 6.520 möglichen Bewilligungen entspricht. Anträge können voraussichtlich noch 326 Tage gestellt werden.
 
+- [Quelle](https://gruenes.haus/photovoltaik-foerderung-sachsen/)
 
 
 
