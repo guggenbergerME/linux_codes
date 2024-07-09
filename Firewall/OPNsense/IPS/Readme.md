@@ -11,4 +11,10 @@ Bei der Erkennung von Angriffen untersuchen die IDP-Systeme den Datenstrom auf M
 
 ## Grundkonfiguration
 
-Wir navigieren nun zu den Einstellungen für das IPS unter ``` Dienste > Einbruchserkennung > Verwaltung ```  .
+Wir navigieren nun zu den Einstellungen für das IPS unter ``` Dienste > Einbruchserkennung > Verwaltung ```.
+
+Als erstes aktivieren wir den „Advanced Mode“, um die erweiterten Optionen zu haben. Anschließend aktivieren wir den Dienst Suricata überhaupt (Pkt. 2). Zu Beginn des Artikels haben wir ja den Unterschied zwischen IDS und IPS beschrieben: soll die OPNsense den Traffic aktiv unterbrechen, dann müssen wir den „IPS mode“ aktivieren (Pkt. 3). Übrigens: das IPS Suricata wird auch von kommerziellen Security-Produkten wie FireEye eingesetzt.
+
+
+## Link
++ [weitere Beschreibung](https://www.du-consult.de/opnsense-ips-konfigurieren/)
