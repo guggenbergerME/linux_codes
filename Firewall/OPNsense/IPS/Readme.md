@@ -29,7 +29,37 @@ Anschließend wird unter „Home networks“ noch festgelegt, welche IPs im inte
 
 Zum Schluss einmal auf „Apply“ klicken, um die Einstellungen zu übernehmen und zu speichern (Pkt. 9). 
 
+## Download der Rulesets
 
+Mit den oben durchgeführten Einstellungen ist das IPS bereits aktiv, allerdings fehlen nun noch die Pattern („Muster“), mit denen das IPS die Angriffe erkennen soll. Diese sind in Rulesets angeordnet. Ein Ruleset enthält mehrere Rules, die auf Pattern basieren.
+
+Grundsätzlich sucht man sich seine gewünschten Rulesets aus (Pkt. 1), klickt auf „enable selected“ (Pkt. 2) und dann auf „download & update rules“ (Pkt. 3).
+
+Die Rulesets unterscheiden sich zum einen in kostenpflichtige und kostenlose Rulesets. Die „guten“ Patterns sind deshalb kostenpflichtig, weil sie kuratiert und aktuell gehalten werden, bspw. IP-Adressen, von denen Angriffe, Portscans oder Exploits aus gestartet wurden.
+
+Die kostenlosen Rulesets dagegen enthalten zum einen allgemeine Muster, bereits bekannte Schwachstellen oder IP-Adressen-Listen, die bereits älter sind. In der Regel haben die kostenlosen Rulesets eine Verzögerung von 30 Tage. Wer damit leben kann, darf gerne zugreifen.
+
+Die zweite Unterscheidung besteht im Inhalt der Rulesets. Sie sind entweder thematisch (IPs), Service-bezogen (SSH, FTP, HTTP) oder Anwendung-bezogen (OpenSSH-Server, WordPress, MariaDB).
+
+Wir empfehlen dringend, nur die benötigten Rulesets zu aktivieren. Das schont den RAM, die CPU sowie die Performance. Wer also FTP und Telnet gar nicht mehr im Netzwerk verwendet, muss diese Rulesets gar nicht herunterladen. Diese Patterns müssen daher auch nicht mit Traffic abgeglichen werden, was der Performance zugute kommt.
+
+Nachdem die Rulesets herunterladen wurden, erscheint das Download-Datum unter „last updated“ (Pkt. 1). Die nicht ausgewählten Rulesets führen zu einem das „x“ und weisen auch „not installed“ als Download-Datum aus (Pkt. 2).
+
+## Automatisches Ruleset-Update
+
+Unter dem Reiter „Zeitplan“ können wir konfigurieren, dass OPNsense regelmäßig Rulesets aktualisiert und dann aktiviert. Dies wird mit einem Cronjob erledigt. Wer Cronjobs bereits kennt, wird mit der Konfiguration keine Probleme haben.
+
+Mit „enabled“ wird der Cronjob aktiviert. Die nächsten 5 Felder definiert, wann der Job ausgeführt werden soll. Im Beispiel wird der Job um 4 Uhr und 00 Minuten an jedem Tag in der Woche, an jedem Tag im Monat sowie in jedem Monat gestartet.
+
+Einmal pro Tag reicht. Wer den Job dennoch um 5 Uhr und 19 Uhr starten möchte, schreibt in die zweite Zeile „5,19“.
+
+## IPS-Logs anzeigen
+
+Es wird nicht lange dauern und schon werden die bekannten IPs auf der Firewall vorbeischauen.
+
+Unter dem Menüpunkt „Services“ > „Intrusion Detection“ > „Administration“ und dem Tab „Alerts“ finden wir alle Verbindungen, die das IPS geblockt hat.
+
+Wer detailliertere Informationen zu den IPS-Blocks haben möchte, findet diese unter dem Menüpunkt „Services“ > „Intrusion Detection“ > „Log File“.
 
 
 ## Link
