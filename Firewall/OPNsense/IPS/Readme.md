@@ -13,7 +13,23 @@ Bei der Erkennung von Angriffen untersuchen die IDP-Systeme den Datenstrom auf M
 
 Wir navigieren nun zu den Einstellungen für das IPS unter ``` Dienste > Einbruchserkennung > Verwaltung ```.
 
-Als erstes aktivieren wir den „Advanced Mode“, um die erweiterten Optionen zu haben. Anschließend aktivieren wir den Dienst Suricata überhaupt (Pkt. 2). Zu Beginn des Artikels haben wir ja den Unterschied zwischen IDS und IPS beschrieben: soll die OPNsense den Traffic aktiv unterbrechen, dann müssen wir den „IPS mode“ aktivieren (Pkt. 3). Übrigens: das IPS Suricata wird auch von kommerziellen Security-Produkten wie FireEye eingesetzt.
+Als erstes aktivieren wir den „Advanced Mode“ (Pkt. 1), um die erweiterten Optionen zu haben. Anschließend aktivieren wir den Dienst Suricata überhaupt (Pkt. 2). Zu Beginn des Artikels haben wir ja den Unterschied zwischen IDS und IPS beschrieben: soll die OPNsense den Traffic aktiv unterbrechen, dann müssen wir den „IPS mode“ aktivieren (Pkt. 3). Übrigens: das IPS Suricata wird auch von kommerziellen Security-Produkten wie FireEye eingesetzt.
+
+Für den Fall, dass wir einen VLAN-Trunk an die OPNsense heranführen, müssen wir den „Promiscuouse mode“ aktivieren, da dann das zugrundeliegende physikalische Interface überwacht wird und die OPNsense auch die Pakete anfassen soll, die eigentlich nicht für das Interface gedacht sind (Pkt. 4).
+
+Hinweis: es ist auch möglich, die VLAN-Interfaces zu überwachen. Die Möglichkeiten dazu sind abhängig von der Schnittstellen-Hardware und letztlich von den Treibern. Bei einigen Systemen führt das Überwachen von VLAN-Interfaces zum Verlust der Konnektivität.
+
+Wenn wir die Alarme und Blocks des IPS verwerten wollen (Dashboards, Korrelationen, SIEM, SOAR), dann können wir die Daten per Syslog weiterleiten (z.B. an Graylog oder Splunk, Pkt.5).
+
+Im Gegensatz zu einem normalen Paketfilter, dessen IP-Adressberechnungen rein nummerisch erfolgen, nimmt ein IPS eine große Menge an Mustern und vergleicht sie mit dem tatsächlichen Traffic. Die Software zum Abgleich kann unterschiedlich ressourcenhungrig und effizient gestalten werden. Wir haben bislang gute Erfahrungen mit dem „Pattern matcher“ Hyperscan gemacht (Pkt. 6).
+
+Unter (Pkt. 7) legen wir fest, an welchen Interfaces ein IPS aktiviert werden soll. Es gibt Stimmen, die ein IPS am WAN-Interface für unnötig halten, wenn NAT durchgeführt wird. Wir konnten das bislang nicht nachvollziehen.
+
+Anschließend wird unter „Home networks“ noch festgelegt, welche IPs im internen Netzwerk genutzt werden. Diese Information wird auch dynamisch in Mustern verwendet (Pkt. 8).
+
+Zum Schluss einmal auf „Apply“ klicken, um die Einstellungen zu übernehmen und zu speichern (Pkt. 9). 
+
+
 
 
 ## Link
