@@ -40,6 +40,16 @@ int main (int argc, char *argv[])
 }
 ```
 
+## Übersetzen
+
+Der Compiler benötigt für GTK+ eine ganze Reihe von Optionen. Glücklicherweise lassen sich diese über pkg-config automatisch hinzufügen:
+```
+gcc -Wall -g helloworld.c -o helloworld `pkg-config --cflags --libs gtk+-3.0` 
+```
+bzw. für GTK+ 2.x:
+```
+gcc -Wall -g helloworld.c -o helloworld `pkg-config --cflags --libs gtk+-2.0` 
+```
 
 ### Links
 + [GTK ubuntu](https://wiki.ubuntuusers.de/GTK%2B/Programmierung/)
