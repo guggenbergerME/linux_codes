@@ -51,5 +51,8 @@ bzw. für GTK+ 2.x:
 gcc -Wall -g helloworld.c -o helloworld `pkg-config --cflags --libs gtk+-2.0` 
 ```
 
+Kompiliertes Programm mit ```./``` ausführen
+
+
 ### Links
 + [GTK ubuntu](https://wiki.ubuntuusers.de/GTK%2B/Programmierung/)
