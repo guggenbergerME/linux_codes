@@ -2,7 +2,7 @@
 
 Routing von zwei unterschiedlichen Lans
 
-![Netzwerk Routing](https://github.com/guggenbergerME/linux_codes/blob/main/Firewall/OPNsense/Routing/1578022627641551.jpg)
+![Netzwerk Routing](GIMA_FW_Transfernetz.drawio.png)
 
 ## Aufbau der Verbindung
 Beide FW sind per LAN miteinander verbunden.
