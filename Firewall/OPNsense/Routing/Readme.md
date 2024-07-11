@@ -1,6 +1,6 @@
 # Netzwerk Routing
 
-Routing von zwei unterschiedlichen Lans
+Routing von zwei unterschiedlichen LANS (Gedankengang)
 
 ![Netzwerk Routing](GIMA_FW_Transfernetz.drawio.png)
 
