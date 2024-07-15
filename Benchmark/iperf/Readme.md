@@ -39,3 +39,22 @@ TCP window size: 16.0 KByte (default)
 [  3]  0.0-10.0 sec    300 MBytes    252 Mbits/sec
 ```
 Interessant ist der Wert bei Bandwith, der die Verbindungsgeschwindigkeit ausgibt. Im gezeigten Beispiel wurde zwischen zwei virtuellen Maschinen gemessen, die auf dem gleichen Rechner laufen. Andere Verbindung liefern natürlich andere Werte.
+
+
+## Weitere Optionen
+
+
+Verfügbare Optionen
+-s 	Startet iperf im Servermodus.
+-c IP_DES_SERVERS 	Startet die Messung auf dem Client.
+-d 	Startet einen Dualtest: Es wird sowohl die Geschwindigkeit von Client zu Server als auch von Server zu Client gemessen. Dies ist vor allem für asymetrische Netzwerktopologien wie z.B. DSL interessant.
+-P ANZAHL 	Lässt ANZAHL Tests gleichzeitig laufen. So kann man testen, ob die getestete Verbindung einbricht, wenn man mehr als einen Client hat.
+-f FORMAT 	Darüber kann man festlegen, welche Einheiten iperf zur Anzeige nutzt. k = kbits, m = megabits, K = kilobytes, M = Megabytes
+-p PORT 	Server läuft auf dem TCP-Port PORT statt 5001, und der Client versucht, sich mit dem Port PORT des Servers zu verbinden.
+-t SEKUNDEN 	Gibt die Dauer des Tests an. Die Voreinstellung ist 10 s.
+-i SEKUNDEN 	Gibt die Intervalllänge an, in der Ausgaben erfolgen. Die Intervalllänge sollte kürzer als die Testdauer sein.
+-V 	Es wird iperf mitgeteilt, dass die IP_DES_SERVERS eine IPv6-Adresse ist.
+-B IP-ADRESSE 	An eine Netzwerkschnittstelle binden, um die Geschwindigkeit über genau diese Schnittstelle zu messen. 
+
+### Links
++ [Iperf Dokumentation](https://wiki.ubuntuusers.de/iperf/)
