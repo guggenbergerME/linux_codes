@@ -1,7 +1,5 @@
 # IPsec
 
-## IPSec
-
 IPSec ist ein Standard, um lokale Netzwerke sicher über das Internet zu verbinden. Dabei legt IPSec so genannte Virtual Private Networks (VPN) an.
 
 IPSec arbeitet dabei auf der IP-Ebene. Dies bedeutet, es werden keine Veränderungen (wie z.B. Verschlüsselungsmodule) in den verwendeten Programmen benötigt. Deshalb ist es auch mit allen TCP/IP basierten Netzwerkprogrammen kompatibel.
