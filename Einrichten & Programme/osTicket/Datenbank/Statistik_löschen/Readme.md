@@ -17,23 +17,18 @@ Datenbank finden:
 mysql> show databases;
 ```
 Datenbank wählen:
-
 ```
 mysql> use datenbankname;
-
 ```
 Tabellen anzeigen lassen (man kann auch gleich zu Punkt 6 springen, wer die Tabellen sehen will, nimmt diesen Punkt mit);
 ```
 mysql> show tables;
-
 ```
 Tabellennamen wählen und Löschen Befehl absetzen (es wird nur der Inhalt gelöscht, die Struktur bleibt erhalten):
-
 ```
 mysql> delete from 'ost_ticket_event';
 ```
 mySQL verlassen:
-
 ```
 mysql> exit
 Bye
