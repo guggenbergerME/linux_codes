@@ -19,3 +19,4 @@ Ein Plus der Energiemanagementfunktion: Sie bündelt unter "Energiemanagement-Ü
 
 ### Links
 + [Projektseite](https://www.openmaint.org/en)
++ [Youtube Video](https://www.youtube.com/watch?v=nicBPdtvpfE&t=7s)
