@@ -9,5 +9,12 @@ Wie immer direkt beim Hersteller und in unseren Tutorials aufmerksam lesen dann 
 
 + [mehr Informationen](https://www.wireguard.com/#:~:text=At%20the%20heart%20of%20WireGuard,peer%20has%20a%20public%20key)
 
+## Wireguard Server Autostart (Linux)
+Den automatischen Start des Wireguard Servers beim Booten erledigt der Befehl:
+```
+systemctl enable wg-quick@wg0.service
+```
+Macht man danach Änderungen an der Wireguard Server Konfig muss anschliessend auch der Wireguard Server mit systemctl restart wg-quick@wg0.service neu gestartet werden !
+
 ### Links
 + [VPN installation mit Wireguard](https://administrator.de/tutorial/merkzettel-vpn-installation-mit-wireguard-660620.html)
