@@ -1,6 +1,6 @@
 # Wireguard mit dynamischen DNS Namen
 
-![NWireguard Logo]([GIMA_FW_Transfernetz.drawio.png](https://www.netways.de/wp-content/uploads/2021/02/Wireguard-ClientConfiguration.jpg))
+![GIMA_FW_Transfernetz.drawio.png](https://www.netways.de/wp-content/uploads/2021/02/Wireguard-ClientConfiguration.jpg)
 
 
 
