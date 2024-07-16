@@ -25,6 +25,26 @@ AllowedIPs = 100.64.64.100/32, 192.168.188.0/24
 Mit wg-quick up wg0 startet man den Wireguard Server. Entsprechend stoppt wg-quick down wg0 ihn.
 Ob der Tunnel aufgebaut wurde überprüft man mit wg show (unixoide OS).
 
+## Redirect versus Split Tunneling
+
+Ein wichtiger Punkt der fast immer falsch gemacht wird und entsprechend beachtet werden sollte!
+Allowed IPs 0.0.0.0/0 = Schickt anstatt dediziert NUR den Traffic des remoten lokalen LANs, immer den gesamten Client Traffic in den VPN Tunnel! Quasi wird dann das Default Gateway des Clinets auf den VPN Tunnel umgeleitet.
+Wenn dies aktiviert wird muss kein weiteres IP Netz mehr unter den AllowedIPs definiert werden!!
+Warum auch, denn 0.0.0.0/0 bedeutet "route ALLEN Client Traffic in den Tunnel". "Alles" inkludiert logischerweise alle IP Netze und damit auch systembedingten Traffic wie DNS (Namensauflösung), NTP (Uhrzeit) etc.
+
+Redirect belastet den Tunnel prinzipbedingt performancetechnisch je nach Trafficvolumen deutlich mehr als das schlankere Split Tunneling Verfahren. Das sollte man immer beachten!
+Leider ein Konfigurationsfehler der oft aus Routing Unkenntis gemacht wird wenn man lediglich nur relevanten Traffic für das remote Zielnetz ins VPN routen will.
+Möchte man keinen Redirect und per Split Tunneling wirklich nur den relevanten Traffic für das remote LAN (oder die LANs) in den Tunnel routen, gibt man hier außer der Server IP mit einer /32er Maske nur noch das bzw. die jeweilige(n) remote(n) IP Netz(e) und Maske an. Summary Subnet Masken sind hier natürlich auch erlaubt um mehrere IP Netze bei intelligentem Subnetting mit einer Maske zu erfassen.
+Mit Split Tunneling wird lediglich nur der Traffic für das remote LAN in den Tunnel gesendet. Lokaler Internet Traffic bleibt hier immer lokal und belastet den Tunnel nicht.
+❗️Split Tunneling ist also performancetechnisch die deutlich bessere Wahl.
+
+Wer aber dennoch z.B. aus Sicherheitsgründen allen Client Traffic verschlüsseln will um z.B. in öffentlichen WLAN Hotspots oder unsicheren Gastnetzen geschützt unterwegs zu sein, kommt um ein Gateway Redirect Setup nicht drum herum.
+
+Welches dieser beiden Verfahren sinnvoll ist, ist deshalb immer vom Einsatzprofil des VPNs abhängig und muss jeder Netzwerk Admin immer im Einzelfall entscheiden.
+In einer Redirect Konfig wird dann ausschliesslich nur 0.0.0.0/0 unter den "AllowedIPs" definiert, NICHT mehr!
+
+⚠️ Es ist also immer entweder nur Split Tunnel oder nur Gateway Redirect erlaubt!
+Eine Kombination beider Verfahren ist NICHT möglich und routingtechnisch natürlich auch völlig unsinnig, da ein Gateway Redirect, wie der Name ja schon sagt, sämtlichen Traffic routet.
 
 ## Peers informationen
 Die AllowedIPs auf Server-Seite sagen dem WG Server von welchen IP-Adressen er von diesem Peer verschlüsselten Traffic annehmen darf und nur von diesen (Cryptokey Routing). Trägst du hier statt einer eindeutigen 32er Maske bei mehreren Peers immer das gleiche Subnetz ein dann kann der Server keine eindeutige Route zu jedem Peer erstellen.
