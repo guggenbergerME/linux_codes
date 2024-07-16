@@ -24,3 +24,4 @@ If you choose one of the tar.gz, tar.bz2, or zip archive files, follow the insta
 
 ### Links
 + [Community Edition](https://otrscommunityedition.com/downloads/)
++ [Anleitung](https://otrscommunityedition.com/doc/manual/admin/6.0/en/html/manual-installation-of-otrs.html)
