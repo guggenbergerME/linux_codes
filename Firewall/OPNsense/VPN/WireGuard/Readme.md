@@ -62,5 +62,34 @@ systemctl enable wg-quick@wg0.service
 ```
 Macht man danach Änderungen an der Wireguard Server Konfig muss anschliessend auch der Wireguard Server mit systemctl restart wg-quick@wg0.service neu gestartet werden !
 
+## Konfiguration Wireguard Client
+
+Die Client Konfig sieht dann völlig identisch aus:
+
++ PrivateKey = Privater Key des Clients
++ Unter [Peer] dann PublicKey = öffentlicher Schlüssel des VPN Servers
+
+
+Zusätzlich kommt hier der Eintrag Endpoint = <Zieladresse_Server>:51820 hinzu, der die IP Adresse oder den Hostnamen des VPN Servers sowie dessen UDP Port definiert.
+
+Zu beachten ist das bei einer Installation des VPN Servers im lokalen LAN Netz immer der DynDNS Hostname des dortigen Routers oder dessen öffentliche WAN Port IP Adresse in der Endpoint Konfig angegeben wird. Nur diese ist aus dem Internet ansprechbar und leitet per Port Forwarding, wie oben bereits beschrieben, den VPN Tunnel an den internen Wireguard Server weiter.
+Beispiele sind dann z.B. Endpoint = meinrouter.dyndns.org:51820 bei DynDNS Hostnamen oder Endpoint = 85.1.2.3:51820 oder eine IPv6 Adresse wer eine öffentliche IP hat.
+Bei einer Installation auf der Peripherie wie Router oder Firewall, entfällt das unsichere Port Forwarding natürlich.
+Ein VPN Setup mit internem VPN Server ist immer latent unsicher, weil durch das Port Forwarding Loch in der Firewall ungeschützer Internet Traffic ins lokale Netz gelangt. VPNs gehören deshalb, wenn möglich, immer auf die Peripherie wie Router oder Firewall!
+```
+[Interface]
+Address = 100.64.64.101/24
+PrivateKey = OMjSCv6e/iXECZwq0ZVL5Ywf/KzZvdsGpYKv1512345=
+# DNS = 172.16.2.1
+
+[Peer]
+PublicKey = cA+mynt84tVH1gPaUN66E8K0nfzvpsQMohrEbz54321=
+# Endpoint = X.Y.Z.H:51820 
+Endpoint = router.myfritz.de:51820 
+AllowedIPs = 100.64.64.1/32, 192.168.2.0/24
+PersistentkeepAlive = 25 
+```
+⚠️ Auch hier gilt wieder der obige Warnhinweis bezüglich der internen Peers und den /32er Masken für interne WG Adressen unter "Allowed IPs"!
+
 ### Links
 + [VPN installation mit Wireguard](https://administrator.de/tutorial/merkzettel-vpn-installation-mit-wireguard-660620.html)
