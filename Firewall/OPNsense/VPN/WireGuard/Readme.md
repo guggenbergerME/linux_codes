@@ -1,5 +1,8 @@
 # Wireguard
 
+## DynDNS
++ [weiterlesen](https://github.com/guggenbergerME/linux_codes/blob/main/Firewall/OPNsense/VPN/WireGuard/Dynamische_DNS.md)
+
 ## Server Konfiguration Linux
 
 Die Server Konfig Datei befindet sich unter /etc/wireguard/wg0.conf ist sehr schlank und schnell aufgesetzt z.B. mit dem nano Editor. Sollte die Datei wg0.conf nicht vorhanden sein erzeugt man sie mit dem nano Editor.
