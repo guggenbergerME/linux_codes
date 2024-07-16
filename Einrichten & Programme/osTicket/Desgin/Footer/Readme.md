@@ -8,8 +8,8 @@ Footer Dateien
 ..\include\client\footer.inc.php
 ..\include\staff\login.tpl.php
 ```
-Find the following code:
+Nach folgendem Text suchen:
 ```
 <div id="footer">Copyright © osTicket.com. All rights reserved</div>
 ```
-and edit the text within the div to customize your footer content. osTicket asks that you leave the powered by osTicket link as a show of support.
+Je nach bedarf anpassen!
