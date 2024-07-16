@@ -10,7 +10,7 @@ Dabei ist mir ein kleines Problem begegnet, Wireguard hat kein automatisches Han
 + Notebook irgendwo unterwegs, muss sich zu allen anderen Verbinden
 + Server zuhause, Verbindung nur über DynDNS möglich
 
-![GIMA_FW_Transfernetz.drawio.png](Wireguard-ClientConfiguration.jpg)
+![Wireguard-ClientConfiguration.jpg](https://github.com/guggenbergerME/linux_codes/blob/main/Firewall/OPNsense/VPN/WireGuard/Wireguard-Endpoints.png)
 
 
 ### Quelle
