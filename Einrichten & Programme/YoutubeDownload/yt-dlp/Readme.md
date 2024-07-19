@@ -8,7 +8,7 @@ sudo chmod a+rx /usr/local/bin/yt-dlp
 
 ## Beispiele
 
-Download eines Videos
+Download eines Videos - Eingabe erfolgt im Terminal!
 ```
 $ yt-dlp https://www.youtube.com/watch?v=t5b20oLaIaw
 ```
