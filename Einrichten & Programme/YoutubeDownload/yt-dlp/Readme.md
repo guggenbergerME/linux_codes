@@ -44,6 +44,10 @@ Sie können auch das Ausgabe-Audioformat mit dem -x --audio-formatFahne.
 yt-dlp -x --audio-Format mp3 https://www.youtube.com/watch?v't5b20oLaIaw
 ```
 
+## Herunterladen von Playlisten und speichern als mp3
+```
+yt-dlp --ignore-errors --format bestaudio --extract-audio --audio-format mp3 --audio-quality 160K --output "%(title)s.%(ext)s" --yes-playlist 'LINK'
+```
 
 ### Links
 + [Projekt](https://github.com/yt-dlp/yt-dlp#installation)
