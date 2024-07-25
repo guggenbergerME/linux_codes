@@ -12,6 +12,9 @@ sh <(curl -sSf https://downloads.nordcdn.com/apps/linux/install.sh)
 Hinweis: Wenn du kein curl-Paket hast, was du feststellen kannst, wenn der obere Schritt nicht funktioniert, kannst du alternativ auch folgenden Befehl eingeben:
 sh <(wget -qO - https://downloads.nordcdn.com/apps/linux/install.sh)
 
+## Download des Clients
++ [NorthVPN Download](https://nordvpn.com/download/linux/?_gl=1*ogg51s*_gcl_au*MjAwMzUxODU3NS4xNzIxODkwMTcy*_ga*MTYzMTI2NDcxMy4xNzIxODkwMTY3*_ga_LEXMJ1N516*MTcyMTg5MDE2Ny4xLjEuMTcyMTg5MDE4MC41Mi4wLjA.&_ga=2.18084025.1611776307.1721890167-1631264713.1721890167)
+
 **Permission denied accessing**
 
 Wenn dir zusätzlich das folgende Problem angezeigt wird: Whoops! Permission denied accessing /run/nordvpn/nordvpnd.sock angezeigt wird, musst du nur den folgenden Befehl eingeben: 
