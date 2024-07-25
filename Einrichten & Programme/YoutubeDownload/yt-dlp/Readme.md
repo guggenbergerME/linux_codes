@@ -5,7 +5,7 @@
 sudo wget https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp -O /usr/local/bin/yt-dlp
 sudo chmod a+rx /usr/local/bin/yt-dlp
 ```
-**Installation von FFmpeg & ffprobe**
+**Installation von FFmpeg wenn noch nicht geschehen**
 ```
 sudo apt install ffmpeg
 ```
