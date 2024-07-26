@@ -47,3 +47,19 @@ Stelle eine Verbindung mit einem NordVPN-Server her:
 nordvpn connect
 ```
 
+## Befehle
+Länder anzeigen
+
+```
+nordvpn countries
+```
+
+Mit einem Land verbinden
+```
+nordvpn connect german
+```
+
+Mit der besten server verbinden
+```
+nordvpn connect
+```
