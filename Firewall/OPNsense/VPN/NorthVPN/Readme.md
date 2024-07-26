@@ -20,6 +20,13 @@ Es kann auch direkt das deb Paket geladen werden.
 
 +[Downloadordner](https://repo.nordvpn.com/deb/nordvpn/debian/pool/main/)
 
+**Installieren**
+installieren Sie ein deb Paket unter Debian/Ubuntu/LM mit folgendem Befehl
+
+```
+sudo dpkg -i nordvpn_3.14.2_amd64.deb
+```
+
 **Permission denied accessing**
 
 Wenn dir zusätzlich das folgende Problem angezeigt wird: Whoops! Permission denied accessing /run/nordvpn/nordvpnd.sock angezeigt wird, musst du nur den folgenden Befehl eingeben: 
