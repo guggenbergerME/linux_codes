@@ -24,7 +24,7 @@ Es kann auch direkt das deb Paket geladen werden.
 installieren Sie ein deb Paket unter Debian/Ubuntu/LM mit folgendem Befehl
 
 ```
-sudo dpkg -i nordvpn_3.14.2_amd64.deb
+sudo dpkg -i nordvpn_[VERSION]_amd64.deb
 ```
 
 **Permission denied accessing**
