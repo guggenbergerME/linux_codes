@@ -20,6 +20,15 @@ network={
 }
 ```
 
+## Booten
+Die 3er Pis booten schon länger von USB, kein Problem.
+Der Pi 4 bootet seit dem Update 20.08.2020 auch von USB.
+Pis mit älterer Firmware brauchen:
+sudo rpi-eeprom-update
+Das geht erstmal von der SD Card.
+Danach braucht man keine SD Card mehr.
+Ein neues System kann man direkt auf eine SSD/HD spielen.
+
 ## Links
 + [Betriebssystem auf eine SD Karte flashen](https://tutorials-raspberrypi.de/rapbian-betriebssystem-raspberry-pi-image-sd-karte-flashen-windows-mac-linux/)
 + [USB Boot per Stick oder SSD Festplatte einrichten](https://tutorials-raspberrypi.de/raspberry-pi-usb-boot-per-stick-ssd-einrichten/)
