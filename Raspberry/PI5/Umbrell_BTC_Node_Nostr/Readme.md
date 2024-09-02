@@ -2,6 +2,6 @@
 
 ## umbrell ssh
 ```
-ssh umbrel@[IP]]
+ssh umbrel@[IP]
 ```
 Passwort entspricht dem aus dem Setup!
