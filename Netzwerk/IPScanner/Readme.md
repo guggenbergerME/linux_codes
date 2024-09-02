@@ -1,3 +1,9 @@
+# nmap scan
+
+```
+nmap -sn [IP Range z.b. 10.100.0.51/16]
+```
+
 # ARP (Network Scan)
 
 "arp" ist ein Kommandozeilen-Tool, dass standardmäßig vorhanden sein sollte. Es sollte sowohl unter Windows, Linux als auch macOS funktionieren.
