@@ -23,3 +23,10 @@ Nach dem Update sollte der PI noch einmal neu gestartet werden
 ```
 sudo reboot
 ```
+
+## Pi konfigurieren
+```
+sudo raspi-config
+```
+
+
