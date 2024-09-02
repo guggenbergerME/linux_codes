@@ -19,3 +19,7 @@ network={
  key_mgmt=WPA-PSK
 }
 ```
+
+## Links
++ [Betriebssystem auf eine SD Karte flashen](https://tutorials-raspberrypi.de/rapbian-betriebssystem-raspberry-pi-image-sd-karte-flashen-windows-mac-linux/)
++ [USB Boot per Stick oder SSD Festplatte einrichten](https://tutorials-raspberrypi.de/raspberry-pi-usb-boot-per-stick-ssd-einrichten/)
