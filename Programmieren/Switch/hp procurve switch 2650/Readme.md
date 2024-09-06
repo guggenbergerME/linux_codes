@@ -8,5 +8,31 @@
 + Stopbits 1
 + Flow Xon/Xoff
 
-## Tool
+## Befehle
+
+ boot                  Reboot the device.
+ clear                 Clear table/statistics or authorized client public
+                       keys.
+ configure             Enter the Configuration context.
+ copy                  Copy datafiles to/from the switch.
+ debug                 Enable/disable debug logging.
+ end                   Return to the Manager Exec context.
+ erase                 Erase the configuration file stored in flash or the
+                       primary/secondary flash image.
+ getMIB                Retrieve and display the value of the MIB objects
+                       specified.
+ kill                  Kill other active console, telnet, or ssh sessions.
+ log                   Display log events.
+ page                  Toggle paging mode.
+ print                 Execute a command and redirect its output to the device
+                       channel for current session.
+ redo                  Re-execute a command from history.
+ reload                Warm reboot of the switch.
+ repeat                Repeat execution of a previous command.
+ setMIB                Set the value of a MIB object.
+ setup                 Enter the 'Switch Setup' screen for basic switch
+                       configuration.
+
+
+### Tool
 + [GTKTerm](https://github.com/guggenbergerME/linux_codes/blob/main/Programmieren/RS232_seriell/GTKTerm.md)
