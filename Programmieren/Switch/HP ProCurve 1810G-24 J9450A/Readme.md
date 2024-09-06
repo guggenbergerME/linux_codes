@@ -13,4 +13,7 @@ Fanless             ja
 max. Leistung       48 Gbps
 ```
 
+## Protokolle
++ IEEE 802.1p Priority
++ IEEE 802.1Q VLANs
 
