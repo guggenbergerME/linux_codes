@@ -9,7 +9,7 @@
 + Flow Xon/Xoff
 
 ## Befehle
-
+```
  boot                  Reboot the device.
  clear                 Clear table/statistics or authorized client public
                        keys.
@@ -32,6 +32,7 @@
  setMIB                Set the value of a MIB object.
  setup                 Enter the 'Switch Setup' screen for basic switch
                        configuration.
+```
 
 
 ### Tool
