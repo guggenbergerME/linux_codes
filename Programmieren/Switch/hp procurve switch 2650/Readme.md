@@ -53,7 +53,7 @@ telnet                Initiate an outbound telnet session to another network
 ```
 ## Bedienung
 ```
-SPACE      Auswahl
+SPACE      Auswahl treffen
 ```
 
 ### Tool
