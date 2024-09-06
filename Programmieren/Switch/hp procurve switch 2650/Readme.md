@@ -50,16 +50,11 @@ telnet                Initiate an outbound telnet session to another network
  ping                  Send IP Ping requests to a device on the network.
  show                  Display switch operation information.
  traceroute            Send traceroute to a device on the network.
-
-
-
-
-
-
-
-
 ```
-
+## Bedienung
+```
+SPACE      Auswahl
+```
 
 ### Tool
 + [GTKTerm](https://github.com/guggenbergerME/linux_codes/blob/main/Programmieren/RS232_seriell/GTKTerm.md)
