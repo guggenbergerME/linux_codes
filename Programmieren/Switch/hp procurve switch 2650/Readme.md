@@ -8,6 +8,24 @@
 + Stopbits 1
 + Flow Xon/Xoff
 
+## Technische Daten
+```
+Authentication Method: 	     Secure Shell (SSH), RADIUS, TACACS+
+Compliant Standards: 	       IEEE 802.3, IEEE 802.3u, IEEE 802.1D, IEEE 802.1Q, IEEE 802.3ab, IEEE 802.1p, IEEE 802.3x, IEEE 802.3ad (LACP), IEEE 802.1w, IEEE 802.1x
+Device Type: 	               Switch - 48 ports - Managed - stackable
+Enclosure Type: 	            Desktop 1U
+Encryption Algorithm: 	      SSL
+Features: 	                  Flow control, auto-sensing per device, auto-negotiation, BOOTP support, trunking, VLAN support, manageable, stackable
+Flash Memory: 	              8 MB Flash
+MAC Address Table Size: 	    8K entries
+Ports: 	                     48 x 10/100 + 2 x combo Gigabit SFP
+Processor: 	                 1 x Motorola MPC8245: 266 MHz
+RAM: 	                       32 MB SDRAM
+Remote Management Protocol: 	SNMP 1, RMON 1, RMON 2, RMON 3, RMON 9, Telnet, SNMP 3, SNMP 2c, HTTP
+Routing Protocol: 	          IGMPv2, IGMP, IGMPv3
+Subtype: 	                   Fast Ethernet
+```
+
 ## Befehle
 ```
  boot                  Reboot the device.
