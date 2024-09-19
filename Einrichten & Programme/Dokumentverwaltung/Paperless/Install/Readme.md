@@ -1,4 +1,12 @@
 # Paperless installation
+
+## installation per script
+Achtung! Es muss bereits Docker installiert sein
+
+```
+bash -c "$(curl --location --silent --show-error https://raw.githubusercontent.com/paperless-ngx/paperless-ngx/main/install-paperless-ngx.sh)"
+```
+
 Installation von Paperless-ngx unter Ubuntu
 
 ## System update
