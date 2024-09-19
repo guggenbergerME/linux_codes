@@ -13,3 +13,16 @@ $ sudo apt update
 $ sudo apt install wireguard
 ```
 Dadurch werden die Pakete wireguard, wireguard-dkms und wireguard-tools installiert. 
+
+## Konfiguration
+WireGuard Private- und Public-Key für den Ubuntu Rechner erzeugen
+
+Für eine erfolgreiche Verbindung benötigt jeder Teilnehmer an einem WireGuard VPN eigene Private- und Public-Keys. Sie können diese bequem mit dem nachfolgenden Befehl erzeugen. Die umask wird auf 077 gesetzt, um alle anderen User außer root den Zugriff zu verweigern. 
+
+```
+$ sudo -i
+# cd /etc/wireguard
+# umask 077
+# wg genkey > private-key
+# wg pubkey > public-key < private-key
+```
