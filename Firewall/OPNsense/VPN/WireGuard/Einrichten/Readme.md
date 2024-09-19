@@ -46,3 +46,4 @@ PublicKey = <Public Key der OPNsense Wireguard Instanz>
 AllowedIPs = <Netzwerke auf die dieser Client Zugriff haben soll>/<Netmask>          
 Endpoint = <Public IP der OPNsense Firewall>:<WireGuard Port>
 ```
+In der OPNsense wird in dem zugehörigen Client (PEER) Eintrag der öffentliche Schlüssel aus der Datei ```public-key``` gesetzt.
