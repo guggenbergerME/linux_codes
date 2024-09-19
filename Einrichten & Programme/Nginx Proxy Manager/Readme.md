@@ -47,3 +47,6 @@ Default login
 Email:    admin@example.com
 Password: changeme
 ```
+
+## Firewal rules
++ [Tutorial](https://homenetworkguy.com/how-to/deploy-nginx-proxy-manager-in-dmz-with-opnsense/)
