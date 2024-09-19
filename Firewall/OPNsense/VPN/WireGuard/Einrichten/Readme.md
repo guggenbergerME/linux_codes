@@ -26,3 +26,23 @@ $ sudo -i
 # wg genkey > private-key
 # wg pubkey > public-key < private-key
 ```
+
+## Dauerhafte Konfiguration anlegen
+
+Wie Sie eine dauerhafte, auch einen Neustart überstehende, Konfiguration erzeugen wird in diesem Abschnitt beschrieben.
+
+Erstellen Sie dazu beispielsweise mit dem Editor vim die neue Datei wg0.conf:
+
+$ sudo nano /etc/wireguard/wg0.conf
+
+Fügen Sie nun in diese Datei die folgenden Zeilen ein. Speichern und verlassen des vim können Sie anschließend mittels :x. Für ein besseres Verständnis sind die einzelnen Zeilen per Inline-Kommentar beschrieben.
+```
+[Interface]
+Address = <IP des Client aus dem Tunneladressenbereich>
+PrivateKey = <Private Key des Clients>
+
+[Peer]
+PublicKey = <Public Key der OPNsense Wireguard Instanz>
+AllowedIPs = <Netzwerke auf die dieser Client Zugriff haben soll>/<Netmask>          
+Endpoint = <Public IP der OPNsense Firewall>:<WireGuard Port>
+```
