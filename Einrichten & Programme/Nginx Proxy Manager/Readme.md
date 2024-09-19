@@ -35,3 +35,15 @@ Starten per portainer oder terminal
 ```
 docker compose up -d
 ```
+
+## Erstes Login
+```
+[IP]:81/login
+```
+
+Default login
+
+```
+Email:    admin@example.com
+Password: changeme
+```
