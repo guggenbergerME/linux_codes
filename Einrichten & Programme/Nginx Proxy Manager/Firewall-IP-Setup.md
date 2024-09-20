@@ -1,5 +1,7 @@
 # Firewall Setup
 
+[[https://github.com/guggenbergerME/linux_codes/blob/main/Einrichten%20%26%20Programme/Nginx%20Proxy%20Manager/Bildschirmfoto%20vom%202024-09-20%2009-58-48.png|alt=octocat]]
+
 Bitte folgende Punkte in der OPNsense aktivieren
 
 Firewall -> Einstellungen -> Aktivieren:
