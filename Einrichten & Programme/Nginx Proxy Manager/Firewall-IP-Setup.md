@@ -1,6 +1,8 @@
 # Firewall Setup
 
-[[https://github.com/guggenbergerME/linux_codes/blob/main/Einrichten%20%26%20Programme/Nginx%20Proxy%20Manager/Bildschirmfoto%20vom%202024-09-20%2009-58-48.png|alt=octocat]]
+
+
+![Bild]([https://www.elektronik-kompendium.de/sites/net/bilder/09072411.png](https://github.com/guggenbergerME/linux_codes/blob/main/Einrichten%20%26%20Programme/Nginx%20Proxy%20Manager/Bildschirmfoto%20vom%202024-09-20%2009-58-48.png))
 
 Bitte folgende Punkte in der OPNsense aktivieren
 
