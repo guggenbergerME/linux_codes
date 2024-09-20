@@ -2,7 +2,7 @@
 
 ## Docker installation
 ```
-$ docker run --restart=always -d -p 8080:80 nextcloud
+docker run -d --restart unless-stopped -p 8080:80 nextcloud
 ```
 http://localhost:8080/ 
 
