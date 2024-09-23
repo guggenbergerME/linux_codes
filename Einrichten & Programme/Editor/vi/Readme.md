@@ -7,6 +7,8 @@
 
 ```:wq``` - Verlassen mit speichern
 
+```ESC``` - Bearbeitungsmodus beenden
+
 
 ### Links
 + [Befehle](https://www.fehcom.de/pub/viref.pdf)
