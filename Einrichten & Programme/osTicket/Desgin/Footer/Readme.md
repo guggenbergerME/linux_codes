@@ -1,6 +1,6 @@
 # osTicket Footer
 
-Eintreten in die Docker Umgebeung mit [exec](https://github.com/guggenbergerME/linux_codes/tree/main/docker/EXEC).
+Eintreten in die Docker Umgebeung mit [EXEC](https://github.com/guggenbergerME/linux_codes/blob/main/Einrichten%20%26%20Programme/docker/EXEC/Readme.md).
 
 Footer Dateien
 
