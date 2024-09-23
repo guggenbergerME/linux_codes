@@ -5,8 +5,8 @@ Eintreten in die Docker Umgebeung mit [EXEC](https://github.com/guggenbergerME/l
 Footer Dateien
 
 ```
-..\include\client\footer.inc.php
-..\include\staff\login.tpl.php
+/var/www/html/include/client/footer.inc.php
+/var/www/html/include/staff/login.tpl.php
 ```
 Nach folgendem Text suchen:
 ```
