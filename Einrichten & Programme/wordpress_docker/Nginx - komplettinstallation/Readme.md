@@ -31,3 +31,13 @@ docker run -d --name wordpress \
   --volume wordpress_data:/bitnami/wordpress \
   bitnami/wordpress-nginx:latest
 ```
+
+## Login wordpress
+```
+[DEINE IP] / wp-admin/
+```
+Benutzername ```user```
+Passwort ```bitnami```
+
+### Links
++ [Bitnami package for WordPress with NGINX](https://github.com/bitnami/containers/tree/main/bitnami/wordpress-nginx#bitnami-package-for-wordpress-with-nginx)
