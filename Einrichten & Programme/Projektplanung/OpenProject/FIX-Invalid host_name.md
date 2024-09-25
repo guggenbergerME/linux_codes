@@ -25,3 +25,9 @@ export OPENPROJECT_ADDITIONAL__HOST__NAMES=["127.0.0.1:6000"]
 ```
 
 Neustart des ganzen Systems
+
+## Konfig ausführen
+
+```
+openproject configure
+```
