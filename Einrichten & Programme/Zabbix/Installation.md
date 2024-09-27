@@ -173,6 +173,10 @@ Du erhältst die folgende Ausgabe:
 Nov 28 16:17:08 ubuntu22041 systemd[1]: Starting The Apache HTTP Server...
 ```
 
+## Erstes Login
+Benutzer ```Admin``` Passwort ```Zabbix```
+
+
 ### Links
 + [Anleitung](https://www.howtoforge.de/anleitung/so-installierst-du-das-zabbix-monitoring-tool-auf-ubuntu-22-04/)
 + [Betrieb](https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-zabbix-to-securely-monitor-remote-servers-on-ubuntu-18-04)
