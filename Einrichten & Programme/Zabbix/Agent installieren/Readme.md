@@ -1,4 +1,4 @@
-# Zabbiy Agent installieren
+# Zabbix Agent installieren
 
 ## Ubuntu
 ```
@@ -55,4 +55,10 @@ ServerActive=zabbix_server_ip_address
 
 Hostname=Second Ubuntu Server
 ...
+```
+## Agent neu starten
+
+```
+sudo systemctl restart zabbix-agent
+sudo systemctl enable zabbix-agent
 ```
