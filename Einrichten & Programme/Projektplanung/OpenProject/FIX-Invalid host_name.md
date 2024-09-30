@@ -28,6 +28,8 @@ Neustart des ganzen Systems
 
 ## Konfig ausführen
 
+Nachfolgender Befehl setzt alles wieder zurück
+
 ```
 openproject configure
 ```
@@ -60,3 +62,5 @@ export OPENPROJECT_HSTS="false"
 ```
 set OPENPROJECT_HTTPS=true
 ```
+
+Änderung in der Config vornehmen und Server neu starten.
