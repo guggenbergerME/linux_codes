@@ -58,6 +58,9 @@ export OPENPROJECT_ADDITIONAL__HOST__NAMES=["127.0.0.1:6000"]
 export OPENPROJECT_HTTPS="false"
 export OPENPROJECT_HSTS="false"
 ```
+Änderung in der Config vornehmen und Server neu starten.
+
+
 ## Problem mit öffnen in neuen Tabs
 ```
 set OPENPROJECT_HTTPS=true
