@@ -1,5 +1,8 @@
 # Sendmail
 
+## Konfigurieren von Postfix
++ [weiterlesen](https://github.com/guggenbergerME/linux_codes/blob/main/Email/sendmail/Postfix/Readme.md)
+
 
 ## Bash
 ```
