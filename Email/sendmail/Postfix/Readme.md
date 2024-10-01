@@ -72,14 +72,17 @@ smtp_use_tls = yes
 smtp_tls_CAfile = /etc/ssl/certs/ca-certificates.crt
 ```
 
-## Postfix reload
+## Postfix neu starten
 
 ```
 /usr/sbin/postfix reload
 ```
 
+## Emailversand testen
 
-
+```
+echo "Hier ist der Body - Das ist eine Testmail" | mail -s "Hier steht der Betreff" email@adresse.to
+```
 
 
 
