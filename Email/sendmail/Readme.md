@@ -1,6 +1,11 @@
 # Sendmail
 
 
+## Bash
+```
+/usr/sbin/sendmail
+```
+
 
 
 ### Links
