@@ -60,7 +60,7 @@ AllowedIPs = 0.0.0.0/0,::/0
 
 ## WG Schnittstelle starten
 
-Aktivieren der Schnitstelle (Angabe der Schnittstelle ohne .conf!)
+Aktivieren der Schnitstelle automatisch bei Systemstart (Angabe der Schnittstelle ohne .conf!)
 
 ```
 sudo systemctl enable wg-quick@wgXXX
