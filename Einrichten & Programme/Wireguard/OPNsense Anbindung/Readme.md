@@ -74,3 +74,12 @@ Status
 sudo systemctl status wg-quick@wgXXX
 ```
 
+## Ausführbare Datei auf Desktop
+
+Erzeugen einer Bash Datei, bsp. ```vpn-start.sh```
+
+```
+#! /bin/sh
+sudo systemctl start wg-quick@wgXXX
+```
+
