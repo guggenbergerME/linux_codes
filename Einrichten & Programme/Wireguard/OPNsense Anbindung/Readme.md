@@ -57,3 +57,20 @@ PublicKey = XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX=
 Endpoint = [SERVER IP]:51820
 AllowedIPs = 0.0.0.0/0,::/0
 ```
+
+## WG Schnittstelle starten
+
+Aktivieren der Schnitstelle (Angabe der Schnittstelle ohne .conf!)
+
+```
+sudo systemctl enable wg-quick@wgXXX
+```
+Starten
+```
+sudo systemctl start wg-quick@wgXXX
+```
+Status
+```
+sudo systemctl status wg-quick@wgXXX
+```
+
