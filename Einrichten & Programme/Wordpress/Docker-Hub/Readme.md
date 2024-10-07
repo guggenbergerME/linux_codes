@@ -34,3 +34,8 @@ docker run -d --name wordpress \
   --volume wordpress_data:/bitnami/wordpress \
   bitnami/wordpress-nginx:latest
 ```
+
+## Docker Befehle
+
++mehr [Befehle](https://github.com/guggenbergerME/linux_codes/tree/main/Einrichten%20&%20Programme/docker/befehle#readme)
+
