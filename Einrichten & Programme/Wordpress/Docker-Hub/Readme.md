@@ -35,6 +35,9 @@ docker run -d --name wordpress \
   bitnami/wordpress-nginx:latest
 ```
 
+# Login
+user | bitnami
+
 ## Docker Befehle
 
 +mehr [Befehle](https://github.com/guggenbergerME/linux_codes/tree/main/Einrichten%20&%20Programme/docker/befehle#readme)
