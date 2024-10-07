@@ -55,3 +55,20 @@ Screen hat noch einiges mehr zu bieten. Weitere Informationen dazu finden Sie au
 man screen
 ```
 Sie können nun mit Screen Linux Befehle im Hintergrund starten!
+
+## Keys
+
+```
+
+Ctrl + a d      Disconnect from the current screen
+
+Ctrl + a "      View all of the available screen windows
+
+Ctrl + a      1,2,3...9      Connect to a screen with a particular number
+
+Ctrl + a i      View information about the current screen
+
+Ctrl + a k      Kills the current window
+
+Ctrl + a \ Kills all windows and terminates screen
+```
