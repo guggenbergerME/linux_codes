@@ -22,7 +22,7 @@ Playbooks enthält) erzeugt.
 ```
 mkdir playbooks
 cd playbooks
-vi hosts
+nano hosts
 ```
 
 Im Hosts-File wird sowohl ein Name (oder eine IP-Adresse sowie Verbindungsparameter angeben,
