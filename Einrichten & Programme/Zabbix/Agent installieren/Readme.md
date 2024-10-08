@@ -18,7 +18,7 @@ Konfiguration des Agenten ändern
 Eintragen der Zabbix Server IP
 ```
 ...
-Server=zabbix_server_ip_address
+Server=zabbix_server_ip_address ->10.250.0.22
 ...
 ```
 
