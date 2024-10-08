@@ -3,3 +3,9 @@
 ```
 docker exec -it <mycontainer> sh
 ```
+
+## EXEC Datei download
+
+```
+docker cp  [CONTAINER-ID]:/docker/container ~/download`
+```
