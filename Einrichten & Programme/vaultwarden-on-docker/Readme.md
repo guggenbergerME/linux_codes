@@ -1,5 +1,35 @@
 # Vaultwarden mit Docker installieren
 
+## Firewall konfigurieren
+Überprüfe den Status der Firewall.
+
+```
+sudo ufw status
+```
+
+Du solltest etwas wie das Folgende sehen.
+```
+Status: active
+
+To                         Action      From
+--                         ------      ----
+OpenSSH                    ALLOW       Anywhere
+OpenSSH (v6)               ALLOW       Anywhere (v6)
+```
+
+Firewall aktivieren
+```
+ufw enable
+```
+
+Erlaube HTTP- und HTTPs-Ports.
+
+```
+ufw allow http
+ufw allow https
+```
+
+
 ## Docker insstallation
 ```
 apt install docker.io
