@@ -99,5 +99,77 @@ environment:
 	 SIGNUPS_ALLOWED: "false"
 ```
 
+## Caddy-Datei für Vaultwarden erstellen
+
+Nachdem wir nun Vaultwarden konfiguriert haben, erstellen wir eine Caddy-Datei für Vaultwarden und öffnen sie zur Bearbeitung.
+
+```
+nano Caddyfile
+```
+
+Füge den folgenden Code in die Datei ein.
+
+```
+{$DOMAIN}:443 {
+  log {
+    level INFO
+    output file {$LOG_FILE} {
+      roll_size 10MB
+      roll_keep 10
+    }
+  }
+
+  # Use the ACME HTTP-01 challenge to get a cert for the configured domain.
+  tls {$EMAIL}
+
+  # This setting may have compatibility issues with some browsers
+  # (e.g., attachment downloading on Firefox). Try disabling this
+  # if you encounter issues.
+  encode gzip
+
+  # The file size is set to 500MB to support the Vaultwarden (Bitwarden) Send feature.
+  request_body {
+       max_size 500MB
+  }
+  
+  header {
+       # Enable cross-site filter (XSS) and tell browser to block detected attacks
+       X-XSS-Protection "1; mode=block"
+       # Disallow the site to be rendered within a frame (clickjacking protection)
+       X-Frame-Options "DENY"
+       # Prevent search engines from indexing (optional)
+       X-Robots-Tag "none"
+       # Server name removing
+       -Server
+  }
+
+  # Notifications redirected to the WebSocket server
+  reverse_proxy /notifications/hub vaultwarden:3012
+
+  # Proxy everything else to Rocket
+  reverse_proxy vaultwarden:80 {
+       # Send the true remote IP to Rocket, so that vaultwarden can put this in the
+       # log, so that fail2ban can ban the correct IP.
+       header_up X-Real-IP {remote_host}
+  }
+}
+```
+
+Speichere die Datei, indem du Strg + X drückst und Y eingibst, wenn du dazu aufgefordert wirst.
+
+## Vaultwarden starten
+
+Starte den Vaultwarden-Docker-Container.
+
+```
+docker compose up -d
+```
+
+Du kannst den Status des Containers mit dem folgenden Befehl überprüfen.
+
+```
+docker ps
+```
+
 ### Links
 + [Config](https://www.howtoforge.de/anleitung/so-installierst-du-vaultwarden-mit-docker-unter-ubuntu-22-04/)
