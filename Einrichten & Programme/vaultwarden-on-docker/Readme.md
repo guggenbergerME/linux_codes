@@ -162,7 +162,7 @@ Speichere die Datei, indem du Strg + X drückst und Y eingibst, wenn du dazu auf
 Starte den Vaultwarden-Docker-Container.
 
 ```
-docker compose up -d
+docker-compose up -d
 ```
 
 Du kannst den Status des Containers mit dem folgenden Befehl überprüfen.
