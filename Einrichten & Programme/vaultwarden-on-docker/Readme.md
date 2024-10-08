@@ -88,3 +88,16 @@ services:
       EMAIL: "admin@example.com"                 # The email address to use for ACME registration.
       LOG_FILE: "/data/access.log"
 ```
+
+## Deaktivieren der Registrierung
+
+Wenn du nicht möchtest, dass deine Vaultwarden-Installation für Benutzerregistrierungen offen ist, kannst du sie deaktivieren, indem du die folgende Variable unter dem Abschnitt environment der Docker-Kompositionsdatei hinzufügst.
+
+```
+environment:
+     WEBSOCKET_ENABLED: "true"  # Enable WebSocket notifications.
+	 SIGNUPS_ALLOWED: "false"
+```
+
+### Links
++ [Config](https://www.howtoforge.de/anleitung/so-installierst-du-vaultwarden-mit-docker-unter-ubuntu-22-04/)
