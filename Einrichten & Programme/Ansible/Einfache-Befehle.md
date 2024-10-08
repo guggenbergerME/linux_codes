@@ -15,5 +15,5 @@ Dabei wird das Module command aufgerufen und als Argument uptime übergeben.
 ## Update ausführen
 
 ```
-ansible 103 -i hosts -m command -a "apt update -y"
+ansible all -i hosts -m command -a "apt update -y"
 ```
