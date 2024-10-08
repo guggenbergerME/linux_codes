@@ -4,6 +4,21 @@
 ```
 apt-get install zabbix-agent
 ```
+
+## Firewall setup
+
+Status der Firewall
+
+```
+ufw status
+```
+
+Portfreigabe
+```
+ufw allow http
+ufw allow https
+```
+
 ### Agent konfig
 
 Agent starten
