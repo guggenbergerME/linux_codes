@@ -4,9 +4,10 @@ Damit für die Verbindung von Master auf Client kein Passwort eingegen werden mu
 Key für den root-Benutzer erstellt.
 
 ```
-ssh-keygen -t rsa
+ssh-keygen
 ```
-Dieser Key wird nun dem root-Benutzer zugewiesen
+Wenn der Schlüssele erstellt wurde kann dieser dem Zielsystem zugewiesen werden. Achten Sie darauf das auf dem Zielsystem ssh aktiviert ist. ([SSH auf Proxmox aktivieren](https://github.com/guggenbergerME/linux_codes/blob/main/OS_Linux/ServerLinux/Proxmox/ssh/Readme.md))
+
 ```
-ssh-copy-id root@localhost
+ssh-copy-id root@[IP]
 ```
