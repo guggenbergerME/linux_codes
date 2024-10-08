@@ -13,7 +13,7 @@ systemctl start zabbix-agent
 
 Konfiguration des Agenten ändern
 ```
-/etc/zabbix/zabbix_agentd.conf
+nano /etc/zabbix/zabbix_agentd.conf
 ```
 Eintragen der Zabbix Server IP
 ```
