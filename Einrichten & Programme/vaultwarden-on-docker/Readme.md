@@ -77,7 +77,7 @@ Starten Sie den Container
 docker compose up -d
 ```
 
-95 / 5.000
 Befolgen Sie die Anweisungen im [Vaultwarden-Wiki](https://github.com/dani-garcia/vaultwarden/wiki), um weitere Konfigurations- und Nutzungsdetails zu erhalten.
 
-
+### Links
++ [Repo](https://github.com/vineethmn/vaultwarden-docker-compose/tree/main)
