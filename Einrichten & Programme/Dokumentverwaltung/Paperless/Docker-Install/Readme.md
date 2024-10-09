@@ -22,3 +22,6 @@ oder im Container per exec
 ```
 $ python3 manage.py createsuperuser
 ```
+
+## Docker Compose Autostart
++ LINK
