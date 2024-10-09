@@ -49,3 +49,18 @@ echo \
   "$(. /etc/os-release && echo "$VERSION_CODENAME")" stable" | \
   sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 ```
+
+## Docker und Docker Compose installieren
+
+Jetzt haben wir alle Vorraussetzungen geschaffen um die aktuellste Version von Docker zu installieren. Zu erst aktualisieren wir nochmals die Paketliste:
+```
+sudo apt update
+```
+Und installieren dann Docker und Docker Compose:
+```
+sudo apt install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+```
+Version 2 von Docker Compose versteckt sich hinter dem Paket docker-compose-plugin.
+```
+sudo docker --version && docker compose version
+```
