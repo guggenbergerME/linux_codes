@@ -1,6 +1,6 @@
 # Installieren von Docker Compose
 
-Um sicherzustellen, dass wir die aktuellste stabile Version von Docker Compose erhalten, werden wir diese Software von ihrem offiziellen [Github-Repository herunterladen](https://github.com/docker/compose).
+Um sicherzustellen, dass wir die aktuellste stabile Version von Docker Compose erhalten, werden wir diese Software von ihrem offiziellen [Github-Repository herunterladen](https://github.com/docker/compose/releases).
 
 Bestätigen Sie zunächst die auf ihrer Seite verfügbare neueste Version. Zum Zeitpunkt des Schreibens dieses Artikels ist die aktuellste stabile Version 1.26.0.
 
