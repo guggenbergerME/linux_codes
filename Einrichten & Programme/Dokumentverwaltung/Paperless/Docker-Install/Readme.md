@@ -24,4 +24,4 @@ $ python3 manage.py createsuperuser
 ```
 
 ## Docker Compose Autostart
-+ LINK
++ [LINK](https://github.com/guggenbergerME/linux_codes/tree/main/Einrichten%20&%20Programme/docker/docker-compose/Autostart_einrichten)
