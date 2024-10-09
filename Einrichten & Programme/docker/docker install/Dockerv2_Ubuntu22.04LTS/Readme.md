@@ -64,3 +64,8 @@ Version 2 von Docker Compose versteckt sich hinter dem Paket docker-compose-plug
 ```
 sudo docker --version && docker compose version
 ```
+
+## Docker starten
+```
+systemctl start docker
+```
