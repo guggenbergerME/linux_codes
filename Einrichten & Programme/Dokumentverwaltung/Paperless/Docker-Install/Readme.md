@@ -9,3 +9,16 @@ Laden Sie auch die Datei docker-compose.env und die Datei ```.env``` herunter un
 ```
 git clone ---> Version
 ```
+
+## docker compose ausführen
+Holen der Pakete mit dem Befehl ```docker compose pull```
+
+## Super User anlegen
+Anlegen eines Superusers mit
+```
+docker compose run --rm webserver createsuperuser
+```
+oder im Container per exec
+```
+$ python3 manage.py createsuperuser
+```
