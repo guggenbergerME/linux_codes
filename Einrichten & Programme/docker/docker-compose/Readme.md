@@ -16,6 +16,6 @@ Legen Sie als Nächstes die richtigen Berechtigungen fest, damit der Befehl dock
 
 Um zu überprüfen, ob die Installation erfolgreich war, können Sie Folgendes ausführen:
 
-    docker-compose --version
+    docker compose --version
 
 Sie sehen eine Ausgabe, die dieser ähnelt:
