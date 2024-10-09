@@ -9,3 +9,13 @@ Mit dem folgenden Befehl wird die Version 2.29.7 herunterladen und die ausführb
 ```
 sudo curl -L "https://github.com/docker/compose/releases/download/2.29.7/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 ```
+
+Legen Sie als Nächstes die richtigen Berechtigungen fest, damit der Befehl docker-compose ausführbar ist:
+
+    sudo chmod +x /usr/local/bin/docker-compose
+
+Um zu überprüfen, ob die Installation erfolgreich war, können Sie Folgendes ausführen:
+
+    docker-compose --version
+
+Sie sehen eine Ausgabe, die dieser ähnelt:
