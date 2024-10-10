@@ -21,6 +21,9 @@ services:
       - INSTALL_BOOK_AND_ADVANCED_HTML_OPS=false
       - LANGS=en_GB
 ```
+## Login authentication
+
+Jetzt wird der erste Benutzer mit Benutzernamen generiert ```admin``` und Passwort ```stirling```. Bei der Anmeldung sind Sie gezwungen, das Passwort in ein neues zu ändern.
 
 ## Anleitung
 + [Github](https://github.com/Stirling-Tools/Stirling-PDF)
