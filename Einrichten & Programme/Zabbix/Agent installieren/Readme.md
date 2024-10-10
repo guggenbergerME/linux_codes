@@ -34,7 +34,23 @@ Eintragen der Zabbix Server IP
 ```
 ...
 Server=zabbix_server_ip_address ->10.250.0.22
+
 ...
+
+### Option: ListenPort
+#       Agent will listen on this port for connections from the server.
+#
+# Mandatory: no
+# Range: 1024-32767
+# Default:
+ListenPort=10050
+
+...
+
+# ServerActive=
+
+ServerActive=10.250.0.22:10051
+
 ```
 
 Standardmäßig verbindet sich der Zabbix-Server mit dem Agenten. Bei einigen Überprüfungen (z. B. Überwachung der Protokolle) ist jedoch eine umgekehrte Verbindung erforderlich. Für eine korrekte Funktionsweise müssen Sie die Adresse des Zabbix-Servers und einen eindeutigen Hostnamen angeben.
