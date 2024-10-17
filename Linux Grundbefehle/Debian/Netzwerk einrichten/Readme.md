@@ -20,3 +20,6 @@ iface eth0 inet static
 address 192.168.2.1
 netmask 255.255.255.0
 ```
+
+### Links
++ [mehr infos](https://www.howtoforge.de/anleitung/einrichtung-der-netzwerkkarten-unter-debian-linux/)
