@@ -14,7 +14,9 @@ Endpoint = [SERVER IP]:51820
 AllowedIPs = 0.0.0.0/0,::/0
 ```
 
-Jede neue WG Instanz bei OPNsense benötigt einen weiteren Port ```51820 - 51821 - 51822``` die im ```WAN``` freigegeben werden müssen. 
+> [!IMPORTANT]  
+> Jede neue WG Instanz bei OPNsense benötigt einen weiteren Port ```51820 - 51821 - 51822``` die im ```WAN``` freigegeben werden müssen. 
+
 
 ## WG installieren
 
