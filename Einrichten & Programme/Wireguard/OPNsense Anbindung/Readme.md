@@ -28,7 +28,7 @@ etc/wireguard/
 
 Anlegen der Datei für den von der OPNsense erzeugten privaten KEY
 ```
-echo "KEY" > private.key
+echo "Privater_key_opensens_generator" > private.key
 ```
 Aus diesem Privaten Key erzeugen wir nun einen Public Key
 
