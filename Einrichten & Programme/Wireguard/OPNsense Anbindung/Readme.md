@@ -77,6 +77,11 @@ Status
 ```
 sudo systemctl status wg-quick@wgXXX
 ```
+Stop
+```
+sudo systemctl stop wg-quick@wgXXX
+```
+
 
 ## Ausführbare Datei auf Desktop
 
