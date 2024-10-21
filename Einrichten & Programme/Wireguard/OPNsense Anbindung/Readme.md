@@ -24,6 +24,9 @@ Für jedes OS findet man [hier](https://www.wireguard.com/install/) die Installa
 
 ## WG Client konfigurieren
 
+> [!IMPORTANT]  
+> Es ist zu beachten das im lokalen und dem entfernten Netzwerk unterschiedliche IP Bereich verwendet werden.
+
 Wechseln in das Verzeichnis von wireguard als root
 
 ```
