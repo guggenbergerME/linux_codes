@@ -9,3 +9,14 @@ pct enter [CTID]
 ```
 passwd [Benutzer]
 ```
+
+## locked Container wieder öffnen
+Für eine Virtuelle Maschiene:
+```
+qm unlock ID
+```
+Für einen LXC Container:
+```
+pct unlock ID 
+
+```
