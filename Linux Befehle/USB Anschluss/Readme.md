@@ -14,3 +14,8 @@ sudo udevadm monitor -u
 ```
 ls -Rl /dev | grep -i usb
 ```
+## lsusb
+Detalierte Informationen
+```
+lsusb -v
+```
