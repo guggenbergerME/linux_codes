@@ -9,3 +9,8 @@ dmesg | grep usb
 ```
 sudo udevadm monitor -u
 ```
+## Ausgabe grep
+
+```
+ls -Rl /dev | grep -i usb
+```
