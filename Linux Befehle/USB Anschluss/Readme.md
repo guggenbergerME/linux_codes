@@ -19,3 +19,7 @@ Detalierte Informationen
 ```
 lsusb -v
 ```
+## Busdevice
+```
+usb-devices
+```
