@@ -23,3 +23,7 @@ lsusb -v
 ```
 usb-devices
 ```
+## USB Schnittstellen Eigentümer
+```
+ls -l /dev/
+```
