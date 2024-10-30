@@ -1,0 +1,5 @@
+# Putty
+
+```
+apt install putty
+```
