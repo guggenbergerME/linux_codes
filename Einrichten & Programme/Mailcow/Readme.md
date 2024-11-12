@@ -2,6 +2,22 @@
 
 ## Installation
 
+### Installation mailcow
+
+***Systemvorraussetzung***
+```
+CPU      min 1 GHz
+RAM      min 16 GB
+HD       min 20 GB (ohne Emails)
+Arch     x86_64, ARN64
+```
+
+***BS***
++ Debian 11, 12
++ Ubuntu 20.04 - 24.04
+
+
+
 ### Hostname ändern
 Änderung des Host Namens in der mailcow.conf
 
