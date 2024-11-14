@@ -1,5 +1,12 @@
 # Mailcow Postfach testen
 
+## SSL Login
+
+```
+ openssl s_client -connect imap-mail.outlook.com:993
+ openssl s_client -starttls imap -connect imap-mail.outlook.com:143
+```
+
 ## POP testen
 
 ```
