@@ -1,5 +1,12 @@
 # SSL
 
+## SSL Certifikat aus einer Verbindung auslesen
+
+```
+openssl s_client -connect DOMAIN:443 2>/dev/null </dev/null |  sed -ne '/-BEGIN CERTIFICATE-/,/-END CERTIFICATE-/p' 
+```
+
+
 ## Server certificate
 
 Server Zertifikat auf osTicketserver hinzufügen
