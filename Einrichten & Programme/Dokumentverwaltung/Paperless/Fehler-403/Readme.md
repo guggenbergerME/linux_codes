@@ -29,3 +29,8 @@ Eintragen der Paperless URL
 PAPERLESS_URL=https://DOMAINLINK
 ```
 
+Container neu aufbauen/einlesen und starten.
+
+```
+docker compose up -d --force-recreate
+```
