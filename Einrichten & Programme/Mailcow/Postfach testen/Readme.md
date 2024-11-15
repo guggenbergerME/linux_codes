@@ -6,6 +6,12 @@
  openssl s_client -connect imap-mail.outlook.com:993
  openssl s_client -starttls imap -connect imap-mail.outlook.com:143
 ```
+## Port 993 testen
+
+```
+openssl s_client -connect Domain:993 -crlf -quiet
+```
+
 
 ## POP testen
 
