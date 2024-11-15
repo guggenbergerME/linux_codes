@@ -1,5 +1,10 @@
 # SSL
 
+## Server certificate
+
+Server Zertifikat auf osTicketserver hinzufügen
+
+
 Seems you did not call the constructor from the laminas-mail protocoltrait class on line 318 in include/class.mail.php which is necessary to set the novalidatecert to true. So we add this call including "true" as the last parameter for the novalidatecert to fix it. All that was necessary is to add this line:
 ```
 parent::__construct($connect['host'], $connect['port'], $connect['ssl'], true);
