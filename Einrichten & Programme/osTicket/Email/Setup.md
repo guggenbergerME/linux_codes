@@ -1,6 +1,10 @@
-# Email Setup
+# Email für OS ticket
 
+100% Funktion ist nur bei reiner VM installation getestet. Mailserver Mailcow!
 
+## IMAP anlegen
 
-### Infos
-+ [Email Grundlagen](https://www.msxfaq.de/cloud/exchangeonline/betrieb/basicauth_ende_umgehen.htm)
++ Hostname mail.domain-xx
++ Port 993
++ Protokoll IMAP
++ Authentication Basic
