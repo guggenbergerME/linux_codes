@@ -85,6 +85,45 @@ find . -type d -exec chmod 755 {} \;
 find . -type f -exec chmod 644 {} \;
 ```
 
+## Apache Virtual Host File
+geh in den Apache Bereich
+```
+cd /etc/apache2/sites-available/
+```
+Erstelle das File 
+```
+nano osticket.conf
+```
+
+Inhalt der Host File
+```
+<VirtualHost *:80>
+ServerName yourdomain.com
+DocumentRoot /var/www/html/osTicket/upload
+
+<Directory /var/www/html/osTicket>
+AllowOverride All
+</Directory>
+
+ErrorLog ${APACHE_LOG_DIR}/error.log
+CustomLog ${APACHE_LOG_DIR}/access.log combined
+
+</VirtualHost>
+```
+File aktivieren und Restart
+```
+sudo a2enmod rewrite
+
+sudo a2ensite osticket.conf
+```
+Prüfen des Syntax
+```
+apachectl -t
+```
+Apache restart
+```
+systemctl reload apache2
+```
 
 ### Link
 + [Quelle](https://www.rosehosting.com/blog/how-to-install-osticket-on-ubuntu-22-04/)
