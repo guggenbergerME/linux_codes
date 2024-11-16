@@ -28,7 +28,47 @@ PHP Installation überprüfen
 ```
 root@host:~# php -v
 ```
+## mariaDB installieren
+```
+sudo apt install mariadb-server -y
+```
+mariadb Starten und erreichbar machen
+```
+sudo systemctl start mariadb && sudo systemctl enable mariadb
+```
+Prüfen
+```
+sudo systemctl status mariadb
+```
+## Anlegen der OSticket Datenbank
+OSTicket Datenbank in mariaDB anlegen
+```
+sudo mariadb
+```
+Datenbank anlegen
+```
+CREATE DATABASE osticket;
+```
+Benutze und Passwort anlegen
+```
+GRANT ALL PRIVILEGES ON osticket.* TO osticket@localhost IDENTIFIED BY "GANZsichersPASSWORT";
+```
 
+
+## OSTicket installieren
+wechseln in das www Verzeichnis des Apache Servers
+```
+cd /var/www/html
+```
+Download der letzten OSTicket Version
+```
+curl -s https://api.github.com/repos/osTicket/osTicket/releases/latest | grep browser_download_url | cut -d '"' -f 4 | wget -i -
+```
+Priv setzen und Exit
+```
+FLUSH PRIVILEGES;
+EXIT;
+```
 
 
 ### Link
