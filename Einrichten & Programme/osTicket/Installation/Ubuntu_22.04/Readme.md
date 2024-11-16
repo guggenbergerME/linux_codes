@@ -53,7 +53,11 @@ Benutze und Passwort anlegen
 ```
 GRANT ALL PRIVILEGES ON osticket.* TO osticket@localhost IDENTIFIED BY "GANZsichersPASSWORT";
 ```
-
+Priv setzen und Exit
+```
+FLUSH PRIVILEGES;
+EXIT;
+```
 
 ## OSTicket installieren
 wechseln in das www Verzeichnis des Apache Servers
@@ -64,10 +68,21 @@ Download der letzten OSTicket Version
 ```
 curl -s https://api.github.com/repos/osTicket/osTicket/releases/latest | grep browser_download_url | cut -d '"' -f 4 | wget -i -
 ```
-Priv setzen und Exit
+OSTicket eventuell in einer anderen Ordnerstruktur installieren
 ```
-FLUSH PRIVILEGES;
-EXIT;
+unzip osTicket-v1.18.X.zip -d osTicket
+
+cp /var/www/html/osTicket/upload/include/ost-sampleconfig.php /var/www/html/osTicket/upload/include/ost-config.php 
+
+rm osTicket-v1.18.X.zip
+```
+Eigentümer und Rechte setzen
+```
+chown -R www-data:www-data /var/www/html/osTicket/
+
+find . -type d -exec chmod 755 {} \;
+
+find . -type f -exec chmod 644 {} \;
 ```
 
 
