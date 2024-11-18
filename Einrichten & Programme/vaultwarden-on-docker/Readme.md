@@ -86,6 +86,9 @@ Generieren Sie ein Authentifizierungstoken für die Administratorseite. Es wird 
 openssl rand -base64 48
 ```
 
+Konfigurieren der Datei ```.env```
+
+
 Halten Sie dieses Token geheim, da es als Kennwort für den Zugriff auf den Admin-Bereich Ihres Servers verwendet wird.
 
 Starten Sie den Container
