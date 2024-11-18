@@ -79,5 +79,14 @@ docker compose up -d
 
 Befolgen Sie die Anweisungen im [Vaultwarden-Wiki](https://github.com/dani-garcia/vaultwarden/wiki), um weitere Konfigurations- und Nutzungsdetails zu erhalten.
 
+## Admin login
+
+Das Login für den Admin erreicht man unter
+
+```
+http://IP:9445/admin
+```
+
+
 ### Links
 + [Repo](https://github.com/vineethmn/vaultwarden-docker-compose/tree/main)
