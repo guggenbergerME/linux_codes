@@ -107,6 +107,10 @@ Das Login für den Admin erreicht man unter
 http://IP:9445/admin
 ```
 
+## SMTP Versand
+
++ Port 587
+
 
 ### Links
 + [Repo](https://github.com/vineethmn/vaultwarden-docker-compose/tree/main)
