@@ -1,5 +1,10 @@
 # Mailcow Update
 
+Programmordner
+```
+/opt/mailcow-dockerized
+```
+
 ```
 ./update.sh
 ```
