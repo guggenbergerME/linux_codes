@@ -17,3 +17,8 @@ Docker Compose im Hintergrund
 ```
 docker compose up -d
 ```
+
+Docker Update durchführen
+```
+docker compose pull
+```
