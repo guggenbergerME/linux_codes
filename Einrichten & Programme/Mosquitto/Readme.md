@@ -69,9 +69,9 @@ Als Nächstes bearbeitest du die MQTT-Konfigurationsdatei und definierst die Por
 ```
 nano /etc/mosquitto/conf.d/default.conf
 ```
-Füge die folgenden Zeilen hinzu:
+Füge die folgenden Zeilen hinzu (Info 0.0.0.0 lässt den Mosquitto auf alle IPs hören.):
 ```
-listener 1883
+listener 1883 0.0.0.0
 password_file /etc/mosquitto/passwd
 ```
 Speichere und schließe die Datei und starte den Mosquitto-Dienst neu, um die Änderungen zu übernehmen.
