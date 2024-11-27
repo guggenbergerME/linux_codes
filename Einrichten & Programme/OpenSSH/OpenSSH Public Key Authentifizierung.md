@@ -71,6 +71,9 @@ Nachdem sich nun der öffentlich. Schlüssel am Server befindet, kann vom Client
 ```
 ssh -i /home/pc/.ssh/id_rsa.pub  benutzer@XXX.XXX.XXX.XXX
 ```
+```
+ssh-keygen -f "/home/pc813/.ssh/known_hosts" -R "10.140.0.5"
+```
 Daraufhin erscheint bei GUI-basierten Systemen eine Fragebox. Nach Eingabe des Passworts, mit dem der Schlüssel beim Erstellen geschützt wurde, ist man am System authentifiziert: 
 
 ## Am Server
