@@ -11,6 +11,8 @@ Damit FHEM mit dem MQTT Server kommunizieren kann müssen zwei Perl Paket instal
 Dazu müsst ihr euch mit Putty auf dem RasPi einloggen und folgende Befehle eingeben:
 ```
 sudo cpan install Net::MQTT:Simple
+```
+```
 sudo cpan install Net::MQTT:Constants
 ```
 
