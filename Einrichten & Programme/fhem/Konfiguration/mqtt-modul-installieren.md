@@ -21,5 +21,7 @@ sudo cpan install Net::MQTT:Constants
 Damit die neu installierten Pakete von FHEM erkannt werden muss FHEM einmal neu gestartet werden. Dazu müsst ihr die folgenden beiden Befehle nacheinander eingeben. Dadurch wird der Server erst gestoppt und dann wieder gestartet. Weiter Infos zum stoppen und starten findet Ihr auch in dem Artikel FHEM – Aufbau, Module & Wissenswertes
 ```
 sudo /etc/init.d/fhem stop
+```
+```
 sudo /etc/init.d/fhem start
 ```
