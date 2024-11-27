@@ -79,6 +79,17 @@ Speichere und schließe die Datei und starte den Mosquitto-Dienst neu, um die Ä
 systemctl restart mosquitto
 ```
 
+## Mosquitto konfigurieren
+
+Einstellungen erfolgen in der Datei
+```
+nano /etc/mosquitto/conf.d/default.conf
+```
+Restart 
+```
+systemctl restart mosquitto
+```
+
 
 
 
