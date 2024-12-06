@@ -75,5 +75,13 @@ Beispiel:
 6 calcAdvent 0 4.Advent
 ```
 
+## Fhem Global eintrag
+Unter den Globalen Einstellungen muss der Kalender und das Gerät mit eingebunden werden.
+Beispiel
+```
+attr holiday2we  [DATEI_Ferien],[GERÄT]
+```
+
+
 ### Links
 + [Detailierte Beschreibung in der FHEM Command](https://fhem.de/commandref.html#holiday)
