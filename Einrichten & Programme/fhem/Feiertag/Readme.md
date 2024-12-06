@@ -74,3 +74,6 @@ Beispiel:
 6 calcAdvent 7 3.Advent
 6 calcAdvent 0 4.Advent
 ```
+
+### Links
++ [Detailierte Beschreibung in der FHEM Command](https://fhem.de/commandref.html#holiday)
