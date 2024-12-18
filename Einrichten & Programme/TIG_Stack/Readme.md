@@ -174,6 +174,44 @@ Klicke auf den Bucket-Namen und dann auf einen der Werte im Filter _measurement 
 
 Das sollte dir bestätigen, dass die Daten korrekt weitergegeben werden.
 
+## Grafana installieren
+
+Wir verwenden das offizielle Grafana-Repository, um es zu installieren. Importiere den Grafana GPG-Schlüssel.
+```
+sudo wget -q -O /usr/share/keyrings/grafana.key https://packages.grafana.com/gpg.key
+```
+Füge das Repository zu deinem System hinzu.
+```
+echo "deb [signed-by=/usr/share/keyrings/grafana.key] https://packages.grafana.com/oss/deb stable main" | sudo tee -a /etc/apt/sources.list.d/grafana.list
+```
+Aktualisiere die Repository-Liste des Systems.
+```
+sudo apt update
+```
+Installiere Grafana.
+```
+sudo apt install grafana
+```
+Starte und aktiviere den Grafana-Dienst.
+```
+sudo systemctl enable grafana-server --now
+```
+Überprüfe den Status des Dienstes.
+```
+sudo systemctl status grafana-server
+? grafana-server.service - Grafana instance
+     Loaded: loaded (/lib/systemd/system/grafana-server.service; enabled; vendor preset: enabled)
+     Active: active (running) since Tue 2022-09-13 01:04:47 UTC; 2s ago
+       Docs: http://docs.grafana.org
+   Main PID: 13674 (grafana-server)
+      Tasks: 7 (limit: 1030)
+     Memory: 104.6M
+        CPU: 1.050s
+     CGroup: /system.slice/grafana-server.service
+             ??13674 /usr/sbin/grafana-server --config=/etc/grafana/grafana.ini --pidfile=/run/grafana/grafana-server.pid --packaging=deb cfg:default.paths.logs=/var/log/grafana 
+```
+
+
 
 
 
