@@ -56,5 +56,114 @@ Du musst deinen anfänglichen Benutzernamen, dein Passwort, den Namen deiner Org
 
 Du kannst diese Einrichtung auch vornehmen, indem du die URL http://<serverIP>:8086/ in deinem Browser aufrufst. Sobald du die Ersteinrichtung durchgeführt hast, kannst du dich mit den oben erstellten Anmeldedaten bei der URL anmelden.
 
+## Telegraf installieren
+Telegraf und InfluxDB teilen sich das gleiche Repository. Das bedeutet, dass du Telegraf direkt installieren kannst.
+
+```
+sudo apt install telegraf
+```
+Der Dienst von Telegraf wird während der Installation automatisch aktiviert und gestartet.
+
+Telegraf ist ein Plugin-gesteuerter Agent und verfügt über 4 Arten von Plugins:
+
+  + Input-Plugins sammeln Metriken.
+  + Prozessor-Plugins transformieren, dekorieren und filtern Metriken.
+  + Aggregator-Plugins erstellen und aggregieren Metriken.
+  + Output-Plugins definieren die Ziele, an die die Metriken gesendet werden, einschließlich InfluxDB.
+
+Telegraf speichert seine Konfiguration für alle diese Plugins in der Datei /etc/telegraf/telegraf.conf. Der erste Schritt besteht darin, Telegraf mit InfluxDB zu verbinden, indem du das Output-Plugin influxdb_v2 aktivierst. Öffne die Datei /etc/telegraf/telegraf.conf zum Bearbeiten.
+```
+$ sudo nano /etc/telegraf/telegraf.conf
+```
+Finde die Zeile [[outputs.influxdb_v2]] und kommentiere sie aus, indem du das # vor der Zeile entfernst. Bearbeite den Code darunter auf folgende Weise.
+```
+# # Configuration for sending metrics to InfluxDB 2.0
+ [[outputs.influxdb_v2]]
+#   ## The URLs of the InfluxDB cluster nodes.
+#   ##
+#   ## Multiple URLs can be specified for a single cluster, only ONE of the
+#   ## urls will be written to each interval.
+#   ##   ex: urls = ["https://us-west-2-1.aws.cloud2.influxdata.com"]
+   urls = ["http://127.0.0.1:8086"]
+#
+#   ## Token for authentication.
+   token = "$INFLUX_TOKEN"
+#
+#   ## Organization is the name of the organization you wish to write to.
+   organization = "howtoforge"
+#
+#   ## Destination bucket to write into.
+   bucket = "tigstack"
+```
+Füge den zuvor gespeicherten Wert des InfluxDB-Tokens anstelle der Variable $INFLUX_TOKEN in den obigen Code ein.
+
+Suche nach der Zeile INPUT PLUGINS und du wirst sehen, dass die folgenden Eingabe-Plugins standardmäßig aktiviert sind.
+```
+# Read metrics about cpu usage
+[[inputs.cpu]]
+  ## Whether to report per-cpu stats or not
+  percpu = true
+  ## Whether to report total system cpu stats or not
+  totalcpu = true
+  ## If true, collect raw CPU time metrics
+  collect_cpu_time = false
+  ## If true, compute and report the sum of all non-idle CPU states
+  report_active = false
+  ## If true and the info is available then add core_id and physical_id tags
+  core_tags = false
+
+
+# Read metrics about disk usage by mount point
+[[inputs.disk]]
+  ## By default stats will be gathered for all mount points.
+  ## Set mount_points will restrict the stats to only the specified mount points.
+  # mount_points = ["/"]
+
+  ## Ignore mount points by filesystem type.
+  ignore_fs = ["tmpfs", "devtmpfs", "devfs", "iso9660", "overlay", "aufs", "squashfs"]
+
+  ## Ignore mount points by mount options.
+  ## The 'mount' command reports options of all mounts in parathesis.
+  ## Bind mounts can be ignored with the special 'bind' option.
+  # ignore_mount_opts = []
+
+
+# Read metrics about disk IO by device
+[[inputs.diskio]]
+....
+....
+
+# Get kernel statistics from /proc/stat
+[[inputs.kernel]]
+  # no configuration
+
+
+# Read metrics about memory usage
+[[inputs.mem]]
+  # no configuration
+  
+# Get the number of processes and group them by status
+[[inputs.processes]]
+  # no configuration
+
+
+# Read metrics about swap memory usage
+[[inputs.swap]]
+  # no configuration
+
+
+# Read metrics about system load & uptime
+[[inputs.system]]
+  # no configuration
+```
+Du kannst je nach Bedarf weitere Input-Plugins konfigurieren, z. B. Apache Server, Docker-Container, Elasticsearch, iptables firewall, Kubernetes, Memcached, MongoDB, MySQL, Nginx, PHP-fpm, Postfix, RabbitMQ, Redis, Varnish, Wireguard, PostgreSQL usw. Es gibt auch einen InfluxDB python client.
+
+Wenn du fertig bist, speichere die Datei, indem du Strg + X drückst und Y eingibst, wenn du dazu aufgefordert wirst.
+
+Starte den Telegraf-Dienst neu, nachdem du die Änderungen vorgenommen hast.
+```
+sudo systemctl restart telegraf
+```
+
 ### Links
 + [Anleitung](https://www.howtoforge.de/anleitung/so-installierst-du-den-tig-stack-telegraf-influxdb-und-grafana-auf-ubuntu-22-04/)
