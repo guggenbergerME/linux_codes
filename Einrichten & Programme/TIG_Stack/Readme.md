@@ -164,6 +164,18 @@ Starte den Telegraf-Dienst neu, nachdem du die Änderungen vorgenommen hast.
 ```
 sudo systemctl restart telegraf
 ```
+## Überprüfe, ob die Telegraf-Statistiken in InfluxDB gespeichert werden
+
+Bevor du fortfährst, musst du überprüfen, ob die Telegraf-Statistiken korrekt erfasst und in die InfluxDB eingespeist werden. Öffne die InfluxDB-Benutzeroberfläche in deinem Browser, klicke auf das dritte Symbol in der linken Seitenleiste und wähle das Menü Buckets.
+
+Klicke auf tigstack und du solltest die folgende Seite sehen.
+
+Klicke auf den Bucket-Namen und dann auf einen der Werte im Filter _measurement und klicke immer wieder auf andere Werte, wenn sie erscheinen. Wenn du fertig bist, klicke auf die Schaltfläche Senden. Oben solltest du ein Diagramm sehen. Es kann sein, dass du einige Zeit warten musst, bis die Daten angezeigt werden.
+
+Das sollte dir bestätigen, dass die Daten korrekt weitergegeben werden.
+
+
+
 
 ### Links
 + [Anleitung](https://www.howtoforge.de/anleitung/so-installierst-du-den-tig-stack-telegraf-influxdb-und-grafana-auf-ubuntu-22-04/)
