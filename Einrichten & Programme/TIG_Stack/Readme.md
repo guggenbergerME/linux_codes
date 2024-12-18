@@ -17,7 +17,14 @@ echo "943666881a1b8d9b849b74caebf02d3465d6beb716510d86a39f6c8e8dac7515  influxda
 # Install influxdb
 sudo apt-get update && sudo apt-get install influxdb2
 ```
-
+InfluxDB starten
+```
+sudo service influxdb start
+```
+Status
+```
+sudo service influxdb status
+```
 
 ### Links
 + [Anleitung](https://www.howtoforge.de/anleitung/so-installierst-du-den-tig-stack-telegraf-influxdb-und-grafana-auf-ubuntu-22-04/)
