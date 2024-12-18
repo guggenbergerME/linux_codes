@@ -52,7 +52,9 @@ $ influx setup
 User    Organization    Bucket
 navjot  howtoforge      tigstack
 ```
+Du musst deinen anfänglichen Benutzernamen, dein Passwort, den Namen deiner Organisation, den Namen des primären Buckets, in dem die Daten gespeichert werden, und die Aufbewahrungsfrist in Stunden für diese Daten festlegen. Deine Angaben werden in der Datei /home/username/.influxdbv2/configs gespeichert.
 
+Du kannst diese Einrichtung auch vornehmen, indem du die URL http://<serverIP>:8086/ in deinem Browser aufrufst. Sobald du die Ersteinrichtung durchgeführt hast, kannst du dich mit den oben erstellten Anmeldedaten bei der URL anmelden.
 
 ### Links
 + [Anleitung](https://www.howtoforge.de/anleitung/so-installierst-du-den-tig-stack-telegraf-influxdb-und-grafana-auf-ubuntu-22-04/)
