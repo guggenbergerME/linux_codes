@@ -26,5 +26,33 @@ Status
 sudo service influxdb status
 ```
 
+## InfluxDB-Datenbank und Benutzeranmeldeinformationen erstellen
+
+Um die Daten von Telegraf zu speichern, musst du die Influx-Datenbank und den Benutzer einrichten.
+
+InfluxDB wird mit einem Kommandozeilen-Tool namens influx ausgeliefert, mit dem du mit dem InfluxDB-Server interagieren kannst. Stell dir influx als das mysql Kommandozeilentool vor.
+
+Führe den folgenden Befehl aus, um die erste Konfiguration für Influx vorzunehmen.
+
+```
+$ influx setup
+> Welcome to InfluxDB 2.0!
+? Please type your primary username navjot
+? Please type your password ***************
+? Please type your password again ***************
+? Please type your primary organization name howtoforge
+? Please type your primary bucket name tigstack
+? Please type your retention period in hours, or 0 for infinite 360
+? Setup with these parameters?
+  Username:          navjot
+  Organization:      howtoforge
+  Bucket:            tigstack
+  Retention Period:  360h0m0s
+ Yes
+User    Organization    Bucket
+navjot  howtoforge      tigstack
+```
+
+
 ### Links
 + [Anleitung](https://www.howtoforge.de/anleitung/so-installierst-du-den-tig-stack-telegraf-influxdb-und-grafana-auf-ubuntu-22-04/)
