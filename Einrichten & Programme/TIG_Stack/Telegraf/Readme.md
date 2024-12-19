@@ -68,6 +68,10 @@ Telegraf speichert seine Konfiguration für alle diese Plugins in der Datei /etc
 
 Die Konfiguration der telegraf.conf erfolgt über InfluxDB!
 
+## Telegraf Status und Neu starten
+
+        systemctl restart telegraf
+
 
 ## Telegraf deinstallieren
 
