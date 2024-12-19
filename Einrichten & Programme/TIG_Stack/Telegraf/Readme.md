@@ -62,6 +62,12 @@ Nun kann Telegraf einfach installiert werden.
 
 Der Dienst von Telegraf wird während der Installation automatisch aktiviert und gestartet.
 
+Telegraf speichert seine Konfiguration für alle diese Plugins in der Datei /etc/telegraf/telegraf.conf. Der erste Schritt besteht darin, Telegraf mit InfluxDB zu verbinden, indem du das Output-Plugin influxdb_v2 aktivierst. Öffne die Datei /etc/telegraf/telegraf.conf zum Bearbeiten.
+
+        nano /etc/telegraf/telegraf.conf
+
+Die Konfiguration der telegraf.conf erfolgt über InfluxDB!
+
 
 ## Telegraf deinstallieren
 
