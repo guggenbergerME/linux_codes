@@ -17,7 +17,7 @@ echo "943666881a1b8d9b849b74caebf02d3465d6beb716510d86a39f6c8e8dac7515  influxda
 | tee /etc/apt/sources.list.d/influxdata.list
 ```
 
-Das bedeutet, dass du Telegraf direkt installieren kannst.
+Nun kann Telegraf einfach installiert werden.
 
         sudo apt install telegraf
 
