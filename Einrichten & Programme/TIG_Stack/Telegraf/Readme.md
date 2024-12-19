@@ -1,5 +1,14 @@
 # Telegraf
 
+## Telegraf installieren
+
+Telegraf und InfluxDB teilen sich das gleiche Repository. Das bedeutet, dass du Telegraf direkt installieren kannst.
+
+        sudo apt install telegraf
+
+Der Dienst von Telegraf wird während der Installation automatisch aktiviert und gestartet.
+
+
 ## Telegraf deinstallieren
 
 **Ubuntu**
