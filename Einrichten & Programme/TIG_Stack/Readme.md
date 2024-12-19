@@ -1,5 +1,44 @@
 # So installierst du den TIG Stack (Telegraf, InfluxDB und Grafana) auf Ubuntu 22.04
 
+## Firewall konfigurieren
+
+Bevor du die Pakete installierst, musst du als erstes die Firewall so konfigurieren, dass sie die Ports für InfluxDB und Grafana öffnet.
+
+Überprüfe den Status der Firewall.
+
+    sudo ufw status
+
+Du solltest etwas wie das Folgende sehen.
+```
+Status: active
+
+To                         Action      From
+--                         ------      ----
+OpenSSH                    ALLOW       Anywhere
+OpenSSH (v6)               ALLOW       Anywhere (v6)
+```
+Öffne Port 8086 für InfluxDB und 3000 für den Grafana-Server.
+
+    sudo ufw allow 8086
+    sudo ufw allow 3000
+
+Überprüfe den Status zur Bestätigung noch einmal.
+
+    sudo ufw status
+
+```
+Status: active
+
+To                         Action      From
+--                         ------      ----
+OpenSSH                    ALLOW       Anywhere
+8086                       ALLOW       Anywhere
+3000                       ALLOW       Anywhere
+OpenSSH (v6)               ALLOW       Anywhere (v6)
+8086 (v6)                  ALLOW       Anywhere (v6)
+3000 (v6)                  ALLOW       Anywhere (v6)
+```
+
 ## Install InfluxDB
 [Quelle](https://docs.influxdata.com/influxdb/v2/install/?t=Linux) der Installation.
 
