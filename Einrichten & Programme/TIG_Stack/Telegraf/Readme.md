@@ -72,6 +72,12 @@ Die Konfiguration der telegraf.conf erfolgt über InfluxDB!
 
         systemctl restart telegraf
 
+## Telegraf DEBUG Modus
+
+Telegram kann in einem Debug Modus gestartet werden
+
+        telegraf --config /etc/telegraf/telegraf.conf --debug
+
 
 ## Telegraf deinstallieren
 
