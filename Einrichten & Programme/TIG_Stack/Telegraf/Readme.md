@@ -64,42 +64,43 @@ Der Dienst von Telegraf wird während der Installation automatisch aktiviert und
 
 Telegraf speichert seine Konfiguration für alle diese Plugins in der Datei /etc/telegraf/telegraf.conf. Der erste Schritt besteht darin, Telegraf mit InfluxDB zu verbinden, indem du das Output-Plugin influxdb_v2 aktivierst. Öffne die Datei /etc/telegraf/telegraf.conf zum Bearbeiten.
 
-        nano /etc/telegraf/telegraf.conf
+```
+nano /etc/telegraf/telegraf.conf
+```
 
 Die Konfiguration der telegraf.conf erfolgt über InfluxDB!
 
 ## Telegraf Status und Neu starten
-
-        systemctl restart telegraf
-
+```
+systemctl restart telegraf
+```
 ## Telegraf DEBUG Modus
 
 Telegram kann in einem Debug Modus gestartet werden
-
-        telegraf --config /etc/telegraf/telegraf.conf --debug
-
-
+```
+telegraf --config /etc/telegraf/telegraf.conf --debug
+```
 ## Telegraf deinstallieren
 
 **Ubuntu**
 
 Telegraf stoppen
-
-    sudo systemctl stop telegraf
-
+```
+sudo systemctl stop telegraf
+```
 Löschen der Telegraf Pakete
-
-    sudo apt-get purge telegraf
-
+```
+sudo apt-get purge telegraf
+```
 Löschen der Konfigurationsdateien
-    
-    sudo rm -rf /etc/telegraf/
-
+```    
+sudo rm -rf /etc/telegraf/
+```
 Pakete Updaten
-
-    sudo apt-get update
-
+```
+sudo apt-get update
+```
 Löschen verbleibender Abhängigkeiten
-
-    sudo apt-get autoremove
-
+```
+sudo apt-get autoremove
+```
