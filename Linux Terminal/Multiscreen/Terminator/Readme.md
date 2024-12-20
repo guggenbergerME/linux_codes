@@ -6,4 +6,8 @@ Terminator 🇬🇧 ist ein in Python geschriebener Terminal-Multiplexer, der es
 
 ![Bild](https://github.com/guggenbergerME/linux_codes/blob/main/Linux%20Terminal/Multiscreen/Terminator/Bildschirmfoto%20vom%202024-12-20%2006-59-51.png)
 
+## Installation
+
+    apt-get install terminator
+
 + [Anleitung](https://wiki.ubuntuusers.de/Terminator/)
