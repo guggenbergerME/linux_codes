@@ -19,3 +19,7 @@ mkdir /media/Festplatte1
 
 mkdir /media/Festplatte2
 ```
+## Ändern der fstab
+```
+nano /etc/fstab
+```
