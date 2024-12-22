@@ -12,3 +12,10 @@ Ausgabe
 /dev/sdb1: UUID="62c1765c-3c9f-45e3-8f22-d7a6b162e2a5" BLOCK_SIZE="4096" TYPE="ext4" PARTUUID="2bd99cc4-deab-491d-a5bd-ae6acc9052f0"
 /dev/sda1: UUID="dd29cd84-e3c4-422a-8847-57b4249af40a" BLOCK_SIZE="4096" TYPE="ext4" PARTUUID="2bd2c32a-01"
 ```
+## Anlegen von Verzeichnissen
+In diesen Verzeichnissen werden die Platten eingebunden
+```
+mkdir /media/Festplatte1
+
+mkdir /media/Festplatte2
+```
