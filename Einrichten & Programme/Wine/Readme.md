@@ -19,6 +19,11 @@ wine uninstaller
 winecfg
 ```
 
+## Wo befinden sich die Programme
+Im Persönlichen Ordner versteckte Dateien sichtbar machen
+```
+/.wine
+```
 
 
 + [Installation](https://wine.htmlvalidator.com/install-wine-on-linux-mint-22.html)
