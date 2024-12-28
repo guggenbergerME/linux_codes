@@ -52,6 +52,11 @@ yt-dlp -x --audio-Format mp3 https://www.youtube.com/watch?v't5b20oLaIaw
 ```
 yt-dlp --ignore-errors --format bestaudio --extract-audio --audio-format mp3 --audio-quality 160K --output "%(title)s.%(ext)s" --yes-playlist 'LINK'
 ```
+## Herunterladen eines ganzen Kanals
+```
+yt-dlp https://www.youtube.com/@Kanalname
+```
+
 
 ### Links
 + [Projekt](https://github.com/yt-dlp/yt-dlp#installation)
