@@ -21,5 +21,5 @@ Crontab öffnen mit ```crontab -e```
 
 Beispiel
 ```
-*/2 * * * * www-data /usr/bin/php /var/www/html/osticket/api/cron.php
+*/2 * * * * /etc/php/8.1 /var/www/html/upload/api/cron.php
 ```
