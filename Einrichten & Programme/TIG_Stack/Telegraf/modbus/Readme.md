@@ -1,5 +1,13 @@
 # telegraf modbus
 
+## Portverbindung testen
+
+Prüfen der ob der Port offen ist
+```
+telnet [IP] [PORT]
+```
+telnet beenden ```STRG+AltGr+9```
+
 ## input Beispiel
 
 ```
