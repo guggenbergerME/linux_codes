@@ -100,5 +100,11 @@ REGISTERNUMMER	REGISTERADRESSE HEX	TYP
   ]
 ```
 
+## Ausgabe testen
+
+```
+telegraf --config /etc/telegraf/telegraf.conf --test --debug
+```
+
 ### Links
 + [Modbus Beschreibung](https://ipc2u.de/artikel/wissenswertes/modbus-rtu-einfach-gemacht-mit-detaillierten-beschreibungen-und-beispielen/)
