@@ -8,6 +8,16 @@ telnet [IP] [PORT]
 ```
 telnet beenden ```STRG+AltGr+9```
 
+## Protokollbeschreibung
+
+```
+REGISTERNUMMER	REGISTERADRESSE HEX	TYP
+1-9999	        0000 to 270E	      lesen-schreiben	Discrete Output Coils	DO
+10001-19999	    0000 to 270E	      lesen	Discrete Input Contacts	DI
+30001-39999	    0000 to 270E	      lesen	Analog Input Registers	AI
+40001-49999	    0000 to 270E	      lesen-schreiben	Analog Output Holding Registers	AO
+```
+
 ## input Beispiel
 
 ```
