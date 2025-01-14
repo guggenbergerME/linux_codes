@@ -99,3 +99,6 @@ REGISTERNUMMER	REGISTERADRESSE HEX	TYP
     { name = "Pump1-Speed", byte_order = "ABCD", data_type = "INT32",   scale=1.0,     address = [3,4]},
   ]
 ```
+
+### Links
++ [Modbus Beschreibung](https://ipc2u.de/artikel/wissenswertes/modbus-rtu-einfach-gemacht-mit-detaillierten-beschreibungen-und-beispielen/)
