@@ -80,6 +80,12 @@ Telegram kann in einem Debug Modus gestartet werden
 ```
 telegraf --config /etc/telegraf/telegraf.conf --debug
 ```
+
+## Ausgabe testen ohne Senden
+```
+telegraf --config /etc/telegraf/telegraf.conf --test --debug
+```
+
 ## Telegraf deinstallieren
 
 **Ubuntu**
