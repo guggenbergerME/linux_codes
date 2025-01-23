@@ -3,9 +3,26 @@
 ## Installation per Docker
 
 ```
+apt install docker.io
+```
+
+
+Omada Docker Image installieren
+
+```
+docker pull mbentley/omada-controller:latest
+```
+
+Docker Volume erstellen
+
+```
+sudo mkdir -p /opt/tplink/EAPController/data
+sudo mkdir -p /opt/tplink/EAPController/logs
+```
+
+```
 docker run -d \
   --name omada-controller \
-  --stop-timeout 60 \
   --restart unless-stopped \
   --ulimit nofile=4096:8192 \
   -p 8088:8088 \
@@ -35,7 +52,13 @@ docker run -d \
   -e TZ=Etc/UTC \
   -v omada-data:/opt/tplink/EAPController/data \
   -v omada-logs:/opt/tplink/EAPController/logs \
-  mbentley/omada-controller:5.15
+  mbentley/omada-controller:latest
+```
+
+## Omada Controller aufrufen
+
+```
+https://[IP]:8043
 ```
 
 + [Anleitung](https://github.com/mbentley/docker-omada-controller)
