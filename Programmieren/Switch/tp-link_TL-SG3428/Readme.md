@@ -8,3 +8,7 @@ Zugang
 ```
 admin/admin
 ```
+
+Switch BootUTIL
+
++ [Link](https://www.tp-link.com/de/support/faq/3146/)
