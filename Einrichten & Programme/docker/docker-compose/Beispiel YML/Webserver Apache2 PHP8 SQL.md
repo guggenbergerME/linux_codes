@@ -3,6 +3,12 @@
 
 docker-compose.yml
 
+Neuaufbau
+```
+docker compose up -build
+```
+
+
 ```
 services:
     webserver:
