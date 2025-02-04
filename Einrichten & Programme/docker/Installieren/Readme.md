@@ -87,6 +87,9 @@ Version 2 von Docker Compose versteckt sich hinter dem Paket docker-compose-plug
 
 ```
 sudo docker --version && docker compose version
+```
+
+```
 jonathan@xxx:~$ docker --version && sudo docker compose version
 Docker version 20.10.17, build 100c701
 Docker Compose version v2.6.0
