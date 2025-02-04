@@ -1,10 +1,15 @@
 # Webserver (apache) PHP SQL phpmyadmin
 
+
+docker-compose.yml
+
 ```
 services:
     webserver:
-        image: php:8-apache
         container_name: webserver
+        build:
+          context: .
+          dockerfile: Dockerfile
         restart: always
         ports:
           - 80:80
@@ -12,6 +17,8 @@ services:
           - ./www:/var/www/html
         labels:
           NAME: "webserver"
+        depends_on:
+          - mysql
 
     mysql:
         image: mysql:latest
@@ -41,5 +48,19 @@ services:
         links:
               - mysql
         environment:
+              PMA_HOST: mysql
+              PMA_PORT: 3306
+              PMA_ARBITRARY: 1
+        restart: always
+        ports:
+              - 8081:80
+```
 
+Dockerfile
+
+```
+FROM php:8.2-apache
+RUN pecl install redis && docker-php-ext-enable redis
+RUN docker-php-ext-install pdo pdo_mysql
+RUN docker-php-ext-install mysqli && docker-php-ext-enable mysqli
 ```
