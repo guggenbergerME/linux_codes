@@ -8,7 +8,10 @@ Neuaufbau
 docker compose up -build
 ```
 
-
+Starten
+```
+docker compose up -d
+```
 ```
 services:
     webserver:
