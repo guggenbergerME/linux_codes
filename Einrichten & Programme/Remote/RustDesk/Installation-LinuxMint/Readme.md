@@ -20,3 +20,8 @@ Installscript ausführen
 
     rustdesk 
 
+### Stichwörter
++ Rustdesk
++ Linux Mint
++ LinuxMint
++ Installation
