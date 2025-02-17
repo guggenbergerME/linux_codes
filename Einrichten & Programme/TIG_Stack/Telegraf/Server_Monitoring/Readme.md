@@ -47,3 +47,15 @@ Beispiel einer telegraf.conf Datei
 [[inputs.net]]
 [[inputs.sensors]]
 ```
+
+## Test
+
+        telegraf -config telegraf.conf -test
+
+Telegraf neu starten
+
+```
+systemctl start telegraf
+systemctl enable telegraf
+systemctl status telegraf
+```
