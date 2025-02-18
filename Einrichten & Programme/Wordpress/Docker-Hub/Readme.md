@@ -11,6 +11,8 @@ docker network create wordpress-network
 
 ## MariaDb Volumen und Container erzeugen
 
+Als erstes erzeugen wir eine Mariadb Datenbank
+
 ```
 $ docker volume create --name mariadb_data
 docker run -d --name mariadb \
@@ -25,6 +27,8 @@ docker run -d --name mariadb \
 ```
 
 ## Wordpress Volumen und Container erzeugen
+
+Danach den eigentliche WP Container
 
 ```
 $ docker volume create --name wordpress_data
