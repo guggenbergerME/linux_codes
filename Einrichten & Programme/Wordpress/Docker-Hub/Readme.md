@@ -1,5 +1,9 @@
 # Wordpress installation mit db
 
+## Docker installieren
+
+    apt-get install docker.io
+
 ## Anlegen einse Netzwerks
 ```
 docker network create wordpress-network
