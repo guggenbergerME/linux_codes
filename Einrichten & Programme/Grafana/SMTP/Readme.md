@@ -34,5 +34,9 @@ from_name = Grafana - Alarm
 
 ```
 
+## Grafan neu starten
+
+    service grafana-server restart
+
 ### Weitere Links
 + [Video Anleitung](https://www.youtube.com/watch?v=U69YYWV7BW0)
