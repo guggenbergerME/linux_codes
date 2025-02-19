@@ -16,3 +16,7 @@
 [auth.anonymous]
 enabled = true
 ```
+
+## Grafan neu starten
+
+    service grafana-server restart
