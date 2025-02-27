@@ -90,10 +90,21 @@ telegraf --config /etc/telegraf/telegraf.conf --test --debug
 
 **Ubuntu**
 
+Telegraf status
+
+```
+systemctl status telegraf.service
+```
+
 Telegraf stoppen
 ```
 sudo systemctl stop telegraf
 ```
+oder
+```
+systemctl stop telegraf.service
+```
+
 Löschen der Telegraf Pakete
 ```
 sudo apt-get purge telegraf
