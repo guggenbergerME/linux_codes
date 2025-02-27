@@ -6,6 +6,10 @@
 
         wget xxxx
 
-Installieren
+## Installieren
 
         dpkg -i PAKET
+
+## Version auslesen
+
+        telegraf --version
