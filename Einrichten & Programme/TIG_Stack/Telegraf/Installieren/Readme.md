@@ -4,5 +4,5 @@
 
 + [Link](https://github.com/influxdata/telegraf/releases)
 
-    wget xxxx
+        wget xxxx
 
