@@ -6,3 +6,6 @@
 
         wget xxxx
 
+Installieren
+
+        dpkg -i PAKET
