@@ -87,5 +87,3 @@ holding_registers = [
 
 Datentyp ist bei Janitzza ```FLOAT32-IEEE```. Dieser Datentyp setzt aus den beiden Integer ```19001 & 19002``` den gemessenen Wert zusammen. 
 Wichtig ist auch die Reihenfolge der Low und High Bits. Dieses wird durch ```byte_order = "ABCD"``` definiert.
-
-![Codes](https://github.com/guggenbergerME/linux_codes/blob/main/Einrichten%20%26%20Programme/TIG_Stack/Telegraf/modbus/Janitza/Adressen_Bus.png)
