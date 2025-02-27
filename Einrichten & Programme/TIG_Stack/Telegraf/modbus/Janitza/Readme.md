@@ -83,6 +83,8 @@ holding_registers = [
 
 ```
 
+## Auslesen der Janitzza Integer
+
 Datentyp ist bei Janitzza ```FLOAT32-IEEE```. Dieser Datentyp setzt aus den beiden Integer ```19001 & 19002``` den gemessenen Wert zusammen. 
 Wichtig ist auch die Reihenfolge der Low und High Bits. Dieses wird durch ```byte_order = "ABCD"``` definiert.
 
