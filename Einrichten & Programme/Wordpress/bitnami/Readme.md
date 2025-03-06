@@ -39,7 +39,7 @@ Errichter Zugangsdaten
     user@example.com
     bitnami
 
-
+Login als Admin
 
 ```
 https://<ip>/wp-admin
