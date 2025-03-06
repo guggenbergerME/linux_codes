@@ -36,8 +36,10 @@ docker run -d --name wordpress \
 
 Admin Login Wordpress wird im Step 3 hinterlegt.
 
+admin/bitnami
+
 ```
-https://<yoi
+https://<ip>/wp-admin
 ```
 
 ### Quelle
