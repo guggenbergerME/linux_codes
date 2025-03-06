@@ -23,7 +23,7 @@ docker run -d --name mariadb \
 ```
 $ docker volume create --name wordpress_data
 docker run -d --name wordpress \
-  -p 8080:8080 -p 8443:8443 \
+  -p 80:8080 -p 8443:8443 \
   --env ALLOW_EMPTY_PASSWORD=yes \
   --env WORDPRESS_DATABASE_USER=bn_wordpress \
   --env WORDPRESS_DATABASE_PASSWORD=bitnami \
@@ -34,9 +34,12 @@ docker run -d --name wordpress \
 ```
 ## Admin Login
 
-Admin Login Wordpress wird im Step 3 hinterlegt.
+Errichter Zugangsdaten
 
-admin/bitnami
+    user@example.com
+    bitnami
+
+
 
 ```
 https://<ip>/wp-admin
