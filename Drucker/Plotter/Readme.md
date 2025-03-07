@@ -1,4 +1,4 @@
-# Plotter an Mint betreiben
+# Plotter an Linux Mint betreiben
 
 ## USB Anschluss
 
