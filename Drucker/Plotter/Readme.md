@@ -14,7 +14,9 @@ Linux Mint
 
     usermod -a -G dialout user
 
+brltty löschen
 
+    sudo apt remove brltty
 
 
 ## Plotterprogram
