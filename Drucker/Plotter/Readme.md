@@ -14,8 +14,9 @@ Linux Mint
 
     usermod -a -G dialout user
 
-
     sudo usermod -aG dialout $(whoami)
+
+    sudo usermod -a -G uucp $USER
 
 brltty löschen
 
