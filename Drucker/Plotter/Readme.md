@@ -12,7 +12,7 @@ Hinzufpgen des Benutzers zu dialout
 
 Linux Mint
 
-    usermod -a -G dialout guggenberger
+    usermod -a -G dialout user
 
 
 
