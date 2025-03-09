@@ -14,6 +14,8 @@ Linux Mint
 
     usermod -a -G dialout user
 
+    sudo usermod -aG dialout $(whoami)
+
 brltty löschen
 
     sudo apt remove brltty
