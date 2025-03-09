@@ -25,7 +25,7 @@ brltty löschen
 
 ![Alternativtext](https://github.com/guggenbergerME/linux_codes/blob/main/Drucker/Plotter/Inkscape.png "optional image title")
 
-![Alternativtext](https://github.com/guggenbergerME/linux_codes/blob/main/Drucker/Plotter/Inkscape.png "optional image title")
+![Alternativtext](https://github.com/guggenbergerME/linux_codes/blob/main/Drucker/Plotter/chmod_usb.png "optional image title")
 
 ## Plotterprogram
 + [Inkscape](https://inkscape.org/de/)
