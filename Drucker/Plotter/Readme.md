@@ -10,6 +10,11 @@ Hinzufpgen des Benutzers zu dialout
 
     sudo addgroup [USERNAME] dualout
 
+Linux Mint
+
+    usermod -a -G dialout guggenberger
+
+
 
 
 ## Plotterprogram
