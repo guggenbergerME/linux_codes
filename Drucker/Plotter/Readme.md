@@ -2,6 +2,12 @@
 
 ## USB Anschluss
 
+Der einfachste Weg um ein USB Gerät ausfindig zu machen ist das auslesen des Kern Logfiles
+
+```
+tail -f /var/log/kern.log
+```
+
 Prüfen ob man als Benutzer in der Gruppe ```dialout````ist.
 
     id
