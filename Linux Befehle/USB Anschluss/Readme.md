@@ -6,6 +6,8 @@ Der einfachste Weg um ein USB Gerät ausfindig zu machen ist das auslesen des Ke
 tail -f /var/log/kern.log
 ```
 
+
+
 ```
 dmesg | grep usb
 ```
