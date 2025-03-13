@@ -1,5 +1,13 @@
 # Plotter an Linux Mint betreiben
 
+## Inkscape installieren
+
+Installation aus den Systemprogrammen. Keine Flatpak.
+
+Starten mit
+
+        sudo inkscape
+
 ## USB Anschluss
 
 Der einfachste Weg um ein USB Gerät ausfindig zu machen ist das auslesen des Kern Logfiles
