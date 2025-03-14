@@ -42,6 +42,8 @@ OpenSSH (v6)               ALLOW       Anywhere (v6)
 ## Install InfluxDB
 [Quelle](https://docs.influxdata.com/influxdb/v2/install/?t=Linux) der Installation.
 
+Kontrolle ob curl und gpg installiert ist.
+
 ```
 # Ubuntu and Debian
 # Add the InfluxData key to verify downloads and add the repository
