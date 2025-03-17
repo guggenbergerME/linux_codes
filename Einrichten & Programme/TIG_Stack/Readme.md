@@ -252,9 +252,11 @@ sudo systemctl status grafana-server
              ??13674 /usr/sbin/grafana-server --config=/etc/grafana/grafana.ini --pidfile=/run/grafana/grafana-server.pid --packaging=deb cfg:default.paths.logs=/var/log/grafana 
 ```
 
+## Grafana starten
+Grafana-Datenquelle einrichten
+Starte die URL http://<serverIP>:3000 in deinem Browser und die folgende Grafana-Anmeldeseite sollte dich begrüßen.
 
-
-
+Erstes Login ```àdmin/admin```
 
 ### Links
 + [Anleitung](https://www.howtoforge.de/anleitung/so-installierst-du-den-tig-stack-telegraf-influxdb-und-grafana-auf-ubuntu-22-04/)
