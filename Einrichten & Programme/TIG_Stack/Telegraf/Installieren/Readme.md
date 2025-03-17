@@ -17,3 +17,7 @@
 ## Version auslesen
 
         telegraf --version
+
+## telegraf starten
+
+        systemctl status telegraf.service
