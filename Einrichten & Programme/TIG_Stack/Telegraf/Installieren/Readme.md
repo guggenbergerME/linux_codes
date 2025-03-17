@@ -6,6 +6,10 @@
 
         wget xxxx
 
+## tar entpacken
+
+         tar -xf [FILE]
+
 ## Installieren
 
         dpkg -i PAKET
