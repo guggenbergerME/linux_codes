@@ -37,6 +37,13 @@ docker compose exec php vendor/bin/pimcore-install --mysql-host-socket=db --mysq
 
 (Für Demo-Paket kann die Installation eine Weile dauern)
 
+## nginx config
+
++ https://github.com/megahoy/pimcore/blob/master/nginx.conf
++ [Nginx Configurieren](https://docs.pimcore.com/pimcore/5.8/Development_Documentation/Installation_and_Upgrade/System_Setup_and_Hosting/Nginx_Configuration.html)
+
+
+
 ### Links
 
 + [Anleitung](https://docs.pimcore.com/platform/Pimcore/Getting_Started/Installation/Docker_Based_Installation)
