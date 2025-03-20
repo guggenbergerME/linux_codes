@@ -94,3 +94,7 @@ jonathan@xxx:~$ docker --version && sudo docker compose version
 Docker version 20.10.17, build 100c701
 Docker Compose version v2.6.0
 ```
+
+## Docker status
+
+    sudo systemctl status docker
