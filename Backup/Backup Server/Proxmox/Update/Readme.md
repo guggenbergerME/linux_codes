@@ -12,11 +12,11 @@ Datei ```/etc/apt/sources.list```
 deb http://ftp.debian.org/debian bookwm main contrib
 deb http://ftp.debian.org/debian bookworm-updates main contrib
 
-Proxmox VE pve-no-subscription Repository bereitgestellt von proxmox.com,
-NICHT für den Einsatz in der Produktion empfohlen
+#Proxmox VE pve-no-subscription Repository bereitgestellt von proxmox.com,
+#NICHT für den Einsatz in der Produktion empfohlen
 deb http://download.proxmox.com/debian/pve bookworm pve-no-subscription
 
-- Sicherheitsupdates
+#- Sicherheitsupdates
 deb http://security.debian.org/debian-security bookwm-security main contrib
 ```
 
