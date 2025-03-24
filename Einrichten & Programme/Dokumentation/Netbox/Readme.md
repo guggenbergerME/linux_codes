@@ -1,5 +1,9 @@
 #Netbox - Dokumentation
 
+## Netbox installation auf Ubuntu Server
+
++ [https://netboxlabs.com/docs/netbox/en/stable/installation/](https://netboxlabs.com/docs/netbox/en/stable/installation/)
+
 ## Netbox - Docker Installation
 ```
 git clone -b release https://github.com/netbox-community/netbox-docker.git
