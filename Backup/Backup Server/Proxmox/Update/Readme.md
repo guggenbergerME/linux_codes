@@ -9,15 +9,15 @@ Wir empfehlen, dieses Projektarchiv in /etc/apt/sources.list.
 Datei ```/etc/apt/sources.list```
 
 ```
-deb http://ftp.debian.org/debian bookwm main contrib
+deb http://ftp.debian.org/debian bookworm main contrib
 deb http://ftp.debian.org/debian bookworm-updates main contrib
 
-#Proxmox VE pve-no-subscription Repository bereitgestellt von proxmox.com,
-#NICHT für den Einsatz in der Produktion empfohlen
+# Proxmox VE pve-no-subscription repository provided by proxmox.com,
+# NOT recommended for production use
 deb http://download.proxmox.com/debian/pve bookworm pve-no-subscription
 
-#- Sicherheitsupdates
-deb http://security.debian.org/debian-security bookwm-security main contrib
+# security updates
+deb http://security.debian.org/debian-security bookworm-security main contrib
 ```
 
 Danach kann der Server aktualisiert werden
