@@ -1,5 +1,9 @@
 #Netbox - Dokumentation
 
+## NetBox update
+
++ [https://github.com/netbox-community/netbox-docker/wiki/Updating](https://github.com/netbox-community/netbox-docker/wiki/Updating)
+
 ## Netbox installation auf Ubuntu Server
 
 + [https://netboxlabs.com/docs/netbox/en/stable/installation/](https://netboxlabs.com/docs/netbox/en/stable/installation/)
