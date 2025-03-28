@@ -1,5 +1,7 @@
 # Rustdesk Server Pro
 
+Anlegen vin individuellen Clients. Erfordert eine Lizenz!
+
 ## Installation
 
 ```
