@@ -96,7 +96,9 @@ Docker Compose version v2.6.0
 ```
 
 ## Docker status
-
-    sudo systemctl status docker
-
-    sudo systemctl start docker
+```
+sudo systemctl status docker
+```
+```
+sudo systemctl start docker
+```
