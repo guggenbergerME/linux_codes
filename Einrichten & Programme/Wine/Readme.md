@@ -10,9 +10,14 @@ sudo apt-get install wine-stable
 ```
 WINEPREFIX="/home/guggenberger/WINE" WINEARCH=win64 winecfg
 ```
-Programm starten
+## Programm starten
 ```
 WINEPREFIX="/home/guggenberger/WINE" wine '/home/guggenberger/Downloads/KindleForPC-installer-2.6.70964.exe'
+```
+
+## Wine Controlpanel
+```
+wine control
 ```
 
 
