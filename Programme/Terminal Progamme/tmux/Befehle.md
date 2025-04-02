@@ -4,6 +4,10 @@ Auflisten aller aktuell laufenden tmux-Sitzungen:
 
     tmux ls 
 
+Neues Fenster
+
+    CTRL + B + C
+
 Neue tmux-Sitzung mit dem Namen „hans“ starten:
 
     tmux new -s hans 
