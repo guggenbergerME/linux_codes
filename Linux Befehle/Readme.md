@@ -1,7 +1,7 @@
 # Linux Befehle
 
 ## Prozesse
-- [Prozess beenden](kill.md)
+- [Prozess beenden](Prosesse/kill.md)
 
 ## SSH
 - [SSH Befehle](ssh.md)
