@@ -32,6 +32,38 @@ oder
 
     tmux a #
 
+## Panel Befehle
+
+Neues Fenster erzeugen/öffnen
+
+    CTRL + b c
+
+Alle aktuell bestehenden Fenster auflisten, zwischen Fenstern wechseln
+
+    CTRL + b w
+
+Zum letzten benutzten Fenster wechseln
+
+    CTRL + b l
+
+Zum chronologisch vorausgehenden Fenster wechseln
+
+    CTRL + b p
+    
+Zum chronologisch nächsten Fenster wechseln
+
+    CTRL + b n
+
+Aktuelles Fenster umbenennen
+
+    CTRL + b ,
+
+Aktuelles Fenster beenden (mit „y“ bestätigen)
+
+    CTRL + b &**&**
+- 1, 2, 3, (…): Zu Fenster Nummer X springen
+- [: Scrollmodus nutzen (mit Pfeiltasten in aktuellem Fenster scrollen)
+
 Alle tmux-Sitzungen anzeigen (Anzeigen von Sitzungsnamen und Anzahl geöffneter Fenster)
 
     tmux 1s
@@ -70,18 +102,6 @@ Befehle für Sitzungen:
 - $: Aktuelle Sitzung umbenennen
 - D: Bestehende Sitzung abtrennen („detach“) und in Hintergrund verschieben
 - ?: Anzeige der aktuell aktiven Tastenkombinationen (Hilfe-Bereich öffnen)
-
-Befehle für Fenster:
-
-- C: Neues Fenster erzeugen/öffnen
-- W: Alle aktuell bestehenden Fenster auflisten, zwischen Fenstern wechseln
-- L: Zum letzten benutzten Fenster wechseln
-- P: Zum chronologisch vorausgehenden Fenster wechseln
-- N: Zum chronologisch nächsten Fenster wechseln
-- ,: Aktuelles Fenster umbenennen
-- &: Aktuelles Fenster beenden (mit „y“ bestätigen)
-- 1, 2, 3, (…): Zu Fenster Nummer X springen
-- [: Scrollmodus nutzen (mit Pfeiltasten in aktuellem Fenster scrollen)
 
 Befehle für Panes:
 
