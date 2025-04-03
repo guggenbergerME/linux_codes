@@ -25,3 +25,5 @@ and check to make sure that only the key(s) you wanted were added.
 
     ssh -i ~/.ssh/ansible [ID]
 
+### Tutorials und Video
++ [YT SSH Setup](https://youtu.be/-Q4T9wLsvOQ?list=PLT98CRl2KxKEUHie1m24-wkyHpEsa4Y70)
