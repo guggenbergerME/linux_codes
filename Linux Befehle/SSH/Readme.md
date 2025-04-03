@@ -9,3 +9,8 @@
 **Verbindung beenden**
 
     logout
+
+## known_hosts Ordner
+
+    cd ~/.ssh/
+
