@@ -48,5 +48,5 @@ ansible testserver -i hosts -m ping
 
 ## Ansible mit Github verbinden
 
-[Link](/Github/ssh/github_ssh.md)
+- [Ansible mit Github verbinden](https://github.com/guggenbergerME/linux_codes/blob/main/Einrichten%20%26%20Programme/Github/ssh/github_ssh.md)
 
