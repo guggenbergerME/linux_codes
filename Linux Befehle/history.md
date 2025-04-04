@@ -18,11 +18,11 @@ Möchte man eine längeres Kommando schnell und effizient erneut ausführen, eig
 
 Nach Drücken von [Strg]-[r] erscheint auf der Konsole folgender Eingabepromt:
 
-(reverse-i-search)`':
+        (reverse-i-search)`':
 Wenn man nun einzelne Zeichen tippt ("pst" in diesem Beispiel), wird die Bash History automatisch nach Kommandos durchsucht, welche diese Zeichenkette enthalten hat. Ist das richtige Kommando gefunden ("pstree -C age -h -t" in diesem Beispiel) kann ohne weitere Eingabe durch Drücken der [Enter]-Taste das Kommando erneut aufgerufen werden:
 
-(reverse-i-search)`pst': pstree -C age -h -t
-!
+        (reverse-i-search)`pst': pstree -C age -h -t
+        !
 Hat man sich zuvor mittels history Kommando die Liste an ausgeführten Kommandos angezeigt, und möchte man ein bestimmtes Kommando (das 1793. Kommando in diesem Beispiel) erneut aufrufen, so ist dies durch Eingabe von "!" gefolgt von der Kommandonummer einfach möglich:
 ´´´
 werner@lmde6:~$ !1793
