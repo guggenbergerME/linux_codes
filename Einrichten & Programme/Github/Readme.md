@@ -1,5 +1,8 @@
 # Github
 
+## Befehle
+- [Grundlegende Befehle](Befehle/Readme.md)
+
 ## SSH Key einrichten
 - [Github ssh Key einrichten](ssh/github_ssh.md)
 
