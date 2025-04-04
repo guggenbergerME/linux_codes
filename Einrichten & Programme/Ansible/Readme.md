@@ -1,4 +1,8 @@
-# Einrichtung
+## ansible ssh
+
++ [ansible ssh key](ssh_key.md)
+
+## Einrichtung
 
 Damit für die Verbindung von Master auf Client kein Passwort eingegen werden muss, wird ein SSH-
 Key für den root-Benutzer erstellt.
