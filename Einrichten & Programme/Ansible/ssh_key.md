@@ -1,4 +1,4 @@
-# Asnible & SSH
+# Ansible & SSH
 
 ## ansible mit ssh key verknüpfen
 
