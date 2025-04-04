@@ -2,7 +2,7 @@
 
 
 ## History
-Dieser Befehl zeigt einen "Verlauf" des Repo an
+Dieser Befehl zeigt einen "Verlauf" des Repo an (Linux Standard)
 
     history
     
