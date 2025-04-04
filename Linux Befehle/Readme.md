@@ -1,7 +1,8 @@
 # Linux Befehle
 
-## Suchen
+## Suchen und Verlauf
 - [which](which.md)
+- [Letzten Eingaben anzeigen](history.md)
 
 ## Prozesse
 - [Prozesse auflisten](Prozesse/auflisten.md)
