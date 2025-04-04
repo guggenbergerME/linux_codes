@@ -21,4 +21,4 @@ Datei bereitstellen
 
 Repo hochladen
 
-    git push origib main
+    git push origin main
