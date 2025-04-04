@@ -1,5 +1,8 @@
 # Linux Befehle
 
+## Suchen
+- [which](which.md)
+
 ## Prozesse
 - [Prozesse auflisten](Prozesse/auflisten.md)
 - [Prozess beenden](Prozesse/kill.md)
