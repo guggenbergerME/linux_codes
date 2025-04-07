@@ -2,6 +2,7 @@
 + [Servertest](Befehle/servertest.md)
 + [Technische Daten anzeigen](Befehle/technischedaten.md)
 + [apt - Update von Server](Befehle/aptupdate.md)
++ [Programm installieren](Befehle/programminstallieren.md)
 
 ## Ansible ssh
 
