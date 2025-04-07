@@ -1,6 +1,6 @@
 ## Ansible Befehle
 + [Servertest](Befehle/servertest.md)
-+ [Technische Daten anzeigen](Befehl/technischedaten.md)
++ [Technische Daten anzeigen](Befehle/technischedaten.md)
 
 ## Ansible ssh
 
