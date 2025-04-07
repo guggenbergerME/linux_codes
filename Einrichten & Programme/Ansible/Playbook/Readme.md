@@ -1,4 +1,4 @@
-# Asnible Playbook
+# Ansible Playbook
 Erstellen von verschieden Playbook im yml für die konfiguration von Server.
 
 ## Tutorial
