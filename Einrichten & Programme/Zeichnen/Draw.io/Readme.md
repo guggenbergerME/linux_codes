@@ -1,7 +1,7 @@
 # draw.io
 
 ## Libary für Draw.io
-- [Grafcet](Bibiolotheken/Grafcet/Readme.md)
+- [Grafcet](Bibliotheken/Grafcet/Readme.md)
 
 ## Installation Linux
 -> Linux Anwendungsverwaltung
