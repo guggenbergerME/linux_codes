@@ -5,6 +5,9 @@
 ### Anleitungen
 - [Der Proxmox Backup Server](https://www.bjoerns-techblog.de/2024/04/der-proxmox-backup-server/)
 
+## Prune-& GC-Jobs
+
+
 
 ## Festplatten entfernen
 
