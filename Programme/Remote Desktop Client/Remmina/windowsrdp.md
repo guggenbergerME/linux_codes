@@ -1,6 +1,8 @@
 # Windows Remote Verbindung
 
-## Verbindungsprofil
+Folgende Einstellungen müssen in der Verbindung zu einem Windows Remote PC eingestellt werden.
+
+## Remmina Verbindung -> Verbindungsprofil
 
 ```
 Server        ServerID
@@ -9,10 +11,13 @@ Passwort      Passwort
 Domäne        name.lcl
 ```
 
-## Erweitert
+## Remmina Verbindung -> Erweitert
 
 ```
 Remote-Desktop-Gateway Server        [IP oder Adresse]
 Remote-Desktop-Gateway Benutzername  NAME
 Remote-Desktop-Gateway Passwort      PASSWORT
 ```
+
+## Drucker freigeben
+Im Bereich ```Erweitert```einen Haken bei ```Drucker freigeben```
