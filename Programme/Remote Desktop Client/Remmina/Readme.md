@@ -9,3 +9,7 @@ etwa der Server hinter einem NAT-Router sitzt. Weiterhin wird Avahi unterstützt
 
 1. Version über die Anwendungsverwaltung bei Linux Mint
 2. per Terminal ```sudo apt-get install remmina ```
+
+## Verbindung zu einem Windows Rechner (RDP)
+Details zu einer RDP Verbindung zu einem Windows Rechner.
++ [Windows RDP Verbindung](windowsrdp.md)
