@@ -6,6 +6,8 @@
 
 ## Erstellen einer VM
 
+![Screenshot](win1.png)
+
 + OS Win11 ISO verwenden
 + System -> SCSI-Controller verwenden – VirtIO SCSI | Bios OVMF (UEFI) und TPM hinzufügen
 + Festplatte – VirtIO-Block und minimale Festplattengröße 64 GB
