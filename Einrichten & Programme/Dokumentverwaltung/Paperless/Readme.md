@@ -10,6 +10,8 @@ $ bash -c "$(curl --location --silent --show-error https://raw.githubusercontent
 + https://docs.paperless-ngx.com/setup/
 + https://docs.paperless-ngx.com/setup/#docker_build
 
++ [Etiketten
+](https://digital-cleaning.de/index.php/paperless-ngx-teil-13-ein-quanten-code-fuer-das-papier-archiv/)
 ## Installation mit compose
 ```
 services:
