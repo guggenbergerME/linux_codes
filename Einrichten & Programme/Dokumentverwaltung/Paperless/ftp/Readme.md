@@ -17,3 +17,7 @@ Mit dem Texteditor „vi“ muss man nun noch ein paar Einstellungen in der Conf
 FTP Server neu starten:
 
     $ /etc/init.d/vsftpd restart
+
+## Neuen ftp User anlegen
+
+    adduser [NAME]
