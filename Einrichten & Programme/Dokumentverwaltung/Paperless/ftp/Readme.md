@@ -21,3 +21,7 @@ FTP Server neu starten:
 ## Neuen ftp User anlegen
 
     adduser [NAME]
+
+## pdf per crontab in den Paperless Ordner schieben
+
+    */2 * * * * mv /home/d1/*.pdf [zielordner]
