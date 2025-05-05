@@ -45,6 +45,11 @@ bash -c "$(curl --location --silent --show-error https://raw.githubusercontent.c
 
 + [Etiketten
 ](https://digital-cleaning.de/index.php/paperless-ngx-teil-13-ein-quanten-code-fuer-das-papier-archiv/)
+
+## Datenupload per FTP
+[Datenupload per FTP zu paperless](ftp/Readme.md)
+
+
 ## Installation mit compose
 ```
 services:
