@@ -21,6 +21,15 @@ Benutzer paperless die Rechte erteilen Docker zu verwenden
 sudo usermod -aG docker paperless
 ```
 
+Docker Status prüfen
+```
+sudo systemctl status docker
+```
+Docker starten
+```
+sudo systemctl start docker
+```
+
 Installationsscript ausführen
 
 ```
