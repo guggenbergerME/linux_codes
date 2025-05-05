@@ -1,5 +1,7 @@
 # Paperless-ngx
 
+Paperless bietet ein interaktives Installationsskript zum Einrichten eines Docker Compose Montage. Das Skript fragt nach ein paar Konfigurationsoptionen und erstellt dann die notwendige Konfigurationsdateien, ziehen Sie das Dockerbild, starten Sie Paperless-ngx und erstellen Sie Ihren Superuser Konto. Das Skript führt im Wesentlichen automatisch die im Docker-Setup beschriebenen Schritte durch.
+
 ## Download installation Script
 ```
 $ bash -c "$(curl --location --silent --show-error https://raw.githubusercontent.com/paperless-ngx/paperless-ngx/main/install-paperless-ngx.sh)"
