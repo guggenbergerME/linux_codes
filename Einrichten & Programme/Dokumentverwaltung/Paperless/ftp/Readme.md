@@ -13,3 +13,7 @@ Mit dem Texteditor „vi“ muss man nun noch ein paar Einstellungen in der Conf
     local_enable=YES     (Zeile: 28)
     write_enable=YES     (Zeile: 31)
     chroot_local_user=YES  (Zeile: 114)
+
+FTP Server neu starten:
+
+    $ /etc/init.d/vsftpd restart
