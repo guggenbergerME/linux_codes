@@ -41,6 +41,8 @@ bash -c "$(curl --location --silent --show-error https://raw.githubusercontent.c
 + https://docs.paperless-ngx.com/setup/
 + https://docs.paperless-ngx.com/setup/#docker_build
 
++ [Workflow](https://digital-cleaning.de/index.php/paperless-ngx-auf-dem-raspberry-pi-erstaunlich-gut-teil-1/)
+
 + [Etiketten
 ](https://digital-cleaning.de/index.php/paperless-ngx-teil-13-ein-quanten-code-fuer-das-papier-archiv/)
 ## Installation mit compose
