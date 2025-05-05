@@ -21,7 +21,7 @@ Benutzer paperless die Rechte erteilen Docker zu verwenden
 sudo usermod -aG docker paperless
 ```
 
-
+Installationsscript ausführen
 
 ```
 bash -c "$(curl --location --silent --show-error https://raw.githubusercontent.com/paperless-ngx/paperless-ngx/main/install-paperless-ngx.sh)"
