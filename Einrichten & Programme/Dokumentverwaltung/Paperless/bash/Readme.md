@@ -13,7 +13,10 @@ source_dir="/home/d1"
 # Ziel
 destination_dir="/home/paperless/paperless-ngx/consume"
 
-# log
+# UID Paperless
+new_owner="1000"
+
+# Logfile
 log_file="/home/paperless/bash/logfile/pdfcopy.log"
 
 # log schreiben
@@ -22,7 +25,7 @@ log() {
   echo "[$timestamp] $1" >> "$log_file"
 }
 
-# Verzeichnis prüfen
+# Verzeichnis check
 if [ ! -d "$destination_dir" ]; then
   log "Zielverzeichnis '$destination_dir' existiert nicht. Versuche es zu erstellen..."
   mkdir -p "$destination_dir"
@@ -34,17 +37,19 @@ if [ ! -d "$destination_dir" ]; then
   fi
 fi
 
-# Finde und verschieben die PDF-Dateien
-log "Verschieben der PDF-Dateien von '$source_dir' nach '$destination_dir'."
+# PDF UID ändern
+log "Starte: Ändere Eigentümer der PDF-Dateien in '$source_dir' zu '$new_owner' und verschiebe sie nach '$destination_dir'."
+find "$source_dir" -type f -name "*.pdf" -exec chown "$new_owner" {} \; -exec mv {} "$destination_dir" \;
+
+# Schleife
 copied_count=0
-find "$source_dir" -type f -name "*.pdf" -exec mv {} "$destination_dir" \;
 while IFS= read -r -d $'\0' file; do
   copied_count=$((copied_count + 1))
-  log "Kopiere: '$file' nach '$destination_dir'."
+  log "Kopiert: '$file' nach '$destination_dir'."
 done < <(find "$source_dir" -type f -name "*.pdf" -print0)
 
 # Gib eine Erfolgsmeldung aus
-log "Erfolgreich. $copied_count PDF-Dateien verschoben."
+log "Das Ändern des Eigentümers und das Kopieren der PDF-Dateien ist abgeschlossen. Es wurden $copied_count PDF-Dateien bearbeitet und kopiert."
 
 exit 0
 ```
