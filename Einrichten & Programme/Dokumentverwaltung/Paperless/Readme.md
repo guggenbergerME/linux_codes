@@ -49,6 +49,9 @@ bash -c "$(curl --location --silent --show-error https://raw.githubusercontent.c
 ## Datenupload per FTP
 [Datenupload per FTP zu paperless](ftp/Readme.md)
 
+## BASH Scripte
+[Bash Script Beispiele](bash/Readme.md)
+
 
 ## Installation mit compose
 ```
