@@ -57,3 +57,10 @@ exit 0
 ## Script ausführbar machen
 
     sudo chmod +x test.sh
+
+## Script per crontab ausführen
+Dieses Script per ```root````als crontab ausjühren. Prüfen des Scannerordners alle 5 Minuten. Pfad zu Script anpassen.
+
+```
+*/5 * * * * ~/bash_paperless/pdfcopy.sh
+```
