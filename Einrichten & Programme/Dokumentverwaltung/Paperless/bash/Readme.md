@@ -48,3 +48,7 @@ log "Erfolgreich. $copied_count PDF-Dateien verschoben."
 
 exit 0
 ```
+
+## Script ausführbar machen
+
+    sudo chmod +x test.sh
