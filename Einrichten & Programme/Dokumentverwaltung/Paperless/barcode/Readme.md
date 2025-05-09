@@ -9,7 +9,7 @@ Einfügen im Abschnitt „environment:“ und auf die Einrückung achten!
 
 Nun die Änderung übernehmen mit 
 
-    sudo docker-compose up -d“
+    sudo docker-compose up -d
 
 erledigt.
 
