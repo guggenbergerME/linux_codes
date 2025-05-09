@@ -14,3 +14,6 @@ Nun die Änderung übernehmen mit
 erledigt.
 
 Von nun an erkennt Paperless-ngx die Codes in Scans. Auch die ASN-Suchfunktion kann entsprechend genutzt werden:
+
+## Barcode drucken
++ [https://app.avery-zweckform.com/](https://app.avery-zweckform.com/)
