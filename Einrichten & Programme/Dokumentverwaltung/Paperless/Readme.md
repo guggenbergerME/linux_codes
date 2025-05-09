@@ -49,6 +49,9 @@ bash -c "$(curl --location --silent --show-error https://raw.githubusercontent.c
 ## Datenupload per FTP
 [Datenupload per FTP zu paperless](ftp/Readme.md)
 
+## Barcode scannen
+[Barcode scannen aktivieren](barcode/Readme.md)
+
 ## BASH Scripte
 [Bash Script Beispiele](bash/Readme.md)
 
