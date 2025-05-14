@@ -63,6 +63,7 @@ echo "Fertig! Datei gespeichert als: $page_output"
 
 ## Script Ausführbar machen
 
+        chmod +x qr_dinA4_generator.sh
 
 ## FEHLER: ImageMagick security policy 'PDF' blocking conversion
 
