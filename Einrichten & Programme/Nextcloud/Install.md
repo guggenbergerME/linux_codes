@@ -1,6 +1,9 @@
 # Nextcloud installation
 
 ## Docker installation
+
+Standart Installation
+
 ```
 docker run -d --restart unless-stopped -p 80:80 nextcloud
 ```
