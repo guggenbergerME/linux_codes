@@ -15,12 +15,12 @@ sudo apt install qrencode imagemagick
 #!/bin/bash
 
 # Einstellungen
-start_num=1         # Startnummer
-anzahl=24           # Anzahl der QR-Codes (max. 24 pro Blatt)
-prefix="CODE"       # Text vor der Nummer
-output_dir="qrcodes"
-labeled_dir="qrcodes_labeled"
-page_output="qr_codes_A4.pdf"
+start_num=1500         # Startnummer für QR-Inhalte
+anzahl=24           # Anzahl der QR-Codes pro Blatt
+prefix="ASN"       # Text vor der Nummer
+output_dir="ausgeb/qrcodes"
+labeled_dir="ausgabe/qrcodes_labeled"
+pdf_output_dir="/home/pc813/Nextcloud-GLT-allgemein/Archiv/QR-Code-Generator"  # NEU: Ausgabeordner für PDF
 
 # Maße in mm
 etikett_breite_mm=70
@@ -28,11 +28,19 @@ etikett_hoehe_mm=36
 dpi=300
 etikett_breite_px=$((etikett_breite_mm * dpi / 25))
 etikett_hoehe_px=$((etikett_hoehe_mm * dpi / 25))
-fontsize=20         # Schriftgröße
+fontsize=50         # Schriftgröße
 
-# Verzeichnisse vorbereiten
-mkdir -p "$output_dir" "$labeled_dir"
-rm -f "$output_dir"/*.png "$labeled_dir"/*.png "$page_output"
+# Ordner vorbereiten
+mkdir -p "$output_dir" "$labeled_dir" "$pdf_output_dir"
+rm -f "$output_dir"/*.png "$labeled_dir"/*.png
+
+# Fortlaufenden PDF-Dateinamen bestimmen
+n=1
+while :; do
+    page_output=$(printf "%s/qr_codes_A4_%03d.pdf" "$pdf_output_dir" "$n")
+    [[ -f $page_output ]] || break
+    ((n++))
+done
 
 echo "🔄 Generiere QR-Codes mit Text darunter..."
 
@@ -60,7 +68,8 @@ echo "📄 Erzeuge DIN A4-Seite mit montierten QR-Codes..."
 montage "$labeled_dir"/*.png -tile 3x8 \
     -geometry +0+0 -page A4 "$page_output"
 
-echo "✅ Fertig! Gespeichert als: $page_output"
+echo "✅ Fertig! Datei gespeichert unter: $page_output"
+
 ```
 
 ## Script Ausführbar machen
