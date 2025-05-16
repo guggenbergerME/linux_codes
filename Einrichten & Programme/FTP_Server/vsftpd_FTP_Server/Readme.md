@@ -9,7 +9,7 @@ Einer der ersten Schritte nach der Erstellung eines Servers ist, sicherzustellen
 
 Wie du erkennen kannst, ist bei jedem Teilbefehl ggf. ein »sudo« notwendig. Nach kurzer Wartezeit ist der Server auf dem neuesten Stand. Es kann weitergehen.
 
-##FTP Server Dienst installieren
+## FTP Server Dienst installieren
 
 Da FTP ein sehr verbreitetes Protokoll ist, gibt es auch viele Anwendungen, die auf FTP aufbauen. Hier wird der Very Secure FTP Daemon (vsftpd)-Server gezeigt. Im Gegensatz zu den Alternativen aus dem Universe- oder Multiverse-Zweig, werden Main-Zweig-Pakete regelmäßig gepflegt und mit Sicherheitsupdates versorgt. Außerdem ist vsftpd sehr auf Sicherheit ausgelegt. Mit folgendem Befehl kann vsftpd auf deinem System installiert werden:
 
