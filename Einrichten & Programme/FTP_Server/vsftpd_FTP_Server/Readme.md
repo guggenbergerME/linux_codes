@@ -74,3 +74,5 @@ Nachdem du die Einstellungen aktiviert oder zum Teil hinzugefügt hast, musst du
 Danach nicht vergessen zu speichern bevor du die Datei verlässt. Abschließend starte vsftpd neu:
 
     sudo systemctl restart vsftpd 
+
+[Quelle](https://gridscale.io/community/tutorials/ftp-ubuntu-erstellen/)
