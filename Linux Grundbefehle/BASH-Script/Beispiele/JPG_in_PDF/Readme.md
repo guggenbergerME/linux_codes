@@ -45,6 +45,9 @@ for jpgfile in "$INPUT_DIR"/*.jpg; do
 done
 shopt -u nullglob nocaseglob
 ```
+## Script ausführbar machen
+
+    chmod +x SCRIPT
 
 ## Script ausführen
 
