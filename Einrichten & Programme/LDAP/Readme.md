@@ -70,5 +70,15 @@ Führe nun den folgenden Befehl aus, um den OpenLDAP-Dienst „slapd“ neu zu s
     sudo systemctl restart slapd
     sudo systemctl status slapd
 
+## Test
+
+Führe abschließend den folgenden Befehl aus, um die OpenLDAP-Basiskonfiguration zu prüfen und zu verifizieren. Du solltest den Basis-DN für den OpenLDAP-Server als„dc=localdomain,dc=com“ erhalten.
+
+        sudo ldapsearch -Q -LLL -Y EXTERNAL -H ldapi:///
+
+## Errichten von Basisgruppen
+
+- [Errichten von Basisgruppen](Basisgruppen/Readme.md)
+
 ### Tutorial
 + https://www.howtoforge.de/anleitung/so-installierst-du-openldap-unter-ubuntu-22-04/
