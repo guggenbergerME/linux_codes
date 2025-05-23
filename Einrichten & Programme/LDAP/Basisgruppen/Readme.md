@@ -14,9 +14,10 @@ Füge die folgende Konfiguration in die Datei ein.
     objectClass: organizationalUnit
     ou: People
 
-dn: ou=Groups,dc=localdomain,dc=com
-objectClass: organizationalUnit
-ou: Groups
+
+    dn: ou=Groups,dc=localdomain,dc=com
+    objectClass: organizationalUnit
+    ou: Groups
 
 Führe nun den unten stehenden Befehl„ldapadd“ aus, um neue Basisgruppen in der Datei„base-groups.ldif“ anzulegen. Du wirst zur Eingabe des OpenLDAP-Administrator-Passworts aufgefordert, also achte darauf, das richtige Passwort einzugeben.
 
