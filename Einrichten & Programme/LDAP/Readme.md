@@ -76,6 +76,9 @@ Führe abschließend den folgenden Befehl aus, um die OpenLDAP-Basiskonfiguratio
 
         sudo ldapsearch -Q -LLL -Y EXTERNAL -H ldapi:///
 
+## LDAP Browser
+- [Apache Directory Studio](LDAP-Browser/Readme.md)
+
 ## Errichten von Basisgruppen
 
 - [Errichten von Basisgruppen](Basisgruppen/Readme.md)
