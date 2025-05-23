@@ -19,3 +19,5 @@ Login
 Profil name     lam
 Passwort        lam
 ```
+
+Konfigurieren der Sprache und Einstellen des ```Tree suffix```
