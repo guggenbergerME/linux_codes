@@ -9,3 +9,13 @@ Gib Y ein, um die Installation zu bestätigen und drücke ENTER, um fortzufahren
     sudo apt install ldap-account-manager
 
 Nach Abschluss der Installation öffnest du den Webbrowser und rufst die IP-Adresse des Servers auf, gefolgt von dem URL-Pfad„/lam (d.h. ```http://[DEINE IP]/lam```). Du solltest nun die Anmeldeseite des LDAP Account Managers (LAM) sehen.
+
+## Erstes einrichten (LAM configuration)
+
+Im Bereich ```Edit server profiles``` LAM einrichten. 
+
+```
+Login
+Profil name     lam
+Passwort        lam
+```
