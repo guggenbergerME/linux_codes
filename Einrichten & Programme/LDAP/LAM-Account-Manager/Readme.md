@@ -21,3 +21,5 @@ Passwort        lam
 ```
 
 Konfigurieren der Sprache und Einstellen des ```Tree suffix```
+
++ [Anleitung](https://www.howtoforge.de/anleitung/so-installierst-du-openldap-server-und-ldap-account-manager-unter-debian-12/)
