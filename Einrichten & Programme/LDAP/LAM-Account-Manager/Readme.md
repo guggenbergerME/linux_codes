@@ -22,8 +22,11 @@ Passwort        lam
 
 Konfigurieren der Sprache und Einstellen des ```Tree suffix```
 
- Security settings
+ **Security settings**
 
         cn=ldap,dc=gima-profi,dc=info
+
+**Account types**
+In diesem Bereich müssen User und Groups angepasst werden.
 
 + [Anleitung](https://www.howtoforge.de/anleitung/so-installierst-du-openldap-server-und-ldap-account-manager-unter-debian-12/)
