@@ -83,5 +83,7 @@ Führe abschließend den folgenden Befehl aus, um die OpenLDAP-Basiskonfiguratio
 
 - [Errichten von Basisgruppen](Basisgruppen/Readme.md)
 
+## LAM-Account-Manager
+- [LAM-Account-Manager installieren](LAM-Account-Manager/Readme.md)
 ### Tutorial
 + https://www.howtoforge.de/anleitung/so-installierst-du-openldap-unter-ubuntu-22-04/
