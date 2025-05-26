@@ -1,5 +1,8 @@
 # Proxmox updaten
 
+## Proxmox-GUI
+Das Nicht-Abonnement-Repository ausgewählt und das Enterprise-Repository deaktiviert. Anschließend, wieder in der GUI, „Aktualisieren“ und dann „Upgrade“ ausführen.
+
 
 ## Proxmox VE Kein Abmelde-Repository
 
