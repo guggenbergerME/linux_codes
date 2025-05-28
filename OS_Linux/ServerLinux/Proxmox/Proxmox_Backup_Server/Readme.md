@@ -21,4 +21,16 @@ und folgenden Inhalt in die Datei kopieren / bzw. die folgenden Änderungen vorn
 # deb https://enterprise.proxmox.com/debian/pbs buster pbs-enterprise
 deb http://download.proxmox.com/debian/pbs buster pbs-no-subscription
 ```
-Danach funktioniert der Update Vorgang auch ohne Subscription.
+Sollte das Update nicht funktionieren muss der gpg angepasst werden
+
+```
+wget http://download.proxmox.com/debian/proxmox-ve-release-6.x.gpg
+sha256sum proxmox-ve-release-6.x.gpg
+# confirm the last command had the expected output!
+cp proxmox-ve-release-6.x.gpg /etc/apt/trusted.gpg.d/
+apt update
+apt full-upgrade
+```
+
+## Links
++ [Proxmox RePo](https://pve.proxmox.com/pve-docs/pve-admin-guide.html#sysadmin_package_repositories)
