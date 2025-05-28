@@ -6,7 +6,9 @@ Der Proxmox-Backup-Server bietet für Produktiv-Systeme Subscriptions an, mit de
 ```
 apt update && apt dist-upgrade
 ein Upgrade des PBS starten möchte.
+```
 
+```
 E: Failed to fetch https://enterprise.proxmox.com/debian/pbs/dists/buster/InRelease  401  Unauthorized [IP: 212.224.xxx.xxx 443]
 E: The repository 'https://enterprise.proxmox.com/debian/pbs buster InRelease' is not signed.
 ```
