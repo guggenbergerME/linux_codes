@@ -28,7 +28,47 @@ Danach kann die ISO-Datei auf den Stick übertragen werden.
 ```
 Dabei ist sdx der erkannte USB-Stick. (x ist durch den entsprechenden Buchstaben zu ersetzen.) Beachte: Alle Daten auf dem USB-Stick werden gelöscht!
 
+## Ändern der Tastaturbelegung
 
+Zu diesem Zeitpunkt ist noch das US-englische Tastaturlayout eingestellt. Zum deutschsprachigen Tastaturlayout wird wie folgt gewechselt:
+
+    loadkeys de-latin1
+
+## Internetverbindung herstellen
+
+Ist beim Systemstart der LAN-Adapter mit dem Router verbunden wird die Internetverbindung automatisch aufgebaut. 
+
+über LAN
+
+Wurde die Verbindung nicht automatisch hergestellt, genügt es die Netzwerkkarte zu ermitteln -
+```
+ip link 
+
+ 1: lo: <LOOPBACK.....
+ 2: enp4s0: <BROADCAST...
+ .
+ .
+ 3: wlp0s1:  <BROADCAST...
+```
+
+Die Netzwerkkarte heißt in diesem Beispiel enp4s0.
+(wlp0s1 ist der Wlanadapter.)
+
+- und die kabelgebundene Netzwerkverbindung neu aufzubauen.
+
+    dhcpcd <Netzwerkkarte>
+
+über Wlan
+
+Die Herstellung der WLan Verbindung wird mit folgendem Komando eingeleitet:
+
+    iwctl
+
+Dort gelangt man nach der Eingabe des folgenden Befehls zur Passwortabfrage:
+
+station wlan0 connect <SSID>
+
+Verlassen wird das Konsolen-Programm iwctl mit der Tastenkombination: Strg+d oder exit 
 
 
 ### Links
