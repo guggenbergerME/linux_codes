@@ -56,7 +56,9 @@ Die Netzwerkkarte heißt in diesem Beispiel enp4s0.
 
 - und die kabelgebundene Netzwerkverbindung neu aufzubauen.
 
-    dhcpcd <Netzwerkkarte>
+```
+dhcpcd <Netzwerkkarte>
+```
 
 über Wlan
 
