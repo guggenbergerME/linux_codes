@@ -59,8 +59,6 @@ Mit Eingabe von **"o"** lösche ich alle evtl. vorhandenen Partitionen und mit E
 ### BOOT-Partition
 
 ```
-neue Partition anlegen mit        n        ENTER
-Partition number 		                   ENTER
-First sector 		                       ENTER
-Last sector 	                 +512M 	   ENTER
-HEX code 	                     ef00 	   ENTER
+neue Partition anlegen mit | n | ENTER
+```
+
