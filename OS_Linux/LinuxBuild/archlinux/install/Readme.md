@@ -78,7 +78,7 @@ Verlassen wird das Konsolen-Programm iwctl mit der Tastenkombination: Strg+d ode
 Um das System ordnungsgemäß installieren zu können, müssen Sie zunächst Partitionen erstellen und diese dann einbinden. Sie haben zu Beginn zwei Laufwerke: zum einen die Festplatte Ihres Rechners und zum anderen das Installationsmedium für Arch Linux. Für die Partitionierung gehen Sie nun wie folgt vor:
 
 - Zunächst wählen Sie „Boot Arch Linux (x86_64)“ aus.
-- Die Partitionen erstellen Sie am einfachsten über ein Programm wie cfdisk. Dieses starten Sie, indem Sie den Namen als Befehl eingeben.
+- Die Partitionen erstellen Sie am einfachsten über ein Programm wie ```cfdisk```. Dieses starten Sie, indem Sie den Namen als Befehl eingeben.
 - Wählen Sie nun als Partitionsstil „dos“ für den MBR-Partitionsstil. Alternativ können Sie unter „Select label type“ „gpt“, „sgi“ oder „sun“ auswählen. Sollten Sie mehrere Festplatten haben, müssen Sie sich für die richtige entscheiden.
 - Starten Sie nun cfdisk über „cfdisk /dev/sda“. Heißt Ihre Festplatte anders, müssen Sie den Part „/dev/sda“ entsprechend austauschen. Dieser steht für die Benennung Ihrer Festplatte.
 - Nun sehen Sie, ob die Festplatte leer ist. Ist das nicht der Fall, können Sie sie über „Delete“ löschen.
