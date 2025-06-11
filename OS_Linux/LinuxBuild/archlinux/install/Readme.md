@@ -73,5 +73,61 @@ station wlan0 connect <SSID>
 Verlassen wird das Konsolen-Programm iwctl mit der Tastenkombination: Strg+d oder exit 
 
 
+## Partitionen erstellen und Festplatte löschen
+
+Um das System ordnungsgemäß installieren zu können, müssen Sie zunächst Partitionen erstellen und diese dann einbinden. Sie haben zu Beginn zwei Laufwerke: zum einen die Festplatte Ihres Rechners und zum anderen das Installationsmedium für Arch Linux. Für die Partitionierung gehen Sie nun wie folgt vor:
+
+- Zunächst wählen Sie „Boot Arch Linux (x86_64)“ aus.
+- Die Partitionen erstellen Sie am einfachsten über ein Programm wie cfdisk. Dieses starten Sie, indem Sie den Namen als Befehl eingeben.
+- Wählen Sie nun als Partitionsstil „dos“ für den MBR-Partitionsstil. Alternativ können Sie unter „Select label type“ „gpt“, „sgi“ oder „sun“ auswählen. Sollten Sie mehrere Festplatten haben, müssen Sie sich für die richtige entscheiden.
+- Starten Sie nun cfdisk über „cfdisk /dev/sda“. Heißt Ihre Festplatte anders, müssen Sie den Part „/dev/sda“ entsprechend austauschen. Dieser steht für die Benennung Ihrer Festplatte.
+- Nun sehen Sie, ob die Festplatte leer ist. Ist das nicht der Fall, können Sie sie über „Delete“ löschen.
+
+
+## Swap-Partition erstellen
+
+Ist die Festplatte leer, erstellen Sie zunächst eine Swap-Partition, die als RAM für Arch Linux verwendet wird.
+
++ Gehen Sie dafür unten links auf „New“ und drücken Sie [Enter].
++ Dann wählen Sie „Primary“ und bestätigen wieder mit [Enter].
++ Jetzt tippen Sie eine Zahl in MB ein und bestätigen diese ebenfalls. 1024 entspricht 1 GB, 2048 2 GB und so weiter. Ihre Swap-Partition sollte doppelt oder sogar dreifach so groß sein wie Ihr RAM. Bei 2 GB RAM würden Sie entsprechend 4096 MB (entspricht viermal 1024) nehmen.
++ Wählen Sie nun „Quit“ und beenden Sie so den Vorgang.
+
+
+
+## Hauptpartition erstellen
+
+Die Hauptpartition wird später der Speicherplatz für Ihr eigentliches Betriebssystem und weitere Daten. Diese erstellen Sie folgendermaßen:
+
++ Wählen Sie die Partition „Pri/Log Free Space“ aus.
++ Gehen Sie wieder zu „New“ und drücken Sie [Enter].
++ Jetzt wählen Sie „Primary“ und bestätigen Ihre Auswahl.
++ Überprüfen Sie die Größe der Partition unter „Size Type“. Dieser Wert sollte Ihrem gesamten Speicher abzüglich der Swap-Partition entsprechen.
++ Gehen Sie nun unten links auf „Bootable“ und bestätigen Sie die Auswahl.
++ Danach wählen Sie „Write“ (zweite Option von rechts), dann „yes“ und drücken [Enter].
++ Beenden Sie nun cfdisk durch „Quit“.
+
+
+## Dateisystem anlegen und Partitionen einbinden
+
+Abschließend legen Sie das Dateisystem an und binden die beiden Partitionen ein. Dazu formatieren Sie zunächst Ihre primäre Partition mit folgendem Befehl:
+```
+mkfs.ext4 /dev/sda2
+```
+Sollten Sie einen anderen Namen für Ihre primäre Partition gewählt haben, ändern Sie die Eingabe entsprechend.
+
+Nun binden Sie die formatierte Partition ein. Der Befehl dafür lautet:
+```
+mount /dev/sda2 /mnt
+```
+So können Sie die Partition als Laufwerk nutzen.
+
+Im nächsten Schritt fügen Sie eine Swap-Datei in der Swap-Partition ein. Dafür verwenden Sie die folgenden Befehle und bestätigen sie jeweils mit [Enter]:
+```
+mkswap /dev/sda1
+```
+```
+swapon /dev/sda1
+```
 ### Links
 + [Anleitung für Einsteiger ](https://wiki.archlinux.de/title/Anleitung_f%C3%BCr_Einsteiger)
