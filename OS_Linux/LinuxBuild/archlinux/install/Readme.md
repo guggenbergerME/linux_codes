@@ -129,5 +129,17 @@ mkswap /dev/sda1
 ```
 swapon /dev/sda1
 ```
+## Arch-Installation: Basissystem und Einstellungen
+
+Nun können Sie mit der eigentlichen Arch-Installation beginnen. Um das Basissystem zu laden, müssen Sie mit dem Internet verbunden sein. Zwar ist dies auch über WLAN möglich, eine Ethernet-Verbindung ist allerdings in diesem Fall sicherer und daher empfehlenswert.
+Basissystem installieren
+
+Für die Arch-Installation geben Sie folgendes ein:
+
+```
+pacstrap /mnt base base-devel
+```
+
+
 ### Links
 + [Anleitung für Einsteiger ](https://wiki.archlinux.de/title/Anleitung_f%C3%BCr_Einsteiger)
