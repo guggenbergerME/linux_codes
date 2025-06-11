@@ -59,6 +59,9 @@ Mit Eingabe von **"o"** lösche ich alle evtl. vorhandenen Partitionen und mit E
 ### BOOT-Partition
 
 ```
-neue Partition anlegen mit | n | ENTER
+Spalte 1 | Spalte 2 | Spalte 3
+-------- | -------- | --------
+Inhalt   | Inhalt   | Inhalt
+Inhalt   | Inhalt   | Inhalt
 ```
 
