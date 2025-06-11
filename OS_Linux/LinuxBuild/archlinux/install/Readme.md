@@ -5,6 +5,7 @@ Das neueste ISO-Abbild kann von [www.archlinux.de/download/](https://www.archlin
 
 + [Anleitung für Anfänger](https://wiki.archlinux.de/title/Anleitung_f%C3%BCr_Einsteiger)
 + [Vorbereitung der Installation](https://wiki.archlinux.de/title/1._Vorbereitung)
++ [Installation](https://kofler.info/arch-linux-installieren/)
 
 Das ISO-Abbild beinhaltet nur die nötigen Programme, um ein minimales GNU/Linux Grundsystem zu installieren. Beachte, dass ein minimales Grundsystem keine grafische Oberfläche enthält. Der Rest des Arch Linux Systems - einschließlich grafischer Oberfläche - wird von der Kommandozeile aus eingerichtet. Dieser Prozess wird detailliert weiter unten besprochen. 
 
