@@ -64,3 +64,5 @@ Mit Eingabe von **"o"** lösche ich alle evtl. vorhandenen Partitionen und mit E
 
 ![BILD](14-36-59.png)
 
++ [Quelle](https://akolles.de/arch-linux/arch-linux-installation)
+
