@@ -140,6 +140,46 @@ Für die Arch-Installation geben Sie folgendes ein:
 pacstrap /mnt base base-devel
 ```
 
+## fstab erzeugen
+
+Erzeugen Sie eine fstab mit UUIDs, damit Sie festlegen können, wo Laufwerke im Verzeichnis eingebaut werden. Der passende Befehl lautet:
+```
+genfstab -UP /mnt > /mnt/etc/fstab
+```
+
+
+## Root-Passwort festlegen
+
+Öffnen Sie nun den chroot-Zugang, um weitere Einstellungen vorzunehmen. Der passende Befehl ist dieser:
+```
+arch-chroot /mnt
+```
+Hier können Sie nun z. B. Ihr Root-Passwort ändern.
+```
+passwd root
+```
+
+## Sprache, Tastaturbelegung und Zeitzone ändern
+
+Über die Systemkonfiguration können Sie an dieser Stelle auch die Sprache festlegen. Für Deutsch ist dieser Befehl der richtige:
+```
+echo LANG=de_DE.UTF-8 > /etc/locale.conf
+```
+Die passenden Befehle für Tastaturbelegung und lokale Zeitzone lauten:
+```
+echo KEYMAP=de-latin1 > /etc/vconsole.conf
+```
+```
+ln -sf /usr/share/zoneinfo/Europe/Berlin /etc/localtime
+```
+
+## Archiv anlegen
+
+Sie benötigen ein Archiv für alle Dateien, die bei einem Systemstart verwendet werden. Diese initramfs erstellen Sie so:
+```
+mkinitcpio -p linux
+```
+
 
 ### Links
 + [Anleitung für Einsteiger ](https://wiki.archlinux.de/title/Anleitung_f%C3%BCr_Einsteiger)
