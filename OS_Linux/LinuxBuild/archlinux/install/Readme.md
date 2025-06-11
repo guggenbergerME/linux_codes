@@ -58,9 +58,9 @@ Mit Eingabe von **"o"** lösche ich alle evtl. vorhandenen Partitionen und mit E
 
 ### BOOT-Partition
 
-![BILD](Bild.jpg)
+![BILD](14-35-16.png)
 
-![BILD](Bild.jpg)
+![BILD](14-36-51.png)
 
-![BILD](Bild.jpg)
+![BILD](14-36-59.png)
 
