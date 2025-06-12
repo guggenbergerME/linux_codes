@@ -119,3 +119,55 @@ Als nächstes wird das Arch Linux Basissystem durch Aufruf von **pacstrap** inst
 Die Gruppe **"base"** lädt Pakete aus dem Repository für ein minimales System, **"base-devel"** lädt zusätzlich Extra-Tools, die es ermöglichen, weitere Software aus dem AUR zu installieren.
 
 Die Pakete **intel-ucode** bzw. **amd-ucode** sorgen für Fehlerbereinigungen und Verbesserungen für die CPU, je nachdem, ob ein Intel- oder AMD-Prozessor verbaut ist:
+
+      pacstrap /mnt intel-ucode
+
+oder
+
+      pacstrap /mnt amd-ucode
+
+Die Konfigurationsdatei fstab (file system table) liegt im Verzeichnis /etc/fstab und enthält eine Liste aller dauerhaft zu mountender Dateisysteme. Alle angelegten Partitionen sind bereits mit einem Label L (siehe: f. Dateisysteme anlegen) versehen:
+
+      genfstab -Lp /mnt > /mnt/etc/fstab
+
+Die Datei fstab wird mit allen eingebundenen, bereits gemounteten (!) Laufwerken erzeugt. Das Programm genfstab nimmt also nur die Geräte in die Datei fstab auf, die bereits gemountet sind. Auf diese Weise können auch nachträglich Festplatten oder andere Laufwerke an das System angebunden und anschließend in die Datei fstab aufgenommen werden.
+
+Mit dem cat Aufruf läßt sich fstab nochmals anzeigen:
+
+      cat /mnt/etc/fstab
+
+Mit diesem Aufruf wechselt man vom Live ISO in das neue System von /mnt
+
+      arch-chroot /mnt
+
+## Benutzer einrichten
+
+Der Rechnername wird festgelegt (hier: kitty) mit
+
+    echo kitty > /etc/hostname
+
+Setzen des Root-Passwortes mit
+
+    passwd
+
+Einen Benutzer mit useradd hinzufügen. Der Benutzername darf nur Kleinbuchstaben und Sonderzeichen enthalten. Der Benutzername ist hier wieder mit "kitty" gewählt.
+
+    useradd -m -g users -s /bin/bash kitty
+
+Passwortvergabe für den Benutzer "kitty" mit zweifacher Passworteingabe:
+
+    passwd kitty
+
+Benutzer kitty zur Gruppe wheel hinzufügen:
+
+    gpasswd -a kitty wheel
+
+Damit der Benutzer Rootrechte erhält, muß eine Konfiguration verändert werden:
+
+    EDITOR=nano visudo
+
+Bei folgenden Zeilen müssen die Kommentarzeichen # und das Leerzeichen entfernt werden:
+
+    # %wheel ALL=(ALL:ALL) ALL
+
+Nach dem Abspeichern haben damit alle User der Gruppe wheel Administratorrechte, wenn sie sudo verwenden.    
