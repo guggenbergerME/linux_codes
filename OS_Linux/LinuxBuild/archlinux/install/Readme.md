@@ -364,10 +364,13 @@ Wird das System, wie in unserem Falle, auf einer SSD betrieben, die TRIM unterst
 ## EFISTUB Uefi
 
 Mit **EFISTUB** kann der Linux Kernel direkt vom UEFI-Motherboard gebootet werden, wobei **Secure Boot de-aktiviert werden sollte** !
+```
+pacman -S efibootmgr dosfstools gptfdisk
+```
 
-    pacman -S efibootmgr dosfstools gptfdisk
-
-    efibootmgr -c -d /dev/nvme0n1 -p 1 -l \vmlinuz-linux -L "Arch Linux" -u "initrd=/initramfs-linux.img root=/dev/nvme0n1p3 rw"
+```
+efibootmgr -c -d /dev/nvme0n1 -p 1 -l \vmlinuz-linux -L "Arch Linux" -u "initrd=/initramfs-linux.img root=/dev/nvme0n1p3 rw"
+```
 
 Die Boot Partition wird über die **fstab** gemountet, wobei der Eintrag in der fstab dann so oder ähnlich aussehen müßte:
 
