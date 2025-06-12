@@ -221,11 +221,12 @@ Abschließend generieren mit:
 
     locale-gen
 
-Die Tastaturbelegung und Schriftart in vconsole.conf festlegen:
+Die Tastaturbelegung 
 
  
     echo KEYMAP=de-latin1 > /etc/vconsole.conf
 
+und Schriftart in vconsole.conf festlegen:
 
     echo FONT=lat9w-16 >> /etc/vconsole.conf
 
