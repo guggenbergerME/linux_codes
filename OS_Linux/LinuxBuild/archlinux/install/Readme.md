@@ -403,11 +403,14 @@ Abschließend muß noch die Grub Konfiguration generiert werden.
 
 Nachdem alles Benötigte installiert und konfiguriert ist, kann das installierte Arch Linux bzw. die Chroot Umgebung verlassen werden mit dem Aufruf:
 
-  ```
-  exit
-  umount -R /mnt
-  ```
+```
+exit
+```
+```
+umount -R /mnt
+```
 
 Der Rechner-Neustart erfolgt mit:
-
-    reboot
+```
+reboot
+```
