@@ -307,3 +307,4 @@ pacman -S lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings
 Über **/etc/lightdm/lightdm-gtk-greeter.conf** läßt sich später das Hintergrundbild auf dem Begrüßungsbildschirm anzupassen. Siehe auch 
 
 + [Xfce4-Desktop konfigurieren](https://akolles.de/arch-linux/tips#login)
++ [ArchLinux Desktop anpassen](Desktop/Readme.md)
