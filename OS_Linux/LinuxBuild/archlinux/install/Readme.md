@@ -117,20 +117,23 @@ mkdir /mnt/boot
 mount -L BOOT /mnt/boot/
 ```
 Das Aktivieren bzw. Einschalten der Swap-Partition geht mit dem Aufruf:
-
-        swapon -L SWAP
-
+```
+swapon -L SWAP
+```
 Die Festplatte ist nun für die Arch Linux Installation vorbereitet. Möchte man noch eine weitere interne Festplattenpartition (z.B. sda1) dauerhaft in die fstab einhängen, so muß zuerst das gewünschte Verzeichnis erstellt und dann an passender Stelle eingehängt werden. Zuvor verschafft man sich einen Überblick per lsblk.
-
-        mkdir /mnt/interne_Festplatte
-
-        mount /dev/sda1 /mnt/interne_Festplatte
-
+```
+mkdir /mnt/interne_Festplatte
+```
+```
+mount /dev/sda1 /mnt/interne_Festplatte
+```
 ## Installation des Basissystems | fstab erzeugen | arch-chroot
 
 Auf dem Live-System aktualisiert Reflector nach der Verbindung mit dem Internet die Spiegelliste für die zu installierenden Pakete in der Datei "/etc/pacman.d/mirrorlist". Diese Datei wird später per Pacstrap auf das neue System kopiert. Es lohnt sich also, diese Mirrorliste gleich zu Beginn nach eigenen Bedürfnissen anzupassen:
 
-          sudo nano /etc/pacman.d/mirrorlist
+```
+nano /etc/pacman.d/mirrorlist
+```
 
 wobei **STRG + K** unerwünschte Zeilen löscht bzw. ausgeschnitten und ggf. an passender Stelle wieder mit **STRG + U** (Zeile für Zeile) eingefügt werden können. Abschließend speichern mit **STRG + O** und beenden mit **STRG + X**.
 
@@ -142,25 +145,26 @@ Die Gruppe **"base"** lädt Pakete aus dem Repository für ein minimales System,
 
 Die Pakete **intel-ucode** bzw. **amd-ucode** sorgen für Fehlerbereinigungen und Verbesserungen für die CPU, je nachdem, ob ein Intel- oder AMD-Prozessor verbaut ist:
 
-      pacstrap /mnt intel-ucode
+
+    pacstrap /mnt intel-ucode
 
 oder
 
-      pacstrap /mnt amd-ucode
+    pacstrap /mnt amd-ucode
 
 Die Konfigurationsdatei fstab (file system table) liegt im Verzeichnis /etc/fstab und enthält eine Liste aller dauerhaft zu mountender Dateisysteme. Alle angelegten Partitionen sind bereits mit einem Label L (siehe: f. Dateisysteme anlegen) versehen:
 
-      genfstab -Lp /mnt > /mnt/etc/fstab
+    genfstab -Lp /mnt > /mnt/etc/fstab
 
 Die Datei fstab wird mit allen eingebundenen, bereits gemounteten (!) Laufwerken erzeugt. Das Programm genfstab nimmt also nur die Geräte in die Datei fstab auf, die bereits gemountet sind. Auf diese Weise können auch nachträglich Festplatten oder andere Laufwerke an das System angebunden und anschließend in die Datei fstab aufgenommen werden.
 
 Mit dem cat Aufruf läßt sich fstab nochmals anzeigen:
 
-      cat /mnt/etc/fstab
+    cat /mnt/etc/fstab
 
 Mit diesem Aufruf wechselt man vom Live ISO in das neue System von /mnt
 
-      arch-chroot /mnt
+    arch-chroot /mnt
 
 ## Benutzer einrichten
 
@@ -219,11 +223,12 @@ Abschließend generieren mit:
 
 Die Tastaturbelegung und Schriftart in vconsole.conf festlegen:
 
-```  
-  echo KEYMAP=de-latin1 > /etc/vconsole.conf
+ 
+    echo KEYMAP=de-latin1 > /etc/vconsole.conf
 
-  echo FONT=lat9w-16 >> /etc/vconsole.conf
-```
+
+    echo FONT=lat9w-16 >> /etc/vconsole.conf
+
 
 Die Zeitzone festlegen:
 
