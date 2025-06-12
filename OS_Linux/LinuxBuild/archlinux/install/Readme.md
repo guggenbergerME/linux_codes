@@ -103,3 +103,19 @@ Die Festplatte ist nun für die Arch Linux Installation vorbereitet. Möchte man
         mkdir /mnt/interne_Festplatte
 
         mount /dev/sda1 /mnt/interne_Festplatte
+
+## Installation des Basissystems | fstab erzeugen | arch-chroot
+
+Auf dem Live-System aktualisiert Reflector nach der Verbindung mit dem Internet die Spiegelliste für die zu installierenden Pakete in der Datei "/etc/pacman.d/mirrorlist". Diese Datei wird später per Pacstrap auf das neue System kopiert. Es lohnt sich also, diese Mirrorliste gleich zu Beginn nach eigenen Bedürfnissen anzupassen:
+
+          sudo nano /etc/pacman.d/mirrorlist
+
+wobei **STRG + K** unerwünschte Zeilen löscht bzw. ausgeschnitten und ggf. an passender Stelle wieder mit **STRG + U** (Zeile für Zeile) eingefügt werden können. Abschließend speichern mit **STRG + O** und beenden mit **STRG + X**.
+
+Als nächstes wird das Arch Linux Basissystem durch Aufruf von **pacstrap** installiert:
+
+        pacstrap /mnt base base-devel linux linux-firmware dhcpcd nano
+
+Die Gruppe **"base"** lädt Pakete aus dem Repository für ein minimales System, **"base-devel"** lädt zusätzlich Extra-Tools, die es ermöglichen, weitere Software aus dem AUR zu installieren.
+
+Die Pakete **intel-ucode** bzw. **amd-ucode** sorgen für Fehlerbereinigungen und Verbesserungen für die CPU, je nachdem, ob ein Intel- oder AMD-Prozessor verbaut ist:
