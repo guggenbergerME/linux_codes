@@ -241,7 +241,7 @@ Die Zeitzone festlegen:
 
     sudo nano /etc/pacman.conf
 
-In den **"Misc options"** werden durch das Entfernen des #-Zeichen bei **"Color"** bestimmte Zeichen farbig dargestellt. Durch Einfügen in einer leeren Zeile ILoveCandy wird dem Fortschrittsbalken ein richtiger Pacman hinzugefügt!
+In den **"Misc options"** werden durch das Entfernen des #-Zeichen bei **"Color"** bestimmte Zeichen farbig dargestellt. Durch Einfügen in einer leeren Zeile **ILoveCandy** wird dem Fortschrittsbalken ein richtiger Pacman hinzugefügt!
 
 Falls man für das 64bit Betriebssystem 32bit Bibliotheken benötigt, muss bei "multilib" das Multilib-Repository aktiviert werden:
 
