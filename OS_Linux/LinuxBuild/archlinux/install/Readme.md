@@ -81,3 +81,15 @@ Mit **mkfs** (make file system) werden die Dateisysteme angelegt und formatiert.
 **Root-Partition**
 
         mkfs.ext4 -L ROOT /dev/sdX
+
+## Dateisysteme einhängen
+
+Zuerst wird die System-Partition (ROOT) am Einhängepunkt /mnt eingehängt. Das Device (hier: Root-Partition) /dev/nvme0n1p3 wird eingehängt und unter /mnt per Label -L verfügbar gemacht:
+
+        mount -L ROOT /mnt
+
+Die Boot-Partition wird in einem /mnt Unterverzeichnis von ROOT verfügbar gemacht. Zuvor muß jedoch das boot-Verzeichnis angelegt werden:
+
+        mkdir /mnt/boot
+
+        mount -L BOOT /mnt/boot/
