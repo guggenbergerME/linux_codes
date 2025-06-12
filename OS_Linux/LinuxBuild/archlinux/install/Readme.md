@@ -49,6 +49,10 @@ Meine für diese Anleitung verwendete 2 TByte große M.2 Samsung SSD 970 EVO Plu
 
 Mit **lsblk** verschafft man sich einen Überblick über vorhandene Partitionen und angeschlossene Festplatten. Hier muß man sehr darauf achten, die richtige Festplatte zu "erwischen", ansonsten droht Datenverlust! Nicht benötigte, externe Festplatten sollte man sowieso vorher abklemmen.
 
+Festplatten Struktur
+
+    lsblk
+
 Zum Partionieren eines UEFI Systems benutze ich nun das mitgelieferte Partitionierungswerkzeug **gdisk**. Der Aufruf erfolgt in meinem Beispiel mit
 
 ```
