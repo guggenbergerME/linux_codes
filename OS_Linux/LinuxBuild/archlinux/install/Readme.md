@@ -66,3 +66,18 @@ Mit Eingabe von **"o"** lösche ich alle evtl. vorhandenen Partitionen und mit E
 
 + [Quelle](https://akolles.de/arch-linux/arch-linux-installation)
 
+## Dateisysteme anlegen
+
+Mit **mkfs** (make file system) werden die Dateisysteme angelegt und formatiert.
+
+**Boot-Partition**
+
+        mkfs.fat -F32 -n BOOT /dev/sdX
+
+**Swap-Partition**
+
+        mkswap -L SWAP /dev/sdX
+
+**Root-Partition**
+
+        mkfs.ext4 -L ROOT /dev/sdX
