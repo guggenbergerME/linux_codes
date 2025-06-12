@@ -328,3 +328,34 @@ systemctl enable reflector.timer
 Der **acpid Dienst** sorgt für die Energieverwaltung, **avahi** für die Netzwerkerkennung und **cups** ist ein Drucksystem für Linux, worüber sich zahlreiche Drucker nutzen lassen. Der Dienst **lightdm.service** bzw. **lightdm** richtet den Login-Manager für den Xfce-Deskop ein. Bitte auf Großschreibung NetworkManager achten. Beim ersten Start des Systems startet der Display-Manager und nach dem Login läuft der Network-Manager, der automatisch eine IP-Adresse mit einer Internetverbindung erstellt.
 
 Wird das System, wie in unserem Falle, auf einer SSD betrieben, die TRIM unterstützt, sollte der **fstrim.timer** aktiviert werden. Für die automatische Korrektur der Zeit mit der Atomuhr über das Internet sorgt timesyncd. Die Serverliste wird mit reflector.timer für kommende Updates aktuell gehalten.
+
+## EFISTUB Uefi
+
+Mit **EFISTUB** kann der Linux Kernel direkt vom UEFI-Motherboard gebootet werden, wobei **Secure Boot de-aktiviert werden sollte** !
+
+    pacman -S efibootmgr dosfstools gptfdisk
+
+    efibootmgr -c -d /dev/nvme0n1 -p 1 -l \vmlinuz-linux -L "Arch Linux" -u "initrd=/initramfs-linux.img root=/dev/nvme0n1p3 rw"
+
+Die Boot Partition wird über die **fstab** gemountet, wobei der Eintrag in der fstab dann so oder ähnlich aussehen müßte:
+
+    /dev/nvme0n1 /boot /vfat defaults,noatime 0 0
+
++ [Weiter Informationen zu EFISTUB](https://wiki.archlinux.de/title/EFISTUB)
+
+Es können natürlich auch andere Bootloader verwendet werden. Ein Auswahl mit Anleitung gibt es hier auf dieser Seite:
+
++ [Weitere Bootloader](https://akolles.de/boot_and_backups/bootloader)
+
+## Neustart
+
+Nachdem alles Benötigte installiert und konfiguriert ist, kann das installierte Arch Linux bzw. die Chroot Umgebung verlassen werden mit dem Aufruf:
+
+  ```
+  exit
+  umount -R /mnt
+  ```
+
+Der Rechner-Neustart erfolgt mit:
+
+    reboot
