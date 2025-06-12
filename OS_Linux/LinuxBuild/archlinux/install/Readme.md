@@ -236,22 +236,22 @@ Es wird ein Abbild des Systems erstellt, welches in den Arbeitsspeicher geladen 
 
 ## Nützliche Programme, Tools und Dienste
 ```
-pacman -S acpid avahi cups cups-pdf ghostscript mtools udisks2 git
+pacman -S --noconfirm acpid avahi cups cups-pdf ghostscript mtools udisks2 git
 ```
 ```
-pacman -S ntfs-3g unrar unzip neofetch reflector
+pacman -S --noconfirm ntfs-3g unrar unzip neofetch reflector
 ```
 ```
-pacman -S appstream-glib libunrar libdvdcss simple-scan
+pacman -S --noconfirm appstream-glib libunrar libdvdcss simple-scan
 ```
 ```
-pacman -S ttf-dejavu ttf-liberation noto-fonts ttf-opensans
+pacman -S --noconfirm ttf-dejavu ttf-liberation noto-fonts ttf-opensans
 ```
 ```
-pacman -S alsa-tools alsa-utils pulseaudio-alsa pavucontrol
+pacman -S --noconfirm alsa-tools alsa-utils pulseaudio-alsa pavucontrol
 ```
 ```
-pacman -S bash-completion networkmanager network-manager-applet gvfs
+pacman -S --noconfirm bash-completion networkmanager network-manager-applet gvfs
 ```
 **Acpid** steht für die Energieverwaltung, **avahi** für die Netzwerkerkennung und **cups** für den Drucker. Das **UDisks**- und das **gvfs-Pake**t enthalten Tools und Bibliotheken für den Zugriff auf Festplatten und Speichergeräten und dessen Bearbeitung. Das **ntfs-3g-Paket** ermöglicht den Zugriff auf ntfs-formatierte Festplatten unter Windows-Betriebssystemen.
 
