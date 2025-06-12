@@ -171,3 +171,38 @@ Bei folgenden Zeilen müssen die Kommentarzeichen # und das Leerzeichen entfernt
     # %wheel ALL=(ALL:ALL) ALL
 
 Nach dem Abspeichern haben damit alle User der Gruppe wheel Administratorrechte, wenn sie sudo verwenden.    
+
+## Sprach-Einstellungen
+
+Die Systemsprache wird auf Deutsch eingestellt.
+
+    echo LANG=de_DE.UTF-8 > /etc/locale.conf
+
+Die Konfigurationsdatei locale.gen mit dem nano Editor öffnen:
+
+    nano /etc/locale.gen
+
+Das Kommentarzeichen "#" am Anfang folgender Zeilen entfernen und dann abspeichern mit STRG+O und ENTER und beenden mit STRG+X:
+
+```
+.#de_DE.UTF-8 UTF-8
+.#de_DE ISO-8859-1
+.#de_DE@euro ISO-8859-15
+.#en_US.UTF-8 UTF-8
+```
+
+Abschließend generieren mit:
+
+    locale-gen
+
+Die Tastaturbelegung und Schriftart in vconsole.conf festlegen:
+
+```  
+  echo KEYMAP=de-latin1 > /etc/vconsole.conf
+
+  echo FONT=lat9w-16 >> /etc/vconsole.conf
+```
+
+Die Zeitzone festlegen:
+
+    ln -sf /usr/share/zoneinfo/Europe/Berlin /etc/localtime
