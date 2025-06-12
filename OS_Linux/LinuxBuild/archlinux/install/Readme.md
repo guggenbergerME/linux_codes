@@ -382,6 +382,23 @@ Es können natürlich auch andere Bootloader verwendet werden. Ein Auswahl mit A
 
 + [Weitere Bootloader](https://akolles.de/boot_and_backups/bootloader)
 
+## Grub Bootloader
+Die Installation des GRUB Bootloaders erfolgt mit
+
+    pacman -S grub
+
+Weitere optionale Abhängigkeiten von GRUB für weitere benötigte Werkzeuge für UEFI werden folgendermaßen eingebunden:
+
+    pacman -S dosfstools efibootmgr
+
+Fortsetzung der GRUB Installation für 64bit UEFI:
+
+    grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=grub
+
+Abschließend muß noch die Grub Konfiguration generiert werden.
+
+    grub-mkconfig -o /boot/grub/grub.cfg
+
 ## Neustart
 
 Nachdem alles Benötigte installiert und konfiguriert ist, kann das installierte Arch Linux bzw. die Chroot Umgebung verlassen werden mit dem Aufruf:
