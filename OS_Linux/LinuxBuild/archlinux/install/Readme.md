@@ -235,6 +235,9 @@ Es wird ein Abbild des Systems erstellt, welches in den Arbeitsspeicher geladen 
     mkinitcpio -p linux
 
 ## Nützliche Programme, Tools und Dienste
+
++ [pacman Befehle](pacman/Readme.md)
+
 ```
 pacman -S --noconfirm acpid avahi cups cups-pdf ghostscript mtools udisks2 git
 ```
