@@ -330,7 +330,7 @@ Ist man sich jedoch weiterhin unsicher, welches Treiber-Paket zu seiner Grafikka
 
 Xfce gehört zu den stabilsten und sparsamsten Bedienungsoberflächen unter Linux. Die Basis Xfce-Installation mit einigen Extras:
 ```
-pacman -S xfce4 xfce4-goodies arc-gtk-theme
+pacman -S xfce4 xfce4-goodies
 ```
 ```
 pacman -S lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings
