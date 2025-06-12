@@ -258,3 +258,52 @@ pacman -S --noconfirm bash-completion networkmanager network-manager-applet gvfs
 ```
 **Acpid** steht für die Energieverwaltung, **avahi** für die Netzwerkerkennung und **cups** für den Drucker. Das **UDisks**- und das **gvfs-Pake**t enthalten Tools und Bibliotheken für den Zugriff auf Festplatten und Speichergeräten und dessen Bearbeitung. Das **ntfs-3g-Paket** ermöglicht den Zugriff auf ntfs-formatierte Festplatten unter Windows-Betriebssystemen.
 
+## Installation von X, Grafiktreiber und der Xfce-Desktop
+
+X ermöglicht die Benutzung einer graphischen Oberfläche unter einem Linux-System. Die Basispakete von Xorg werden installiert mit
+
+    pacman -S xorg-server xorg-xinit
+
+Nun wird der Treiber für die Grafikkarte hinzugefügt. Mit
+
+    lspci | grep VGA
+
+zeigt die vorhandene Grafikkarte. In meinem Rechner steckt eine NVidia GTX 1070. PC-Spieler mit einer NVidia-Karte wählen vorzugsweise den proprietären NVidia Grafiktreiber:
+
+NVidia & Vulkan Treiber
+```
+pacman -S eglexternalplatform egl-wayland
+```
+```
+pacman -S nvidia nvidia-settings lib32-nvidia-utils
+```
+```
+pacman -S vulkan-icd-loader lib32-vulkan-icd-loader
+```
+
+Wem der Open Source Treiber reicht, gibt für seine Grafikkarte den passenden Befehl ein:
+```
+Intel 	pacman -S xf86-video-intel
+```
+```
+AMD 	pacman -S xf86-video-amdgpu
+```
+```
+Nvidia 	pacman -S xf86-video-nouveau
+```
+
+Ist man sich jedoch weiterhin unsicher, welches Treiber-Paket zu seiner Grafikkarte paßt, so lassen sich auch die gesamten Videotreiber installieren:
+
+    pacman -S xorg-drivers
+
+Xfce gehört zu den stabilsten und sparsamsten Bedienungsoberflächen unter Linux. Die Basis Xfce-Installation mit einigen Extras:
+```
+pacman -S xfce4 xfce4-goodies arc-gtk-theme
+```
+```
+pacman -S lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings
+```
+
+Über **/etc/lightdm/lightdm-gtk-greeter.conf** läßt sich später das Hintergrundbild auf dem Begrüßungsbildschirm anzupassen. Siehe auch 
+
++ [Xfce4-Desktop konfigurieren](https://akolles.de/arch-linux/tips#login)
