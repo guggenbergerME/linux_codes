@@ -308,3 +308,23 @@ pacman -S lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings
 
 + [Xfce4-Desktop konfigurieren](https://akolles.de/arch-linux/tips#login)
 + [ArchLinux Desktop anpassen](Desktop/Readme.md)
+
+## Benötigte Dienste aktivieren
+
+Um diese Dienste automatisch beim Booten zu starten, werden sie mit folgendem Aufruf aktiviert:
+
+```
+systemctl enable acpid avahi-daemon cups.service
+```
+```
+systemctl enable lightdm.service NetworkManager
+```
+```
+systemctl enable fstrim.timer systemd-timesyncd.service
+```
+```
+systemctl enable reflector.timer
+```
+Der **acpid Dienst** sorgt für die Energieverwaltung, **avahi** für die Netzwerkerkennung und **cups** ist ein Drucksystem für Linux, worüber sich zahlreiche Drucker nutzen lassen. Der Dienst **lightdm.service** bzw. **lightdm** richtet den Login-Manager für den Xfce-Deskop ein. Bitte auf Großschreibung NetworkManager achten. Beim ersten Start des Systems startet der Display-Manager und nach dem Login läuft der Network-Manager, der automatisch eine IP-Adresse mit einer Internetverbindung erstellt.
+
+Wird das System, wie in unserem Falle, auf einer SSD betrieben, die TRIM unterstützt, sollte der **fstrim.timer** aktiviert werden. Für die automatische Korrektur der Zeit mit der Atomuhr über das Internet sorgt timesyncd. Die Serverliste wird mit reflector.timer für kommende Updates aktuell gehalten.
