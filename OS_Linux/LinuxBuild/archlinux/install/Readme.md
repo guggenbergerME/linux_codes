@@ -310,14 +310,18 @@ pacman -S vulkan-icd-loader lib32-vulkan-icd-loader
 ```
 
 Wem der Open Source Treiber reicht, gibt für seine Grafikkarte den passenden Befehl ein:
+
+Intel
 ```
-Intel 	pacman -S xf86-video-intel
+pacman -S xf86-video-intel
 ```
+AMD
 ```
-AMD 	pacman -S xf86-video-amdgpu
+pacman -S xf86-video-amdgpu
 ```
+Nvidia
 ```
-Nvidia 	pacman -S xf86-video-nouveau
+pacman -S xf86-video-nouveau
 ```
 
 Ist man sich jedoch weiterhin unsicher, welches Treiber-Paket zu seiner Grafikkarte paßt, so lassen sich auch die gesamten Videotreiber installieren:
