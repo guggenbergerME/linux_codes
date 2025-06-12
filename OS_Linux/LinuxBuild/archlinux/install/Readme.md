@@ -85,7 +85,7 @@ Mit Eingabe von **"o"** lösche ich alle evtl. vorhandenen Partitionen und mit E
 
 + [Quelle](https://akolles.de/arch-linux/arch-linux-installation)
 
-Wird bei "Last sector" kein Wert eingetragen, so wird der Rest des Festplattenspeichers an die aktuelle Partition /dev/nvme0n1p3 vergeben. Die Eingabe von "p" zeigt nochmals einen Überblick. Mit Eingabe von "w" und der abschließenden Bestätigung mit "Y" werden die Änderungen in die Partitionstabelle geschrieben. Am Schluß erfolgt die Meldung: "OK, writing new GUID partition table (GPT) to /dev/sdb. The operation has completed successfully." lsblk zeigt einen abschließenden Überblick.
+Wird bei "Last sector" kein Wert eingetragen, so wird der Rest des Festplattenspeichers an die aktuelle Partition /dev/nvme0n1p3 vergeben. Die Eingabe von **"p"** zeigt nochmals einen Überblick. Mit Eingabe von **"w"** und der abschließenden Bestätigung mit **"Y"** werden die Änderungen in die Partitionstabelle geschrieben. Am Schluß erfolgt die Meldung: "OK, writing new GUID partition table (GPT) to /dev/sdb. The operation has completed successfully." lsblk zeigt einen abschließenden Überblick.
 
 ## Dateisysteme anlegen
 
