@@ -185,10 +185,10 @@ Die Konfigurationsdatei locale.gen mit dem nano Editor öffnen:
 Das Kommentarzeichen "#" am Anfang folgender Zeilen entfernen und dann abspeichern mit STRG+O und ENTER und beenden mit STRG+X:
 
 ```
-.#de_DE.UTF-8 UTF-8
-.#de_DE ISO-8859-1
-.#de_DE@euro ISO-8859-15
-.#en_US.UTF-8 UTF-8
+#de_DE.UTF-8 UTF-8
+#de_DE ISO-8859-1
+#de_DE@euro ISO-8859-15
+#en_US.UTF-8 UTF-8
 ```
 
 Abschließend generieren mit:
