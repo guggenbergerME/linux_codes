@@ -110,11 +110,12 @@ Zuerst wird die System-Partition (ROOT) am Einhängepunkt /mnt eingehängt. Das 
         mount -L ROOT /mnt
 
 Die Boot-Partition wird in einem /mnt Unterverzeichnis von ROOT verfügbar gemacht. Zuvor muß jedoch das boot-Verzeichnis angelegt werden:
-
-        mkdir /mnt/boot
-
-        mount -L BOOT /mnt/boot/
-
+```
+mkdir /mnt/boot
+```
+```
+mount -L BOOT /mnt/boot/
+```
 Das Aktivieren bzw. Einschalten der Swap-Partition geht mit dem Aufruf:
 
         swapon -L SWAP
