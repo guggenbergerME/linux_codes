@@ -93,3 +93,13 @@ Die Boot-Partition wird in einem /mnt Unterverzeichnis von ROOT verfügbar gemac
         mkdir /mnt/boot
 
         mount -L BOOT /mnt/boot/
+
+Das Aktivieren bzw. Einschalten der Swap-Partition geht mit dem Aufruf:
+
+        swapon -L SWAP
+
+Die Festplatte ist nun für die Arch Linux Installation vorbereitet. Möchte man noch eine weitere interne Festplattenpartition (z.B. sda1) dauerhaft in die fstab einhängen, so muß zuerst das gewünschte Verzeichnis erstellt und dann an passender Stelle eingehängt werden. Zuvor verschafft man sich einen Überblick per lsblk.
+
+        mkdir /mnt/interne_Festplatte
+
+        mount /dev/sda1 /mnt/interne_Festplatte
