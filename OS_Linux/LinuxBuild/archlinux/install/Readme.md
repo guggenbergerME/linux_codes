@@ -206,3 +206,30 @@ Die Tastaturbelegung und Schriftart in vconsole.conf festlegen:
 Die Zeitzone festlegen:
 
     ln -sf /usr/share/zoneinfo/Europe/Berlin /etc/localtime
+
+## Der Paketmanager
+
+Über die **"pacman.conf"** Datei läßt sich das Aussehen und Verhalten des Paketmanagers Pacman ändern. Mit Nano wird diese Datei geöffnet:
+
+    sudo nano /etc/pacman.conf
+
+In den **"Misc options"** werden durch das Entfernen des #-Zeichen bei **"Color"** bestimmte Zeichen farbig dargestellt. Durch Einfügen in einer leeren Zeile ILoveCandy wird dem Fortschrittsbalken ein richtiger Pacman hinzugefügt!
+
+Falls man für das 64bit Betriebssystem 32bit Bibliotheken benötigt, muss bei "multilib" das Multilib-Repository aktiviert werden:
+
+```
+[multilib-testing]
+Include = /etc/pacman.d/mirrorlist
+[multilib]
+Include = /etc/pacman.d/mirrorlist
+```
+
+Mit CRTL+O und ENTER abspeichern und mit CRTL+X beenden.
+
+Anschließend muß die Pacman Repository Datenbanken neu geladen werden:
+
+    pacman -Sy
+
+Es wird ein Abbild des Systems erstellt, welches in den Arbeitsspeicher geladen wird.
+
+    mkinitcpio -p linux
