@@ -7,3 +7,6 @@ Im Bereich root folgenden Befehl eingben
 ```
 archinstall
 ```
+
+### Links
++ [Anleitungsvideo](https://www.youtube.com/watch?v=HQihX4dFLCA&list=WL)
