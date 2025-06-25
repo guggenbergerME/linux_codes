@@ -21,7 +21,10 @@ The downloaded docker-compose.yml file should contain the template below with de
 INFO
 APP_URL should be the domain you can access docmost from. e.g https://docmost.example.com
 
+```
 docmost/docker-compose.yml
+```
+
 ```
 version: "3"
 
