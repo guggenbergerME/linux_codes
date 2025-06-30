@@ -78,6 +78,7 @@ Führe abschließend den folgenden Befehl aus, um die OpenLDAP-Basiskonfiguratio
 
 ## Setup
 + [Einrichten und Setup](https://www.riecken.de/2016/01/openldap-ab-2-4-installieren-und-einrichten/)
++ [LDAP Ubuntu 24 einrichten](https://documentation.ubuntu.com/server/how-to/openldap/install-openldap/)
 
 ## LDAP Browser
 - [Apache Directory Studio](LDAP-Browser/Readme.md)
