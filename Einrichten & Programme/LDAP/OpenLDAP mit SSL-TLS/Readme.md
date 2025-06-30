@@ -11,3 +11,6 @@ sudo openssl req -x509 -nodes -days 365 \
   -keyout /etc/pki/tls/ldapserver.key \
   -out /etc/pki/tls/ldapserver.crt
 ```
+
+## Anleitung
++ [Setup](https://www.riecken.de/2016/01/openldap-ab-2-4-installieren-und-einrichten/)
