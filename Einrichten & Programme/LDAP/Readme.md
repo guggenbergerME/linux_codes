@@ -76,6 +76,9 @@ Führe abschließend den folgenden Befehl aus, um die OpenLDAP-Basiskonfiguratio
 
         sudo ldapsearch -Q -LLL -Y EXTERNAL -H ldapi:///
 
+## Setup
++ [Einrichten und Setup](https://www.riecken.de/2016/01/openldap-ab-2-4-installieren-und-einrichten/)
+
 ## LDAP Browser
 - [Apache Directory Studio](LDAP-Browser/Readme.md)
 
