@@ -20,5 +20,14 @@ Achtung wir geben gleich das Default-Passwort mit an, damit der Login sofort fun
 docker container run -dit -p 8006:5000 -p 8007:8000 --tmpfs /opt/omd/sites/cmk/tmp:uid=1000,gid=1000 -v monitoring:/omd/sites --name monitoring -v /etc/localtime:/etc/localtime:ro -e CMK_PASSWORD='relation' -e MAIL_RELAY_HOST='mail.thomas-krenn.com' --restart always checkmk/check-mk-raw:2.2.0-latest
 ```
 
+## Webinterface
+Mittels **http://IP-DES-DOCKER-SERVERS:8006**, wir haben hier den Custom Port 8006 verwendet, kann der Aufruf der Web-UI getestet werden.
+
+## Login-Daten
+Einloggen kann man sich in der Login Maske mit den folgenden Daten. Achtung: das Passwort ist dieses, welches Sie am Anfang beim Starten des Containers vergeben haben!
+
+User: cmkadmin
+Passwort: relation
+
 ### Links
 + [Download](https://checkmk.com/download)
