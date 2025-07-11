@@ -6,6 +6,10 @@
 
 ## Repo - samba 
 
+Die Verwaltung der Rechte und Benutzer wird in dieser Repo über die yml von Docker erledigt.
+
+        nano docker-compose.yml
+
 Clonen der Repo
 
     git clone https://github.com/ServerContainers/samba.git
