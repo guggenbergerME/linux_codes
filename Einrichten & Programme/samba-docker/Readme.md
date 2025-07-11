@@ -10,5 +10,9 @@ Installation
 
     docker compose up -d
 
+Lesen der Logfiles
+
+        docker compose logs -f --tail 100
+
 ### Tutorial
 + [Info Video](https://www.youtube.com/watch?v=8ByeVA5GCZY)
