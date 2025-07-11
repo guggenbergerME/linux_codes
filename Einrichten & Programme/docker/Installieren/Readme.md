@@ -1,5 +1,31 @@
 # Installation Docker & Docker Compose
 
+## Docker Installation unter Ubuntu 24.04
+Installation von Docker und Docker Compose!
+
+**Paketquellen Updaten**
+
+```
+apt update
+apt install apt-transport-https curl gpg -y
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
+echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu $(. /etc/os-release && echo "$VERSION_CODENAME") stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+apt update
+```
+**Docker installation**
+
+```
+apt install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin -y
+```
+
+**Prüfen der Installation**
+
+```
+docker --version && docker compose version
+```
+
+
+
 ## Ubuntu 22 installation
 
 ```
