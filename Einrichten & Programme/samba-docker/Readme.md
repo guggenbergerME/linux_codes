@@ -14,9 +14,13 @@ Clonen der Repo
 
     git clone https://github.com/ServerContainers/samba.git
 
-Installation
+Installation und starten
 
-    docker compose up -d
+        docker compose up -d
+
+Compose beenden
+
+        docker compose stop
 
 Lesen der Logfiles
 
