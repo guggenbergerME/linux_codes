@@ -21,8 +21,11 @@ echo \
 sudo apt update -y
 sudo apt install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin -y
 sudo docker --version && docker compose version
-sudo systemctl start docker
 ```
+Docker starten
+
+    sudo systemctl start docker
+
 
 + [Anleitung Ubuntu 22.xx](https://goneuland.de/docker-docker-compose-v2-auf-ubuntu-22-04-lts-installieren/)
 
