@@ -28,6 +28,5 @@ Einbinden des SMB File Servers
 
         smb://[IP DES SERVERS]
 
-
 ### Tutorial
 + [Info Video](https://www.youtube.com/watch?v=8ByeVA5GCZY)
