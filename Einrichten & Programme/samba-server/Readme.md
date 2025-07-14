@@ -9,88 +9,60 @@ Aktualisieren Sie zuerst das Software-Repository Ihres Systems:
 
 Installieren Sie dann das Samba-Paket. 
 
-    sudo apt install samba
+    sudo apt install samba samba-ad-dc
 
+Version prüfen
 
+    samba --version
 
+## Samba-Konfiguration
 
-## Server
-```bash
-# Become root
-apt install samba
+Die Hauptkonfigurationsdatei für Samba befindet sich unter /etc/samba/smb.conf. Es ist eine gute Praxis, eine Sicherungskopie der Originalkonfigurationsdatei zu erstellen, bevor Sie Änderungen vornehmen. Führen Sie dazu den folgenden Befehl aus:
 
-# Prepare Storage space:
-mkdir /var/samba
-chmod 777 /var/samba
+    sudo cp /etc/samba/smb.conf /etc/samba/smb.conf.backup
 
-cp /etc/samba/smb.conf /etc/samba/smb.conf.bak
+Nun öffnen Sie die Konfigurationsdatei mit Ihrem bevorzugten Texteditor, z.B. nano:
 
-vim /etc/samba/smb.conf
+    sudo nano /etc/samba/smb.conf
+
+Am Ende der Datei können Sie einen neuen Abschnitt für den Ordner hinzufügen, den Sie freigeben möchten. Zum Beispiel:
+
+```
+[MeineFreigabe]
+   path = /pfad/zum/freigeben/ordner
+   read only = no
+   browsable = yes
 ```
 
-**Content of smb.conf:** \
-Configures a public file server at /media/samba/.
+Ersetzen Sie **/pfad/zum/freigeben/ordner** durch den tatsächlichen Pfad des Ordners, den Sie freigeben möchten. Speichern Sie die Datei und schließen Sie den Editor.
+
+## Benutzer und Berechtigungen
+
+Für den Zugriff auf die freigegebenen Ordner muss ein Samba-Benutzer eingerichtet werden. Dieser Benutzer muss auf dem Linux-System existieren. Um einen neuen Benutzer hinzuzufügen und ihn zu Samba hinzuzufügen, verwenden Sie die folgenden Befehle:
+
 ```
-[global]
-workgroup = Fileserver
-security = user
-map to guest = Bad Password
-
-[homes]
-comment = Home Directories
-browsable = no
-read only = no
-create mode = 0750
-
-[public]
-path = /var/samba
-public = yes
-writable = yes
-comment = Fileserver
-printable = no
-guest ok = yes
+sudo adduser meinbenutzer
+sudo smbpasswd -a meinbenutzer
 ```
 
-```bash
-systemctl restart smbd.service samba*
-ufw allow 445
-```
+Ersetzen Sie meinbenutzer durch den gewünschten Benutzernamen. Sie werden aufgefordert, ein Passwort einzugeben.
 
-### Add user
+## Samba-Dienst steuern
 
-Samba seems to have their own user management with password database
+Nachdem Sie die Konfiguration abgeschlossen haben, müssen Sie den Samba-Dienst neu starten, um die Änderungen zu übernehmen. Verwenden Sie dazu den folgenden Befehl:
 
-```bash
-sudo smbpasswd -a USERNAME
-```
+    sudo systemctl restart smbd
 
-## Linux Client:
-### Nautilus:
-- select 'other' in the left bar
-- type `smb://IP-ADDRESS/public` into the server connection field
-- click on connect, and choose 'anoynmus'
+Überprüfen Sie den Status des Dienstes, um sicherzustellen, dass alles korrekt läuft:
 
-### Nemo:
-- choose 'File -> connect with server'
-- choose 'windows share'
-- enter the ip adress of the fileserver into the server field
-- leave 'release' blank
-- as folder enter `/public`
-- click on 'Connect'
-- as username enter `nobody`
-- enter e.g. `x` into the password field. It is completely up to you what to choose.
-- finally click again on 'Connect'
+    sudo systemctl status smbd
 
-### Mount
-```bash
-sudo apt install cifs-utils -y
+## Zugriff von Windows aus
 
-# These two // in front of the ip address are correct and essential
-sudo mount -t cifs //IP-ADDRESS/public /mnt -o user=nobody
-# Leave password empty and just press enter
-```
+Um auf die Samba-Freigabe von einem Windows-Computer aus zuzugreifen, öffnen Sie den Explorer und geben Sie **\\IP-des-Samba-Servers\MeineFreigabe** in die Adressleiste ein, wobei Sie **IP-des-Samba-Servers** durch die tatsächliche IP-Adresse Ihres Samba-Servers ersetzen.
 
-## Windows Client:
-- Open explorer
-- rightclick network on the left side, select 'mount network filesystem'
-- write `\\IP-ADDRESS\public` into the text field and choose a network character, e.g. 'Z'
+### Shape.host Services
+
+Zum Schluss möchten wir noch erwähnen, dass Shape.host Cloud VPS-Dienste anbietet, die ideal für die Ausführung von Samba und anderen Netzwerkdiensten sind. Mit den Cloud VPS-Lösungen von Shape.host können Sie sicher sein, dass Ihre Daten sicher und zugänglich sind, egal wo Sie sich befinden.
+
+Durch die Verwendung eines Cloud VPS für Ihre Samba-Freigaben profitieren Sie von der Skalierbarkeit, Zuverlässigkeit und Leistung, die erforderlich sind, um Ihre Daten effizient zu verwalten und zu teilen. Shape.host bietet eine Reihe von Paketen an, die auf die
