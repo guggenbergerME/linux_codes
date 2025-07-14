@@ -67,6 +67,12 @@ Nachdem Sie die Konfiguration abgeschlossen haben, müssen Sie den Samba-Dienst 
 
     sudo systemctl status smbd
 
+## Zugriff Linux
+
+Einfügen des smb Links
+
+    smb://[IP-DES-SERVER]/MeineFreigabe/
+
 ## Zugriff von Windows aus
 
 Um auf die Samba-Freigabe von einem Windows-Computer aus zuzugreifen, öffnen Sie den Explorer und geben Sie **\\IP-des-Samba-Servers\MeineFreigabe** in die Adressleiste ein, wobei Sie **IP-des-Samba-Servers** durch die tatsächliche IP-Adresse Ihres Samba-Servers ersetzen.
