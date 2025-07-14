@@ -1,4 +1,4 @@
-# Setup Samba Server for Windows and Linux Filesystem Share
+# Samba Filehost für Linux und Windows
 
 ## Samba installation
 
