@@ -1,5 +1,19 @@
 # Setup Samba Server for Windows and Linux Filesystem Share
 
+## Samba installation
+
+Aktualisieren Sie zuerst das Software-Repository Ihres Systems:
+
+    sudo apt update
+    sudo apt upgrade
+
+Installieren Sie dann das Samba-Paket. 
+
+    sudo apt install samba
+
+
+
+
 ## Server
 ```bash
 # Become root
