@@ -44,6 +44,16 @@ Für den Zugriff auf die freigegebenen Ordner muss ein Samba-Benutzer eingericht
 sudo adduser meinbenutzer
 sudo smbpasswd -a meinbenutzer
 ```
+smbpasswd Key Optionen
+
+    -a: Add a new user to the Samba password database.
+    -x: Delete a user from the Samba password database.
+    -r: Specifies a remote machine to change passwords on.
+    -U: Specifies the username for operations.
+    -s: Silent mode, suppresses password prompts.
+    -n: No password (used to set a blank password).
+    -d: Disables the user account.
+    -e: Enables the user account
 
 Ersetzen Sie meinbenutzer durch den gewünschten Benutzernamen. Sie werden aufgefordert, ein Passwort einzugeben.
 
