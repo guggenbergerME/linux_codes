@@ -25,3 +25,7 @@ FTP Server neu starten:
 ## pdf per crontab in den Paperless Ordner schieben
 
     */2 * * * * mv /home/d1/*.pdf [zielordner]
+
+## ftp Verbinden
+
+    ftp://[AnmeldeName]@10.115.0.5/home/[Anmeldename]
