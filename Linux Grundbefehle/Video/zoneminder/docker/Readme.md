@@ -46,4 +46,6 @@ Docker ZoneMinder Compose starten
 
 ## Accessing Docker ZoneMinder Container
 
-Now that your container is up and running, all you have to do to start using ZoneMinder is access the web interface at **http://ServerIPadress:8080/zm/**.
+Now that your container is up and running, all you have to do to start using ZoneMinder is access the web interface at 
+
+        http://ServerIPadress:8080/zm/
