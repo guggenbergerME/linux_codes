@@ -42,7 +42,7 @@ services:
 ```
 Docker ZoneMinder Compose starten
 
-        Start ZoneMinder
+        docker compose up -d
 
 ## Accessing Docker ZoneMinder Container
 
