@@ -2,7 +2,7 @@
 
 ## OpenLDAP installieren und konfigurieren:
 
-- Installieren Sie OpenLDAP auf Ihrem Server.
+- [Installieren Sie OpenLDAP auf Ihrem Server](https://github.com/guggenbergerME/linux_codes/tree/main/Einrichten%20%26%20Programme/LDAP).
 - Erstellen Sie ein LDAP-Schema, das für die Speicherung von Samba-Benutzerinformationen geeignet ist.
 - Importieren Sie die erforderlichen LDIF-Dateien (z.B. für die Samba-Schemaerweiterung).
 - Konfigurieren Sie den OpenLDAP-Server, um Anfragen von Samba zu verarbeiten.
