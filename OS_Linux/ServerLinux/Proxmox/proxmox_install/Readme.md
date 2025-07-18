@@ -25,6 +25,9 @@ iface vmbr0 inet static
         bridge-vlan-aware yes
         bridge-vids 2-4094
 ```
+## Netzwerk neu starten
+
+        systemctl restart network-online.target
 
 ## System neu starten
 
