@@ -10,7 +10,7 @@ LAN-Anschluss aktivieren
 
 Wenn die Schnittstelle bereits konfiguriert ist:
 
-        ifup enp0s31f6
+        ifup enoX
 
 Bearbeiten Sie die Datei /etc/network/interfaces
 
