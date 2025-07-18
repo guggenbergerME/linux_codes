@@ -6,6 +6,12 @@ Netzwerk Konfiguration anzeigen
 
         ip link show
 
+LAN-Anschluss aktivieren
+
+Wenn die Schnittstelle bereits konfiguriert ist:
+
+        ifup enp0s31f6
+
 Bearbeiten Sie die Datei /etc/network/interfaces
 
 ```
