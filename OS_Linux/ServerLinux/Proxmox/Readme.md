@@ -1,5 +1,8 @@
 # Proxmox
 
+## Proxmox Installation
++ [Installation eines Proxmox Servers](proxmox_install/Readme.md)
+
 
 ## LXC Container CT Templates
 + https://technium.ch/proxmox-lxc-container-erstellen-tutorial/
