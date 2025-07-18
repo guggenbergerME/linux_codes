@@ -2,6 +2,10 @@
 
 ## Netzwerkonfiguration
 
+Netzwerk Konfiguration anzeigen
+
+        ip link show
+
 Bearbeiten Sie die Datei /etc/network/interfaces
 
 ```
