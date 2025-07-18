@@ -1,4 +1,4 @@
-# LDAP installieren
+# OpenLDAP installieren
 Bevor du mit der Installation des OpenLDAP-Servers beginnst, musst du sicherstellen, dass der FQDN (Fully Qualified Domain Name) für den OpenLDAP-Server richtig konfiguriert ist. In dieser Demo werden wir einen OpenLDAP-Server mit dem Server-Hostnamen„ldap“ und der Domain„localdomain.com“ sowie der IP-Adresse„192.168.5.25“ einrichten.
 
 Führe den folgenden Befehl aus, um den FQDN auf „ldap.localdomain.com“ einzurichten.
