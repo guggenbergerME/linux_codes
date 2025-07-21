@@ -114,5 +114,7 @@ docker run -d \
   mbentley/omada-controller:latest
 ```
 
+## Aufrufen der webgui
+Der Server benötig ca. 5 Minuten zum erzeugen der Zertifikate!
 
 + [Anleitung](https://github.com/mbentley/docker-omada-controller)
