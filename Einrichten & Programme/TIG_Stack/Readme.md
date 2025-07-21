@@ -45,7 +45,7 @@ OpenSSH (v6)               ALLOW       Anywhere (v6)
 Kontrolle ob curl und gpg installiert ist.
 
 ```
-apt install curl gpg -Y
+apt install curl gpg -y
 ```
 
 ```
