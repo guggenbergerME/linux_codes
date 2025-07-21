@@ -45,6 +45,10 @@ OpenSSH (v6)               ALLOW       Anywhere (v6)
 Kontrolle ob curl und gpg installiert ist.
 
 ```
+apt install curl gpg -Y
+```
+
+```
 # Ubuntu and Debian
 # Add the InfluxData key to verify downloads and add the repository
 curl --silent --location -O \
