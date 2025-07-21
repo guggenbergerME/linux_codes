@@ -42,7 +42,7 @@ ufw allow https
 Repository kolonen
 
 ```
-https://github.com/vineethmn/vaultwarden-docker-compose.git
+git clone https://github.com/vineethmn/vaultwarden-docker-compose.git
 ```
 
 Wechseln in den ordner
