@@ -1,5 +1,11 @@
 # Passwort lokal erzeugen
 
+## Erzeugen mit GPG
+
+```
+gpg --gen-random --armor 1 12
+```
+
 ## pwgen
 ```
 sudo apt-get install pwgen
