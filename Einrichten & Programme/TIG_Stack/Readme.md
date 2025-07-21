@@ -79,6 +79,11 @@ InfluxDB wird mit einem Kommandozeilen-Tool namens influx ausgeliefert, mit dem 
 
 Führe den folgenden Befehl aus, um die erste Konfiguration für Influx vorzunehmen.
 
+Passwort ezeugen
+
+    gpg --gen-random --armor 1 12
+
+
 ```
 $ influx setup
 > Welcome to InfluxDB 2.0!
