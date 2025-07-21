@@ -31,39 +31,9 @@ ufw allow https
 
 
 ## Docker/Compose installation
-```
-mkdir -p ~/.docker/cli-plugins/
-curl -SL https://github.com/docker/compose/releases/download/v2.3.3/docker-compose-linux-x86_64 -o ~/.docker/cli-plugins/docker-compose
-```
 
-Ausführbar machen
++ [Docker installieren](https://github.com/guggenbergerME/linux_codes/tree/main/Einrichten%20%26%20Programme/docker/Installieren)
 
-```
-chmod +x ~/.docker/cli-plugins/docker-compose
-```
-
-Version Prüfen
-
-```
-docker compose version
-```
-
-Compose löschen
-```
-docker image rm nginx:alpine
-```
-
-Docker Image
-Anzeigen
-```
-docker images
-```
-Löschen
-```
-docker rmi <image_id>
-```
-
-+ [Weitere Docker Compose Befehle](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-compose-on-ubuntu-20-04-de)
 
 ## Start der installation
 
