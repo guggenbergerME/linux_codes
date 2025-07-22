@@ -4,7 +4,7 @@
 Nutzer der sudo-Gruppe hinzufügen
 Ist noch kein Nutzer in der sudo-Gruppe eingetragen, muss dieser Schritt als root durchgeführt werden. Am einfachsten ist der Wechsel auf root mit dem Befehl:
 
-          nutzer@linux:~$ su
+          nutzer@linux:~$ su -
 
 Nach Eingabe des root-Passworts kann ein neuer Nutzer in die Gruppe hinzugefügt werden:
 
