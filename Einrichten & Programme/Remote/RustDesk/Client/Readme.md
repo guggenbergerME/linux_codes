@@ -4,6 +4,10 @@
 
 deb download und installieren
 
+## Installation unter Debain
+
+     sudo apt install -fy ./rustdesk-<Versionsnummer>.deb
+
 ## Zugriff
 
 + IP des RustDesk Servers
