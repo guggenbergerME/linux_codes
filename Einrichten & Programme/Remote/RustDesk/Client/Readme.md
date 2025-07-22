@@ -1,5 +1,9 @@
 # Linux Client installation
 
+Datei Ausführbar machen
+
+     chmod +x 
+
 [Aktuelle Versionen ](https://github.com/rustdesk/rustdesk/releases)
 
 deb download und installieren
