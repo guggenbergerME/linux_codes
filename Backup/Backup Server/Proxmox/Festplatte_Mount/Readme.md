@@ -16,6 +16,10 @@ Kontrolle der Eingehängten Platten
 
     lsblk -f
 
+## unmount Festplatte
+
+    umount /mnt/[ORDNER]
+
 ## Proxmox Storage hinzufügen
 
 Im Bereich **Rechenzentrum/Storage** ein neues Verzeichnis anlegen.
