@@ -7,9 +7,15 @@ Github clone
     git clone https://github.com/invoiceninja/dockerfiles.git
     
 
-API Key erzeugen
+## Generieren Sie einen APP_KEY
+Dies APP_KEYkann durch Ausführen von Folgendem generiert werden:
 
-    openssl rand -base64 64
+If you haven't started the containers yet:
+
+    docker run --rm -it invoiceninja/invoiceninja-debian php artisan key:generate --show
+
+Or if your containers are already running:
+    docker compose exec app php artisan key:generate --show
 
 Ändern der .env
 
