@@ -31,9 +31,14 @@ Falls Fish noch nicht installiert ist, installiere es mit sudo apt-get update &&
 Füge /usr/bin/fish hinzu, falls es noch nicht vorhanden ist.
 Speichere und schließe die Datei.
 
-3. Shell mit chsh ändern:
-Gib chsh -s /usr/bin/fish ein und bestätige mit Enter.
+## Shell mit chsh ändern:
+Gib 
+
+    chsh -s /usr/bin/fish 
+
+ein und bestätige mit Enter.
+
 Gib dein Passwort ein, wenn du dazu aufgefordert wirst.
 
-4. Anmelden und Abmelden:
+## Anmelden und Abmelden:
 Um die Änderung wirksam zu machen, melde dich von deiner aktuellen Sitzung ab und wieder an.
