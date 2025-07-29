@@ -36,31 +36,8 @@ Am Ende der Datei können Sie einen neuen Abschnitt für den Ordner hinzufügen,
 
 Ersetzen Sie **/pfad/zum/freigeben/ordner** durch den tatsächlichen Pfad des Ordners, den Sie freigeben möchten. Speichern Sie die Datei und schließen Sie den Editor.
 
-## Benutzer und Berechtigungen
-
-Für den Zugriff auf die freigegebenen Ordner muss ein Samba-Benutzer eingerichtet werden. Dieser Benutzer muss auf dem Linux-System existieren. Um einen neuen Benutzer hinzuzufügen und ihn zu Samba hinzuzufügen, verwenden Sie die folgenden Befehle:
-
-```
-sudo adduser meinbenutzer
-sudo smbpasswd -a meinbenutzer
-```
-
-## Alle Samba Benutzer auflisten
-
-    pdbedit -L
-
-smbpasswd Key Optionen
-
-    -a: Add a new user to the Samba password database.
-    -x: Delete a user from the Samba password database.
-    -r: Specifies a remote machine to change passwords on.
-    -U: Specifies the username for operations.
-    -s: Silent mode, suppresses password prompts.
-    -n: No password (used to set a blank password).
-    -d: Disables the user account.
-    -e: Enables the user account
-
-Ersetzen Sie meinbenutzer durch den gewünschten Benutzernamen. Sie werden aufgefordert, ein Passwort einzugeben.
+## Samba Benutzer
++ [Liste der Befehle](Benutzerverwaltung/Readme.md)
 
 ## Samba-Dienst steuern
 
