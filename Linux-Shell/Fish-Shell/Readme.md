@@ -25,7 +25,7 @@ sudo apt install fish
 
 Falls Fish noch nicht installiert ist, installiere es mit sudo apt-get update && sudo apt-get install fish.
 
-2. Überprüfen, ob Fish in /etc/shells eingetragen ist:
+2. Überprüfen, ob Fish in **/etc/shells** eingetragen ist:
 
 Öffne die Datei mit sudo nano /etc/shells.
 Füge /usr/bin/fish hinzu, falls es noch nicht vorhanden ist.
