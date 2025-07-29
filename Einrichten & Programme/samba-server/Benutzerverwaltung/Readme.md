@@ -39,4 +39,4 @@ Ersetzen Sie meinbenutzer durch den gewünschten Benutzernamen. Sie werden aufge
 
 Anschliessend den Linux Benutzer samt Homeverzeichnis löschen
 
-    userdel -r benutzername
+    userdel -r [NAME]
