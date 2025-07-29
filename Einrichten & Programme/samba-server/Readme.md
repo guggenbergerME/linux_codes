@@ -44,6 +44,11 @@ Für den Zugriff auf die freigegebenen Ordner muss ein Samba-Benutzer eingericht
 sudo adduser meinbenutzer
 sudo smbpasswd -a meinbenutzer
 ```
+
+## Alle Samba Benutzer auflisten
+
+    pdbedit -L
+
 smbpasswd Key Optionen
 
     -a: Add a new user to the Samba password database.
