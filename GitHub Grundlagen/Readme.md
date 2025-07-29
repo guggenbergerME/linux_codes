@@ -7,4 +7,4 @@
 + [Links auf lokale Files](Lokaler_Link.md)
 
 ## Bilder
-![alt text](proxmox_smb.png)
+    ![alt text](Bildlink)
