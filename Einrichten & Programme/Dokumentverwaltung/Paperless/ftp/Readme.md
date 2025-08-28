@@ -47,6 +47,11 @@ sudo systemctl enable vsftpd
 
     */2 * * * * mv /home/d1/*.pdf [zielordner]
 
-## ftp Verbinden
+## FTp testen
+
+Terminal eingabe
+
+    ftp benutzer@[IP]
+
 
     ftp://[AnmeldeName]@10.115.0.5/home/[Anmeldename]
