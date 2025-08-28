@@ -43,6 +43,8 @@ sudo systemctl enable vsftpd
 
     adduser [NAME]
 
+Anlegen eines FTP Ordners
+
 ## pdf per crontab in den Paperless Ordner schieben
 
     */2 * * * * mv /home/d1/*.pdf [zielordner]
