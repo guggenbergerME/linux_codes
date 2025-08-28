@@ -12,6 +12,11 @@ Kopieren des Public Key auf den entfernten Server
 
     ssh-copy-id -i ~/.ssh/id_ed25519.pub [IP]
 
+Beispiel
+
+    ssh-copy-id -i /home/pc813/.ssh/id_rsa.pub root@10.115.050
+
+
 Nach Eingabe des Zugangsdaten erscheint nun folgende Meldung
 
 ```
