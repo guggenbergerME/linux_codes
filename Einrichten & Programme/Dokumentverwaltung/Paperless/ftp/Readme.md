@@ -30,9 +30,13 @@ Anlegen eines FTP Ordners
 
 ## pdf per crontab in den Paperless Ordner schieben
 
-    */2 * * * * mv /home/d1/*.pdf [zielordner]
+Die sntsprechenden BASH Scripte liegen im Root Verzeichnis. Der Crontab wird per root ausgeführt"
+```
+# m h  dom mon dow   command
+*/5 * * * * ~/bash_paperless/[FILE_NAME].sh
+```
 
-## FTp testen
+## FTP testen
 
 Terminal eingabe
 
