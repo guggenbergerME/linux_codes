@@ -19,6 +19,9 @@ sudo systemctl start vsftpd
 sudo systemctl enable vsftpd
 ```
 
+## Firewall
+Ausschalten der Proxmox Firewall und beachten der Gateway Firewall Regeln.
+
 ## Neuen ftp User anlegen
 
     adduser [NAME]
