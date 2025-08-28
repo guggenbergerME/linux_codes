@@ -10,27 +10,7 @@ Mit dem Texteditor „vi“ muss man nun noch ein paar Einstellungen in der Conf
 
     $ nano /etc/vsftpd.conf
 
-```
-listen=NO
-listen_ipv6=YES
-anonymous_enable=NO
-local_enable=YES
-write_enable=YES
-allow_writeable_chroot=YES
-dirmessage_enable=YES
-use_localtime=YES
-xferlog_enable=YES
-connect_from_port_20=YES
-chroot_local_user=YES
-secure_chroot_dir=/var/run/vsftpd/empty
-pam_service_name=vsftpd
-pasv_enable=Yes
-user_sub_token=$USER
-local_root=/home/$USER/ftp
-local_umask=022
-pasv_min_port=10000
-pasv_max_port=11000
-```
+[Beispiel vsftpd.conf Datei](https://github.com/guggenbergerME/linux_codes/blob/main/Einrichten%20%26%20Programme/Dokumentverwaltung/Paperless/ftp/vsftpd.conf)
 
 FTP Server neu starten:
 
