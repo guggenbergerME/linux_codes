@@ -53,5 +53,6 @@ Terminal eingabe
 
     ftp benutzer@[IP]
 
+Eingabe GUI Ordner
 
     ftp://[AnmeldeName]@10.115.0.5/home/[Anmeldename]
