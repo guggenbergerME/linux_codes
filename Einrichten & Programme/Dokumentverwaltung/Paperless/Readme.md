@@ -46,6 +46,9 @@ Sprache
 
     deu
 
+## Ablauf der Doku Pflege
++ [Gima](https://github.com/guggenbergerME/linux_codes/blob/main/Einrichten%20%26%20Programme/Dokumentverwaltung/Paperless/AblaufGima/Readme.md)
+
 ## Anletung
 
 + https://docs.paperless-ngx.com/setup/
