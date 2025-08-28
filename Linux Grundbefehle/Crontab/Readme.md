@@ -56,3 +56,7 @@ Sollte man in einem Befehl ein "%" Zeichen verwenden, beispielsweise bei einem D
 0 8,17 * * * /usr/bin/script.sh >>/var/log/cron/script_$(date +\%Y\%m\%d).log
 
 ```
+
+## Crontab testen
+
+    systemctl status cron
