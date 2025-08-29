@@ -23,5 +23,15 @@ Funktion
 
 Die Links zu einer PDF werden aus einer Textdatei gelesen und mit der alten Version auf dem Server verglichen.
 
+[Script](https://github.com/guggenbergerME/linux_codes/blob/main/Linux%20Grundbefehle/BASH-Script/PDF_Hash_Vergleich/pdf_verglaichen_liste_web.sh)
 
+Die Links werden aus der Datei **urls.txt** gelesen.
 
+Aufbau der Datei **urls.txt**
+
+```
+http://example.com/bericht1.pdf
+http://example.com/bericht2.pdf
+http://example.com/bericht3.pdf
+
+```
