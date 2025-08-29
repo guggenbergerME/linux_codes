@@ -30,9 +30,12 @@ Die Links werden aus der Datei **urls.txt** gelesen.
 Aufbau der Datei **urls.txt**
 
 ```
-http://example.com/bericht1.pdf
-http://example.com/bericht2.pdf
-http://example.com/bericht3.pdf
+[Berichte Q1]
+http://example.com/report1.pdf
+http://example.com/report2.pdf
+
+[Berichte Q2]
+http://example.com/report3.pdf
 
 ```
 
