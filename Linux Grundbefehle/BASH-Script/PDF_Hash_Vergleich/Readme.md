@@ -17,4 +17,4 @@ Funktion
 + Mit passender Datei im alt/-Ordner (gleicher Name) vergleichen
 + Unterschiede per Hash melden
 
-Link zum Script
+[Link zum Script](https://github.com/guggenbergerME/linux_codes/blob/main/Linux%20Grundbefehle/BASH-Script/PDF_Hash_Vergleich/pdf_vergleichen_website.sh)
