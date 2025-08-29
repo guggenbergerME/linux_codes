@@ -1,6 +1,7 @@
 #!/bin/bash
 # pdfhttpcompare_list.sh – vergleicht mehrere PDFs von URLs mit Dateien im Ordner alt
 # Fehlende PDFs werden automatisch gespeichert
+# Download-Fehler werden in eine Logdatei geschrieben
 
 if [ $# -ne 2 ]; then
     echo "Usage: $0 <url_liste.txt> <ordner_alt>"
@@ -9,6 +10,7 @@ fi
 
 URL_FILE="$1"
 ALT_DIR="$2"
+LOGFILE="$(dirname "$0")/download_errors.log"
 
 if [ ! -f "$URL_FILE" ]; then
     echo "Fehler: '$URL_FILE' existiert nicht."
@@ -19,6 +21,8 @@ if [ ! -d "$ALT_DIR" ]; then
     echo "Fehler: '$ALT_DIR' ist kein gültiger Ordner."
     exit 3
 fi
+
+echo "==== Starte Vergleich am $(date) ====" >> "$LOGFILE"
 
 # Jede Zeile der URL-Liste verarbeiten
 while IFS= read -r URL; do
@@ -37,6 +41,7 @@ while IFS= read -r URL; do
 
     if [ ! -s "$TMP_FILE" ]; then
         echo "   ❌ Fehler beim Download von $URL"
+        echo "$(date '+%Y-%m-%d %H:%M:%S') – Fehler beim Download: $URL" >> "$LOGFILE"
         rm -f "$TMP_FILE"
         continue
     fi
