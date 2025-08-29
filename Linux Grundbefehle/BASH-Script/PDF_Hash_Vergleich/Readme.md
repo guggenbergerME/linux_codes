@@ -43,4 +43,4 @@ http://example.com/bericht3.pdf
 ```
 ./pdfhttpcompare_list.sh urls.txt ./alt
 ```
-
+Sollte ein Download Link nicht existieren oder Falsch sein erfolgt eine Fehlermeldung in **download_errors.log**
