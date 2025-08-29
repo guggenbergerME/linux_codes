@@ -23,7 +23,7 @@ Funktion
 
 Die Links zu einer PDF werden aus einer Textdatei gelesen und mit der alten Version auf dem Server verglichen.
 
-[Script](https://github.com/guggenbergerME/linux_codes/blob/main/Linux%20Grundbefehle/BASH-Script/PDF_Hash_Vergleich/pdf_verglaichen_liste_web.sh)
++ [PDF Liste Web Vergleich](https://github.com/guggenbergerME/linux_codes/blob/main/Linux%20Grundbefehle/BASH-Script/PDF_Hash_Vergleich/pdf_vergleichen_liste_web.sh)
 
 Die Links werden aus der Datei **urls.txt** gelesen.
 
