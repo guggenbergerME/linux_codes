@@ -35,3 +35,7 @@ http://example.com/bericht2.pdf
 http://example.com/bericht3.pdf
 
 ```
+
+## Links aus einer Datei auslesen und wenn nicht vorhanden pdf abspeichern
+
++ Dieses Script prüft einen PDF auf einem http Link und vergleicht es mit der Version auf dem Server. Wenn es keine Version gibt wird es abgespeichert.
