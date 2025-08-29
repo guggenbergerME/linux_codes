@@ -9,3 +9,12 @@ Ausfüren des Scriptes
 chmod +x pdfcompare.sh
 ./pdf_vergleichen.sh ./neu ./alt
 ```
+
+## Neues pdf von Link herunterladen und mit altem Dokument vergleichen
+
+Funktion
++ PDF von URL laden
++ Mit passender Datei im alt/-Ordner (gleicher Name) vergleichen
++ Unterschiede per Hash melden
+
+Link zum Script
