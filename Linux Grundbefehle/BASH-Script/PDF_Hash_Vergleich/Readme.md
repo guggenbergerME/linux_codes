@@ -40,4 +40,7 @@ http://example.com/bericht3.pdf
 
 + [Dieses Script prüft einen PDF auf einem http Link und vergleicht es mit der Version auf dem Server. Wenn es keine Version gibt wird es abgespeichert.](https://github.com/guggenbergerME/linux_codes/blob/main/Linux%20Grundbefehle/BASH-Script/PDF_Hash_Vergleich/pdf_vergleichen_liste_web_neu_anlegen.sh)
 
+```
+./pdfhttpcompare_list.sh urls.txt ./alt
+```
 
