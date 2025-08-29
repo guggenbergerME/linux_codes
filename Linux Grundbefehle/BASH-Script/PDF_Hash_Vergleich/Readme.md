@@ -18,3 +18,10 @@ Funktion
 + Unterschiede per Hash melden
 
 [Link zum Script](https://github.com/guggenbergerME/linux_codes/blob/main/Linux%20Grundbefehle/BASH-Script/PDF_Hash_Vergleich/pdf_vergleichen_website.sh)
+
+## Links aus einer Datei auslesen und vergleichen
+
+Die Links zu einer PDF werden aus einer Textdatei gelesen und mit der alten Version auf dem Server verglichen.
+
+
+
