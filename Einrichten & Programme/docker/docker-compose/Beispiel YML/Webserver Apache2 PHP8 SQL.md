@@ -14,6 +14,12 @@ Starten
 ```
 docker compose up -d
 ```
+
+Herunterfahren
+```
+docker compose down
+```
+
 ```
 services:
     webserver:
