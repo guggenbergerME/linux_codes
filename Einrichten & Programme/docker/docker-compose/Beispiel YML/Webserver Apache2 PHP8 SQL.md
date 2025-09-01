@@ -67,7 +67,9 @@ services:
               - 8081:80
 ```
 
-Dockerfile
+## Dockerfile
+
+Im Dockerfile können weitere PHP Plugins installiert werden.
 
 ```
 FROM php:8.2-apache
