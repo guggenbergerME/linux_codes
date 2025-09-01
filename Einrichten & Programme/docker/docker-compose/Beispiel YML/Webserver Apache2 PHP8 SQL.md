@@ -1,7 +1,7 @@
 # Webserver (apache) PHP SQL phpmyadmin
 
 
-docker-compose.yml
+Erstellen per nano von **docker-compose.yml** und **Dockerfile**
 
 Neuaufbau
 ```
