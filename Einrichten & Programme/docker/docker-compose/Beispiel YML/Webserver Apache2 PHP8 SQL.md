@@ -5,8 +5,10 @@ docker-compose.yml
 
 Neuaufbau
 ```
-docker compose up -build
+docker compose up --build
 ```
+
+[Mehr Befehle](https://docs.docker.com/reference/cli/docker/compose/up/)
 
 Starten
 ```
