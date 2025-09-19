@@ -42,3 +42,15 @@ Gib dein Passwort ein, wenn du dazu aufgefordert wirst.
 
 ## Anmelden und Abmelden:
 Um die Änderung wirksam zu machen, melde dich von deiner aktuellen Sitzung ab und wieder an.
+
+## Anpassen über das integrierte fish_config Tool
+
+Das ist der bequemste Weg:
+
+        fish_config
+
+Dadurch öffnet sich ein Web-Interface im Browser.
+
+Dort kannst du Farbschemen auswählen oder eigene Farben definieren (für Befehle, Strings, Kommentare, Fehler usw.).
+
+Die Einstellungen werden automatisch in ~/.config/fish/conf.d/ gespeichert.
